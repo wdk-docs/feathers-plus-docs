@@ -1,0 +1,4069 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, BandCap
+# This file is distributed under the same license as the feathers-plus docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: feathers-plus docs \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-06-26 14:06+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2
+msgid "feathers-hooks-common Usage"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:4
+msgid "Use feathers-hooks-common v4.x.x with FeathersJS Buzzard."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:6
+msgid "Use feathers-hooks-common v3.10.0 with FeathersJS Auk. v4.x.x. should also work if you don’t use callbacks in your hooks."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:9
+msgid "Hooks may be used on the client as well as the server."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:42
+msgid "Find Hooks using Tags"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:44
+msgid "Each Feathers hook and utility function is listed under all the tags relevant to it.Hooks"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:50
+#: ../../source/v1/feathers-hooks-common/index.rst:104
+#: ../../source/v1/feathers-hooks-common/index.rst:148
+#: ../../source/v1/feathers-hooks-common/index.rst:250
+#: ../../source/v1/feathers-hooks-common/index.rst:441
+#: ../../source/v1/feathers-hooks-common/index.rst:494
+#: ../../source/v1/feathers-hooks-common/index.rst:608
+#: ../../source/v1/feathers-hooks-common/index.rst:736
+#: ../../source/v1/feathers-hooks-common/index.rst:782
+#: ../../source/v1/feathers-hooks-common/index.rst:1210
+#: ../../source/v1/feathers-hooks-common/index.rst:1309
+#: ../../source/v1/feathers-hooks-common/index.rst:1394
+#: ../../source/v1/feathers-hooks-common/index.rst:1439
+#: ../../source/v1/feathers-hooks-common/index.rst:1533
+#: ../../source/v1/feathers-hooks-common/index.rst:1618
+#: ../../source/v1/feathers-hooks-common/index.rst:1681
+#: ../../source/v1/feathers-hooks-common/index.rst:1753
+#: ../../source/v1/feathers-hooks-common/index.rst:1818
+#: ../../source/v1/feathers-hooks-common/index.rst:2047
+#: ../../source/v1/feathers-hooks-common/index.rst:2105
+#: ../../source/v1/feathers-hooks-common/index.rst:2179
+#: ../../source/v1/feathers-hooks-common/index.rst:2379
+#: ../../source/v1/feathers-hooks-common/index.rst:2454
+#: ../../source/v1/feathers-hooks-common/index.rst:2531
+#: ../../source/v1/feathers-hooks-common/index.rst:2604
+#: ../../source/v1/feathers-hooks-common/index.rst:2696
+#: ../../source/v1/feathers-hooks-common/index.rst:2986
+#: ../../source/v1/feathers-hooks-common/index.rst:3030
+#: ../../source/v1/feathers-hooks-common/index.rst:3082
+#: ../../source/v1/feathers-hooks-common/index.rst:3150
+#: ../../source/v1/feathers-hooks-common/index.rst:3224
+#: ../../source/v1/feathers-hooks-common/index.rst:3298
+#: ../../source/v1/feathers-hooks-common/index.rst:3484
+#: ../../source/v1/feathers-hooks-common/index.rst:3611
+#: ../../source/v1/feathers-hooks-common/index.rst:3682
+#: ../../source/v1/feathers-hooks-common/index.rst:3748
+#: ../../source/v1/feathers-hooks-common/index.rst:3798
+#: ../../source/v1/feathers-hooks-common/index.rst:3840
+#: ../../source/v1/feathers-hooks-common/index.rst:3885
+#: ../../source/v1/feathers-hooks-common/index.rst:3928
+#: ../../source/v1/feathers-hooks-common/index.rst:3966
+#: ../../source/v1/feathers-hooks-common/index.rst:4013
+#: ../../source/v1/feathers-hooks-common/index.rst:4067
+#: ../../source/v1/feathers-hooks-common/index.rst:4149
+#: ../../source/v1/feathers-hooks-common/index.rst:4239
+#: ../../source/v1/feathers-hooks-common/index.rst:4337
+msgid "**Arguments**"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:52
+#: ../../source/v1/feathers-hooks-common/index.rst:106
+msgid "``{...Function}`` Hook functions."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:55
+#: ../../source/v1/feathers-hooks-common/index.rst:109
+#: ../../source/v1/feathers-hooks-common/index.rst:153
+#: ../../source/v1/feathers-hooks-common/index.rst:220
+#: ../../source/v1/feathers-hooks-common/index.rst:260
+#: ../../source/v1/feathers-hooks-common/index.rst:282
+#: ../../source/v1/feathers-hooks-common/index.rst:426
+#: ../../source/v1/feathers-hooks-common/index.rst:447
+#: ../../source/v1/feathers-hooks-common/index.rst:499
+#: ../../source/v1/feathers-hooks-common/index.rst:613
+#: ../../source/v1/feathers-hooks-common/index.rst:741
+#: ../../source/v1/feathers-hooks-common/index.rst:793
+#: ../../source/v1/feathers-hooks-common/index.rst:800
+#: ../../source/v1/feathers-hooks-common/index.rst:1217
+#: ../../source/v1/feathers-hooks-common/index.rst:1316
+#: ../../source/v1/feathers-hooks-common/index.rst:1399
+#: ../../source/v1/feathers-hooks-common/index.rst:1539
+#: ../../source/v1/feathers-hooks-common/index.rst:1624
+#: ../../source/v1/feathers-hooks-common/index.rst:1687
+#: ../../source/v1/feathers-hooks-common/index.rst:1758
+#: ../../source/v1/feathers-hooks-common/index.rst:1847
+#: ../../source/v1/feathers-hooks-common/index.rst:1856
+#: ../../source/v1/feathers-hooks-common/index.rst:2053
+#: ../../source/v1/feathers-hooks-common/index.rst:2112
+#: ../../source/v1/feathers-hooks-common/index.rst:2191
+#: ../../source/v1/feathers-hooks-common/index.rst:2197
+#: ../../source/v1/feathers-hooks-common/index.rst:2250
+#: ../../source/v1/feathers-hooks-common/index.rst:2385
+#: ../../source/v1/feathers-hooks-common/index.rst:2459
+#: ../../source/v1/feathers-hooks-common/index.rst:2536
+#: ../../source/v1/feathers-hooks-common/index.rst:2609
+#: ../../source/v1/feathers-hooks-common/index.rst:2701
+#: ../../source/v1/feathers-hooks-common/index.rst:2719
+#: ../../source/v1/feathers-hooks-common/index.rst:2732
+#: ../../source/v1/feathers-hooks-common/index.rst:2991
+#: ../../source/v1/feathers-hooks-common/index.rst:3035
+#: ../../source/v1/feathers-hooks-common/index.rst:3088
+#: ../../source/v1/feathers-hooks-common/index.rst:3156
+#: ../../source/v1/feathers-hooks-common/index.rst:3229
+#: ../../source/v1/feathers-hooks-common/index.rst:3273
+#: ../../source/v1/feathers-hooks-common/index.rst:3308
+#: ../../source/v1/feathers-hooks-common/index.rst:3338
+#: ../../source/v1/feathers-hooks-common/index.rst:3416
+#: ../../source/v1/feathers-hooks-common/index.rst:3490
+#: ../../source/v1/feathers-hooks-common/index.rst:3497
+#: ../../source/v1/feathers-hooks-common/index.rst:3617
+#: ../../source/v1/feathers-hooks-common/index.rst:3690
+#: ../../source/v1/feathers-hooks-common/index.rst:3753
+#: ../../source/v1/feathers-hooks-common/index.rst:3804
+#: ../../source/v1/feathers-hooks-common/index.rst:3846
+#: ../../source/v1/feathers-hooks-common/index.rst:3891
+#: ../../source/v1/feathers-hooks-common/index.rst:3935
+#: ../../source/v1/feathers-hooks-common/index.rst:3971
+#: ../../source/v1/feathers-hooks-common/index.rst:4019
+#: ../../source/v1/feathers-hooks-common/index.rst:4075
+#: ../../source/v1/feathers-hooks-common/index.rst:4155
+#: ../../source/v1/feathers-hooks-common/index.rst:4245
+#: ../../source/v1/feathers-hooks-common/index.rst:4342
+msgid "Argument"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:55
+#: ../../source/v1/feathers-hooks-common/index.rst:109
+#: ../../source/v1/feathers-hooks-common/index.rst:153
+#: ../../source/v1/feathers-hooks-common/index.rst:220
+#: ../../source/v1/feathers-hooks-common/index.rst:260
+#: ../../source/v1/feathers-hooks-common/index.rst:282
+#: ../../source/v1/feathers-hooks-common/index.rst:426
+#: ../../source/v1/feathers-hooks-common/index.rst:447
+#: ../../source/v1/feathers-hooks-common/index.rst:499
+#: ../../source/v1/feathers-hooks-common/index.rst:613
+#: ../../source/v1/feathers-hooks-common/index.rst:741
+#: ../../source/v1/feathers-hooks-common/index.rst:793
+#: ../../source/v1/feathers-hooks-common/index.rst:800
+#: ../../source/v1/feathers-hooks-common/index.rst:1217
+#: ../../source/v1/feathers-hooks-common/index.rst:1316
+#: ../../source/v1/feathers-hooks-common/index.rst:1399
+#: ../../source/v1/feathers-hooks-common/index.rst:1444
+#: ../../source/v1/feathers-hooks-common/index.rst:1539
+#: ../../source/v1/feathers-hooks-common/index.rst:1624
+#: ../../source/v1/feathers-hooks-common/index.rst:1687
+#: ../../source/v1/feathers-hooks-common/index.rst:1758
+#: ../../source/v1/feathers-hooks-common/index.rst:1847
+#: ../../source/v1/feathers-hooks-common/index.rst:1856
+#: ../../source/v1/feathers-hooks-common/index.rst:2053
+#: ../../source/v1/feathers-hooks-common/index.rst:2112
+#: ../../source/v1/feathers-hooks-common/index.rst:2191
+#: ../../source/v1/feathers-hooks-common/index.rst:2197
+#: ../../source/v1/feathers-hooks-common/index.rst:2250
+#: ../../source/v1/feathers-hooks-common/index.rst:2385
+#: ../../source/v1/feathers-hooks-common/index.rst:2459
+#: ../../source/v1/feathers-hooks-common/index.rst:2536
+#: ../../source/v1/feathers-hooks-common/index.rst:2609
+#: ../../source/v1/feathers-hooks-common/index.rst:2701
+#: ../../source/v1/feathers-hooks-common/index.rst:2719
+#: ../../source/v1/feathers-hooks-common/index.rst:2732
+#: ../../source/v1/feathers-hooks-common/index.rst:2991
+#: ../../source/v1/feathers-hooks-common/index.rst:3035
+#: ../../source/v1/feathers-hooks-common/index.rst:3088
+#: ../../source/v1/feathers-hooks-common/index.rst:3156
+#: ../../source/v1/feathers-hooks-common/index.rst:3229
+#: ../../source/v1/feathers-hooks-common/index.rst:3273
+#: ../../source/v1/feathers-hooks-common/index.rst:3308
+#: ../../source/v1/feathers-hooks-common/index.rst:3338
+#: ../../source/v1/feathers-hooks-common/index.rst:3416
+#: ../../source/v1/feathers-hooks-common/index.rst:3490
+#: ../../source/v1/feathers-hooks-common/index.rst:3497
+#: ../../source/v1/feathers-hooks-common/index.rst:3561
+#: ../../source/v1/feathers-hooks-common/index.rst:3617
+#: ../../source/v1/feathers-hooks-common/index.rst:3690
+#: ../../source/v1/feathers-hooks-common/index.rst:3753
+#: ../../source/v1/feathers-hooks-common/index.rst:3804
+#: ../../source/v1/feathers-hooks-common/index.rst:3846
+#: ../../source/v1/feathers-hooks-common/index.rst:3891
+#: ../../source/v1/feathers-hooks-common/index.rst:3935
+#: ../../source/v1/feathers-hooks-common/index.rst:3971
+#: ../../source/v1/feathers-hooks-common/index.rst:4019
+#: ../../source/v1/feathers-hooks-common/index.rst:4075
+#: ../../source/v1/feathers-hooks-common/index.rst:4105
+#: ../../source/v1/feathers-hooks-common/index.rst:4155
+#: ../../source/v1/feathers-hooks-common/index.rst:4245
+#: ../../source/v1/feathers-hooks-common/index.rst:4342
+msgid "Type"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:55
+#: ../../source/v1/feathers-hooks-common/index.rst:109
+#: ../../source/v1/feathers-hooks-common/index.rst:153
+#: ../../source/v1/feathers-hooks-common/index.rst:260
+#: ../../source/v1/feathers-hooks-common/index.rst:282
+#: ../../source/v1/feathers-hooks-common/index.rst:426
+#: ../../source/v1/feathers-hooks-common/index.rst:447
+#: ../../source/v1/feathers-hooks-common/index.rst:499
+#: ../../source/v1/feathers-hooks-common/index.rst:613
+#: ../../source/v1/feathers-hooks-common/index.rst:741
+#: ../../source/v1/feathers-hooks-common/index.rst:793
+#: ../../source/v1/feathers-hooks-common/index.rst:800
+#: ../../source/v1/feathers-hooks-common/index.rst:1217
+#: ../../source/v1/feathers-hooks-common/index.rst:1316
+#: ../../source/v1/feathers-hooks-common/index.rst:1399
+#: ../../source/v1/feathers-hooks-common/index.rst:1444
+#: ../../source/v1/feathers-hooks-common/index.rst:1539
+#: ../../source/v1/feathers-hooks-common/index.rst:1624
+#: ../../source/v1/feathers-hooks-common/index.rst:1687
+#: ../../source/v1/feathers-hooks-common/index.rst:1758
+#: ../../source/v1/feathers-hooks-common/index.rst:1847
+#: ../../source/v1/feathers-hooks-common/index.rst:2053
+#: ../../source/v1/feathers-hooks-common/index.rst:2112
+#: ../../source/v1/feathers-hooks-common/index.rst:2191
+#: ../../source/v1/feathers-hooks-common/index.rst:2197
+#: ../../source/v1/feathers-hooks-common/index.rst:2250
+#: ../../source/v1/feathers-hooks-common/index.rst:2385
+#: ../../source/v1/feathers-hooks-common/index.rst:2459
+#: ../../source/v1/feathers-hooks-common/index.rst:2536
+#: ../../source/v1/feathers-hooks-common/index.rst:2609
+#: ../../source/v1/feathers-hooks-common/index.rst:2701
+#: ../../source/v1/feathers-hooks-common/index.rst:2991
+#: ../../source/v1/feathers-hooks-common/index.rst:3035
+#: ../../source/v1/feathers-hooks-common/index.rst:3088
+#: ../../source/v1/feathers-hooks-common/index.rst:3156
+#: ../../source/v1/feathers-hooks-common/index.rst:3229
+#: ../../source/v1/feathers-hooks-common/index.rst:3273
+#: ../../source/v1/feathers-hooks-common/index.rst:3308
+#: ../../source/v1/feathers-hooks-common/index.rst:3338
+#: ../../source/v1/feathers-hooks-common/index.rst:3416
+#: ../../source/v1/feathers-hooks-common/index.rst:3490
+#: ../../source/v1/feathers-hooks-common/index.rst:3497
+#: ../../source/v1/feathers-hooks-common/index.rst:3617
+#: ../../source/v1/feathers-hooks-common/index.rst:3690
+#: ../../source/v1/feathers-hooks-common/index.rst:3753
+#: ../../source/v1/feathers-hooks-common/index.rst:3804
+#: ../../source/v1/feathers-hooks-common/index.rst:3846
+#: ../../source/v1/feathers-hooks-common/index.rst:3891
+#: ../../source/v1/feathers-hooks-common/index.rst:3935
+#: ../../source/v1/feathers-hooks-common/index.rst:3971
+#: ../../source/v1/feathers-hooks-common/index.rst:4019
+#: ../../source/v1/feathers-hooks-common/index.rst:4075
+#: ../../source/v1/feathers-hooks-common/index.rst:4105
+#: ../../source/v1/feathers-hooks-common/index.rst:4155
+#: ../../source/v1/feathers-hooks-common/index.rst:4245
+#: ../../source/v1/feathers-hooks-common/index.rst:4342
+msgid "Default"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:55
+#: ../../source/v1/feathers-hooks-common/index.rst:109
+#: ../../source/v1/feathers-hooks-common/index.rst:153
+#: ../../source/v1/feathers-hooks-common/index.rst:220
+#: ../../source/v1/feathers-hooks-common/index.rst:260
+#: ../../source/v1/feathers-hooks-common/index.rst:426
+#: ../../source/v1/feathers-hooks-common/index.rst:447
+#: ../../source/v1/feathers-hooks-common/index.rst:499
+#: ../../source/v1/feathers-hooks-common/index.rst:613
+#: ../../source/v1/feathers-hooks-common/index.rst:623
+#: ../../source/v1/feathers-hooks-common/index.rst:741
+#: ../../source/v1/feathers-hooks-common/index.rst:1217
+#: ../../source/v1/feathers-hooks-common/index.rst:1316
+#: ../../source/v1/feathers-hooks-common/index.rst:1399
+#: ../../source/v1/feathers-hooks-common/index.rst:1444
+#: ../../source/v1/feathers-hooks-common/index.rst:1450
+#: ../../source/v1/feathers-hooks-common/index.rst:1687
+#: ../../source/v1/feathers-hooks-common/index.rst:1758
+#: ../../source/v1/feathers-hooks-common/index.rst:2053
+#: ../../source/v1/feathers-hooks-common/index.rst:2191
+#: ../../source/v1/feathers-hooks-common/index.rst:2385
+#: ../../source/v1/feathers-hooks-common/index.rst:2459
+#: ../../source/v1/feathers-hooks-common/index.rst:2536
+#: ../../source/v1/feathers-hooks-common/index.rst:2609
+#: ../../source/v1/feathers-hooks-common/index.rst:2701
+#: ../../source/v1/feathers-hooks-common/index.rst:2991
+#: ../../source/v1/feathers-hooks-common/index.rst:3035
+#: ../../source/v1/feathers-hooks-common/index.rst:3088
+#: ../../source/v1/feathers-hooks-common/index.rst:3156
+#: ../../source/v1/feathers-hooks-common/index.rst:3229
+#: ../../source/v1/feathers-hooks-common/index.rst:3273
+#: ../../source/v1/feathers-hooks-common/index.rst:3308
+#: ../../source/v1/feathers-hooks-common/index.rst:3416
+#: ../../source/v1/feathers-hooks-common/index.rst:3490
+#: ../../source/v1/feathers-hooks-common/index.rst:3561
+#: ../../source/v1/feathers-hooks-common/index.rst:3617
+#: ../../source/v1/feathers-hooks-common/index.rst:3690
+#: ../../source/v1/feathers-hooks-common/index.rst:3753
+#: ../../source/v1/feathers-hooks-common/index.rst:3804
+#: ../../source/v1/feathers-hooks-common/index.rst:3846
+#: ../../source/v1/feathers-hooks-common/index.rst:3891
+#: ../../source/v1/feathers-hooks-common/index.rst:3935
+#: ../../source/v1/feathers-hooks-common/index.rst:3971
+#: ../../source/v1/feathers-hooks-common/index.rst:4019
+#: ../../source/v1/feathers-hooks-common/index.rst:4075
+#: ../../source/v1/feathers-hooks-common/index.rst:4105
+#: ../../source/v1/feathers-hooks-common/index.rst:4155
+#: ../../source/v1/feathers-hooks-common/index.rst:4245
+#: ../../source/v1/feathers-hooks-common/index.rst:4342
+msgid "Description"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:57
+#: ../../source/v1/feathers-hooks-common/index.rst:111
+msgid "``hooks``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:57
+#: ../../source/v1/feathers-hooks-common/index.rst:111
+msgid "``...Function``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:57
+msgid "The hooks to run. They will mutate ``context.da ta`` for before hooks, or ``context.re sult`` for after hooks. This is the default action for hooks."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:74
+#: ../../source/v1/feathers-hooks-common/index.rst:114
+#: ../../source/v1/feathers-hooks-common/index.rst:161
+#: ../../source/v1/feathers-hooks-common/index.rst:314
+#: ../../source/v1/feathers-hooks-common/index.rst:453
+#: ../../source/v1/feathers-hooks-common/index.rst:504
+#: ../../source/v1/feathers-hooks-common/index.rst:533
+#: ../../source/v1/feathers-hooks-common/index.rst:559
+#: ../../source/v1/feathers-hooks-common/index.rst:584
+#: ../../source/v1/feathers-hooks-common/index.rst:632
+#: ../../source/v1/feathers-hooks-common/index.rst:676
+#: ../../source/v1/feathers-hooks-common/index.rst:713
+#: ../../source/v1/feathers-hooks-common/index.rst:755
+#: ../../source/v1/feathers-hooks-common/index.rst:1265
+#: ../../source/v1/feathers-hooks-common/index.rst:1364
+#: ../../source/v1/feathers-hooks-common/index.rst:1415
+#: ../../source/v1/feathers-hooks-common/index.rst:1462
+#: ../../source/v1/feathers-hooks-common/index.rst:1499
+#: ../../source/v1/feathers-hooks-common/index.rst:1545
+#: ../../source/v1/feathers-hooks-common/index.rst:1583
+#: ../../source/v1/feathers-hooks-common/index.rst:1630
+#: ../../source/v1/feathers-hooks-common/index.rst:1657
+#: ../../source/v1/feathers-hooks-common/index.rst:1701
+#: ../../source/v1/feathers-hooks-common/index.rst:1773
+#: ../../source/v1/feathers-hooks-common/index.rst:2059
+#: ../../source/v1/feathers-hooks-common/index.rst:2086
+#: ../../source/v1/feathers-hooks-common/index.rst:2148
+#: ../../source/v1/feathers-hooks-common/index.rst:2299
+#: ../../source/v1/feathers-hooks-common/index.rst:2355
+#: ../../source/v1/feathers-hooks-common/index.rst:2402
+#: ../../source/v1/feathers-hooks-common/index.rst:2478
+#: ../../source/v1/feathers-hooks-common/index.rst:2551
+#: ../../source/v1/feathers-hooks-common/index.rst:2619
+#: ../../source/v1/feathers-hooks-common/index.rst:3005
+#: ../../source/v1/feathers-hooks-common/index.rst:3048
+#: ../../source/v1/feathers-hooks-common/index.rst:3109
+#: ../../source/v1/feathers-hooks-common/index.rst:3191
+#: ../../source/v1/feathers-hooks-common/index.rst:3234
+#: ../../source/v1/feathers-hooks-common/index.rst:3361
+#: ../../source/v1/feathers-hooks-common/index.rst:3566
+#: ../../source/v1/feathers-hooks-common/index.rst:3636
+#: ../../source/v1/feathers-hooks-common/index.rst:3713
+#: ../../source/v1/feathers-hooks-common/index.rst:3762
+#: ../../source/v1/feathers-hooks-common/index.rst:3810
+#: ../../source/v1/feathers-hooks-common/index.rst:3854
+#: ../../source/v1/feathers-hooks-common/index.rst:3899
+#: ../../source/v1/feathers-hooks-common/index.rst:3942
+#: ../../source/v1/feathers-hooks-common/index.rst:3979
+#: ../../source/v1/feathers-hooks-common/index.rst:4025
+#: ../../source/v1/feathers-hooks-common/index.rst:4110
+#: ../../source/v1/feathers-hooks-common/index.rst:4185
+#: ../../source/v1/feathers-hooks-common/index.rst:4251
+#: ../../source/v1/feathers-hooks-common/index.rst:4347
+msgid "**Example**"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:88
+#: ../../source/v1/feathers-hooks-common/index.rst:128
+msgid "Hooks ``hook1``, ``hook3`` and ``hook5`` will run “normally”, mutating ``content.result``. Hooks ``hook2`` and ``hook4`` will mutate ``context.dispatch``."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:92
+#: ../../source/v1/feathers-hooks-common/index.rst:132
+#: ../../source/v1/feathers-hooks-common/index.rst:202
+#: ../../source/v1/feathers-hooks-common/index.rst:383
+#: ../../source/v1/feathers-hooks-common/index.rst:479
+#: ../../source/v1/feathers-hooks-common/index.rst:514
+#: ../../source/v1/feathers-hooks-common/index.rst:544
+#: ../../source/v1/feathers-hooks-common/index.rst:569
+#: ../../source/v1/feathers-hooks-common/index.rst:594
+#: ../../source/v1/feathers-hooks-common/index.rst:649
+#: ../../source/v1/feathers-hooks-common/index.rst:686
+#: ../../source/v1/feathers-hooks-common/index.rst:723
+#: ../../source/v1/feathers-hooks-common/index.rst:765
+#: ../../source/v1/feathers-hooks-common/index.rst:1176
+#: ../../source/v1/feathers-hooks-common/index.rst:1292
+#: ../../source/v1/feathers-hooks-common/index.rst:1377
+#: ../../source/v1/feathers-hooks-common/index.rst:1426
+#: ../../source/v1/feathers-hooks-common/index.rst:1472
+#: ../../source/v1/feathers-hooks-common/index.rst:1509
+#: ../../source/v1/feathers-hooks-common/index.rst:1556
+#: ../../source/v1/feathers-hooks-common/index.rst:1593
+#: ../../source/v1/feathers-hooks-common/index.rst:1640
+#: ../../source/v1/feathers-hooks-common/index.rst:1667
+#: ../../source/v1/feathers-hooks-common/index.rst:1734
+#: ../../source/v1/feathers-hooks-common/index.rst:1797
+#: ../../source/v1/feathers-hooks-common/index.rst:2029
+#: ../../source/v1/feathers-hooks-common/index.rst:2069
+#: ../../source/v1/feathers-hooks-common/index.rst:2163
+#: ../../source/v1/feathers-hooks-common/index.rst:2339
+#: ../../source/v1/feathers-hooks-common/index.rst:2365
+#: ../../source/v1/feathers-hooks-common/index.rst:2415
+#: ../../source/v1/feathers-hooks-common/index.rst:2502
+#: ../../source/v1/feathers-hooks-common/index.rst:2572
+#: ../../source/v1/feathers-hooks-common/index.rst:3015
+#: ../../source/v1/feathers-hooks-common/index.rst:3058
+#: ../../source/v1/feathers-hooks-common/index.rst:3131
+#: ../../source/v1/feathers-hooks-common/index.rst:3206
+#: ../../source/v1/feathers-hooks-common/index.rst:3248
+#: ../../source/v1/feathers-hooks-common/index.rst:3384
+#: ../../source/v1/feathers-hooks-common/index.rst:3585
+#: ../../source/v1/feathers-hooks-common/index.rst:3656
+#: ../../source/v1/feathers-hooks-common/index.rst:3733
+#: ../../source/v1/feathers-hooks-common/index.rst:3773
+#: ../../source/v1/feathers-hooks-common/index.rst:3824
+#: ../../source/v1/feathers-hooks-common/index.rst:3871
+#: ../../source/v1/feathers-hooks-common/index.rst:3914
+#: ../../source/v1/feathers-hooks-common/index.rst:3999
+#: ../../source/v1/feathers-hooks-common/index.rst:4045
+#: ../../source/v1/feathers-hooks-common/index.rst:4125
+#: ../../source/v1/feathers-hooks-common/index.rst:4209
+#: ../../source/v1/feathers-hooks-common/index.rst:4357
+msgid "**Details**"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:94
+msgid "A hook can call a series of hooks using ``actOnDispatch``. Some of those hooks may call other hooks with ``actOnDefault`` or ``actOnDispatch``. This can “turtle down” to further layers."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:98
+msgid "The main purpose of ``actOnDefault`` is to “undo” ``actOnDispatch``."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:111
+msgid "The hooks to run. They will mutate ``context.dispatch``."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:134
+msgid "A hook can call a series of hooks using ``actOnDispatch``. Some of those hooks may call other hooks with ``actOnDefault`` or ``actOnDispatch``. This can “turtle down” to further layers. context.dispatch is a writeable, optional property and contains a “safe” version of the data that should be sent to any client. If context.dispatch has not been set context.result will be sent to the client instead.Note: context.dispatch only affects the data sent through a Feathers Transport like REST or Socet.io. An internal method call will still get the data set in context.result."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:150
+msgid "``{Function} func``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:155
+msgid "``func``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:155
+#: ../../source/v1/feathers-hooks-common/index.rst:501
+#: ../../source/v1/feathers-hooks-common/index.rst:1689
+#: ../../source/v1/feathers-hooks-common/index.rst:1851
+#: ../../source/v1/feathers-hooks-common/index.rst:1864
+#: ../../source/v1/feathers-hooks-common/index.rst:2115
+#: ../../source/v1/feathers-hooks-common/index.rst:2125
+#: ../../source/v1/feathers-hooks-common/index.rst:2461
+#: ../../source/v1/feathers-hooks-common/index.rst:2725
+#: ../../source/v1/feathers-hooks-common/index.rst:2726
+#: ../../source/v1/feathers-hooks-common/index.rst:3090
+#: ../../source/v1/feathers-hooks-common/index.rst:3098
+#: ../../source/v1/feathers-hooks-common/index.rst:3231
+#: ../../source/v1/feathers-hooks-common/index.rst:4248
+msgid "``Function``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:155
+msgid "``(item,`` ``context) = >`` ``{}``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:155
+msgid "Function  modifies ``item`` in place. See below."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:158
+msgid "“The mutated item. Returning undefined means the item in the parameters was mutated in place.” result “undefined \\|\\| item”"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:174
+msgid "Async mutations can be handled with async/await:"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:182
+#: ../../source/v1/feathers-hooks-common/index.rst:193
+msgid "You can also perform async mutations using Promises by returning a Promise that is resolved once all mutations are complete:"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:204
+msgid "The declarative nature of most of the common hooks, e.g. \\ ``discard('password')``, requires you to remember the names of a fair number of hooks, their parameters, and any possible nuances."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:208
+msgid "The ``alterItems`` hook offers an imperative alternative where you directly alter the items. It allows you to reduce the number of trivial hooks you have to register, and you are aware of exactly what your ``alterItems`` hooks do."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:213
+msgid "``func`` is called for each item in ``context.data`` (before hook) or ``context.result[.data]`` (after hook). It receives the parameters"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:216
+#: ../../source/v1/feathers-hooks-common/index.rst:419
+msgid "``{Object} item``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:217
+#: ../../source/v1/feathers-hooks-common/index.rst:3263
+#: ../../source/v1/feathers-hooks-common/index.rst:3487
+#: ../../source/v1/feathers-hooks-common/index.rst:3684
+#: ../../source/v1/feathers-hooks-common/index.rst:3968
+#: ../../source/v1/feathers-hooks-common/index.rst:4015
+#: ../../source/v1/feathers-hooks-common/index.rst:4069
+msgid "``{Object} context``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:222
+#: ../../source/v1/feathers-hooks-common/index.rst:428
+#: ../../source/v1/feathers-hooks-common/index.rst:3436
+msgid "``item``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:222
+#: ../../source/v1/feathers-hooks-common/index.rst:227
+#: ../../source/v1/feathers-hooks-common/index.rst:278
+#: ../../source/v1/feathers-hooks-common/index.rst:428
+#: ../../source/v1/feathers-hooks-common/index.rst:429
+#: ../../source/v1/feathers-hooks-common/index.rst:796
+#: ../../source/v1/feathers-hooks-common/index.rst:817
+#: ../../source/v1/feathers-hooks-common/index.rst:1849
+#: ../../source/v1/feathers-hooks-common/index.rst:1863
+#: ../../source/v1/feathers-hooks-common/index.rst:2703
+#: ../../source/v1/feathers-hooks-common/index.rst:3275
+#: ../../source/v1/feathers-hooks-common/index.rst:3276
+#: ../../source/v1/feathers-hooks-common/index.rst:3310
+#: ../../source/v1/feathers-hooks-common/index.rst:3331
+#: ../../source/v1/feathers-hooks-common/index.rst:3424
+#: ../../source/v1/feathers-hooks-common/index.rst:3492
+#: ../../source/v1/feathers-hooks-common/index.rst:3493
+#: ../../source/v1/feathers-hooks-common/index.rst:3563
+#: ../../source/v1/feathers-hooks-common/index.rst:3630
+#: ../../source/v1/feathers-hooks-common/index.rst:3692
+#: ../../source/v1/feathers-hooks-common/index.rst:3806
+#: ../../source/v1/feathers-hooks-common/index.rst:3848
+#: ../../source/v1/feathers-hooks-common/index.rst:3893
+#: ../../source/v1/feathers-hooks-common/index.rst:3937
+#: ../../source/v1/feathers-hooks-common/index.rst:3973
+#: ../../source/v1/feathers-hooks-common/index.rst:4021
+#: ../../source/v1/feathers-hooks-common/index.rst:4077
+#: ../../source/v1/feathers-hooks-common/index.rst:4081
+#: ../../source/v1/feathers-hooks-common/index.rst:4094
+#: ../../source/v1/feathers-hooks-common/index.rst:4107
+#: ../../source/v1/feathers-hooks-common/index.rst:4157
+#: ../../source/v1/feathers-hooks-common/index.rst:4247
+msgid "``Object``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:222
+msgid "The item. The function modifies it in place."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:227
+#: ../../source/v1/feathers-hooks-common/index.rst:3276
+#: ../../source/v1/feathers-hooks-common/index.rst:3493
+#: ../../source/v1/feathers-hooks-common/index.rst:3692
+#: ../../source/v1/feathers-hooks-common/index.rst:3973
+#: ../../source/v1/feathers-hooks-common/index.rst:4021
+#: ../../source/v1/feathers-hooks-common/index.rst:4077
+msgid "``context``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:227
+msgid "The current context. It contains any alterations made to items so far."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:234
+#: ../../source/v1/feathers-hooks-common/index.rst:3556
+#: ../../source/v1/feathers-hooks-common/index.rst:4100
+msgid "**Returns**"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:236
+msgid "``func`` may alternatively return a replacement ``item`` rather than ``undefined``. This is a convenience feature which permits, for example, use of functions from the `Lodash <https://lodash.com/>`__ library, as such functions tend to return new objects."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:242
+msgid "{% hooksApiFootnote alterItems %}"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:242
+msgid "<h3 id=\"cache\">"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:244
+msgid "cache(cacheMap [, keyField] [, options ])"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:248
+msgid "{% hooksApi cache %}"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:252
+msgid "``{Object | Map} cacheMap``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:253
+msgid "``{String} [ keyField ]``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:254
+msgid "``{Object} [ options ]``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:256
+msgid "``{Function} [ clone ]``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:257
+msgid "``{Function} [makeCacheKey]``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:262
+msgid "``cacheMap``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:262
+msgid "``Object`` ``Map``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:262
+msgid "Instance of ``Map``, or an object with a similar API, to be used as the cache."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:271
+msgid "``keyField``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:271
+#: ../../source/v1/feathers-hooks-common/index.rst:449
+#: ../../source/v1/feathers-hooks-common/index.rst:1541
+#: ../../source/v1/feathers-hooks-common/index.rst:1626
+#: ../../source/v1/feathers-hooks-common/index.rst:1858
+#: ../../source/v1/feathers-hooks-common/index.rst:2387
+#: ../../source/v1/feathers-hooks-common/index.rst:2397
+#: ../../source/v1/feathers-hooks-common/index.rst:2611
+#: ../../source/v1/feathers-hooks-common/index.rst:2721
+#: ../../source/v1/feathers-hooks-common/index.rst:2734
+#: ../../source/v1/feathers-hooks-common/index.rst:3695
+#: ../../source/v1/feathers-hooks-common/index.rst:3708
+#: ../../source/v1/feathers-hooks-common/index.rst:3807
+#: ../../source/v1/feathers-hooks-common/index.rst:3849
+#: ../../source/v1/feathers-hooks-common/index.rst:3894
+#: ../../source/v1/feathers-hooks-common/index.rst:3938
+msgid "``String``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:271
+msgid "``context.se rvice.id`` or ``item._id ?"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:275
+msgid "'_id' !! 'i"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:276
+msgid "d'``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:271
+msgid "The name of the record id field."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:278
+msgid "``option``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:278
+msgid "Options."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:282
+#: ../../source/v1/feathers-hooks-common/index.rst:3338
+#: ../../source/v1/feathers-hooks-common/index.rst:3497
+msgid "``options ``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:282
+#: ../../source/v1/feathers-hooks-common/index.rst:2197
+#: ../../source/v1/feathers-hooks-common/index.rst:2250
+#: ../../source/v1/feathers-hooks-common/index.rst:3338
+#: ../../source/v1/feathers-hooks-common/index.rst:3497
+msgid "Descripti on"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:285
+#: ../../source/v1/feathers-hooks-common/index.rst:293
+#: ../../source/v1/feathers-hooks-common/index.rst:2125
+msgid "``clone``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:285
+#: ../../source/v1/feathers-hooks-common/index.rst:293
+#: ../../source/v1/feathers-hooks-common/index.rst:2262
+#: ../../source/v1/feathers-hooks-common/index.rst:3341
+msgid "``Functio n``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:285
+msgid "``item => JSON.par se(`` ``JSON.stringify(i tem) )``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:285
+msgid "Function to perform a deep clone. See below."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:293
+msgid "``key => key``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:293
+msgid "Function to convert record key to cache key. Use this to convert MongoDB/M ongoose ObjectId/ bson keys to a cache key using ``item._i d.toStrin g()``."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:368
+#: ../../source/v1/feathers-hooks-common/index.rst:1173
+msgid "The ``cache`` hook **must** be registered in both ``before`` and ``after``."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:375
+msgid "The cache will grow without limit when ``Map`` is used and the resulting memory pressure may adversely affect your performance. ``Map`` should only be used when you know or can control its size."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:385
+msgid "The ``cache`` hook maintain a persistent cache for the service it is registerd on. A persistent cache stores records so future requests for those records can be served faster; the records stored in the cache are duplicates of records stored in the database."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:390
+msgid "The ``get`` service method retrieves records from the cache and updates ``context.result`` ``[.data]``. The other methods remove their ``context.data`` entries from the cache in the ``before`` hook, and add entries in the ``after`` hook. All the records returned by a ``find`` call are added to the cache."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:396
+msgid "The ``cache`` hook may be provided a custom Map instance to use as its memoization cache. Any object that implements the methods get(), set(), delete() and clear() can be provided. This allows for custom Maps which implement various `cache algorithms <https://en.wikipedia.org/wiki/Cache_replacement_policies>`__ to be provided."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:403
+msgid "The companion ``@feathers-plus/cache`` provides a least recently-used cache which discards the least recently used items first. It is compatible with ``cache`` as well as the BatchLoaders used with the ``fastJoin`` hook."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:408
+msgid "The ``cache`` hook can make `fastJoin <#fastjoin>`__ hooks run more efficiently."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:411
+msgid "MongoDB and Mongoose store record keys as bson objects rather than as scalars. The safest way to use the cache is in conjunction with the ``makeCacheKey`` option."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:415
+msgid "**options.clone**"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:417
+msgid "The clone function has a single parameter."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:421
+#: ../../source/v1/feathers-hooks-common/index.rst:3411
+msgid "It returns"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:423
+msgid "``{Object} clonedItem``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:428
+msgid "The record."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:429
+msgid "``clonedItem``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:429
+msgid "A clone of ``item``."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:433
+msgid "{% hooksApiFootnote cache %}"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:433
+msgid "<h3 id=\"debug\">"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:435
+msgid "debug( label [, …fieldNames ] )"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:439
+msgid "{% hooksApi debug %}"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:443
+msgid "``{String} label``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:444
+msgid "``{Array < String >} [ fieldNames ]``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:449
+#: ../../source/v1/feathers-hooks-common/index.rst:3708
+msgid "``label``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:449
+msgid "Label to identify the logged information."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:450
+#: ../../source/v1/feathers-hooks-common/index.rst:1542
+#: ../../source/v1/feathers-hooks-common/index.rst:1627
+#: ../../source/v1/feathers-hooks-common/index.rst:2056
+msgid "``fieldNames``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:450
+#: ../../source/v1/feathers-hooks-common/index.rst:1760
+#: ../../source/v1/feathers-hooks-common/index.rst:1859
+#: ../../source/v1/feathers-hooks-common/index.rst:1860
+#: ../../source/v1/feathers-hooks-common/index.rst:2056
+#: ../../source/v1/feathers-hooks-common/index.rst:4167
+msgid "dot notation"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:450
+msgid "The field values in ``context.params`` to display."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:481
+msgid "``debug`` is great for debugging issues with hooks. Log the hook context before and after a hook to see what the hook started with, and what it changed."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:486
+msgid "{% hooksApiFootnote debug %}"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:486
+msgid "<h3 id=\"depopulate\">"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:488
+msgid "dePopulate( )"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:492
+msgid "{% hooksApi dePopulate %}"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:496
+msgid "``{Function} customDepop``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:501
+msgid "``customDepop``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:501
+msgid "``rec => rec``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:501
+msgid "Additional modifications for a record."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:516
+msgid "Removes joined records, computed properties, and profile information created by ```populate`` <#populate>`__. Populated and serialized items may, after dePopulate, be used in service calls."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:520
+msgid "Removes fields created by resolver functions using ``fgraphql``. Populated items may, after dePopulate, be used in a patch service call.."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:525
+msgid "{% hooksApiFootnote dePopulate %}"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:525
+msgid "<h3 id=\"disablemultiitemchange\">"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:527
+msgid "disableMultiItemChange( )"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:531
+msgid "{% hooksApi disableMultiItemChange %}"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:546
+msgid "When using the ``patch`` or ``remove`` methods, a ``null`` id could mutate many, even all the records in the database, so accidentally using it may cause undesirable results."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:551
+msgid "{% hooksApiFootnote disableMultiItemChange %}"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:551
+msgid "<h3 id=\"disablemultiitemcreate\">"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:553
+msgid "disableMultiItemCreate( )"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:557
+msgid "{% hooksApi disableMultiItemCreate %}"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:571
+msgid "The ``create`` method creates multiple record if passed an array of items. This hook prevents that, allowing only single records to be created."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:576
+msgid "{% hooksApiFootnote disableMultiItemCreate %}"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:576
+msgid "<h3 id=\"disablepagination\">"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:578
+msgid "disablePagination()"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:582
+msgid "{% hooksApi disablePagination %}"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:596
+msgid "Pagination is disabled if ``context.query.$limit`` is -1 or ‘-1’. It works for all types of calls including REST."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:600
+msgid "{% hooksApiFootnote disablePagination %}"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:600
+msgid "<h3 id=\"disallow\">"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:602
+msgid "disallow( …transports )"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:606
+msgid "{% hooksApi disallow %}"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:610
+#: ../../source/v1/feathers-hooks-common/index.rst:1441
+msgid "``{Array< String >} transports``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:615
+msgid "``transports ``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:615
+#: ../../source/v1/feathers-hooks-common/index.rst:1446
+#: ../../source/v1/feathers-hooks-common/index.rst:1542
+#: ../../source/v1/feathers-hooks-common/index.rst:1627
+#: ../../source/v1/feathers-hooks-common/index.rst:3619
+#: ../../source/v1/feathers-hooks-common/index.rst:3700
+#: ../../source/v1/feathers-hooks-common/index.rst:4087
+msgid "``Array< String >``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:615
+msgid "disallow all transports"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:615
+msgid "The transports that you want to disallow."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:623
+#: ../../source/v1/feathers-hooks-common/index.rst:1446
+#: ../../source/v1/feathers-hooks-common/index.rst:1450
+#: ../../source/v1/feathers-hooks-common/index.rst:4344
+msgid "``transports``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:623
+#: ../../source/v1/feathers-hooks-common/index.rst:1450
+msgid "Value"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:625
+#: ../../source/v1/feathers-hooks-common/index.rst:1452
+msgid "``socketio``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:625
+msgid "disallow calls by Socket.IO transport"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:626
+#: ../../source/v1/feathers-hooks-common/index.rst:1453
+msgid "``primus``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:626
+msgid "disallow calls by Primus transport"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:627
+#: ../../source/v1/feathers-hooks-common/index.rst:1454
+msgid "``rest``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:627
+msgid "disallow calls by REST transport"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:628
+#: ../../source/v1/feathers-hooks-common/index.rst:1455
+msgid "``external``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:628
+msgid "disallow calls other than from server"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:629
+#: ../../source/v1/feathers-hooks-common/index.rst:1456
+msgid "``server``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:629
+msgid "disallow calls from server"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:651
+msgid "Prevents access to a service method completely or just for specific transports. All transports set the ``context.params.provider`` property, and ``disallow`` checks this."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:656
+msgid "{% hooksApiFootnote disallow %}"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:656
+msgid "<h3 id=\"discard\">"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:658
+msgid "discard( …fieldNames )"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:662
+msgid "{% hooksApi discard %}"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:664
+#: ../../source/v1/feathers-hooks-common/index.rst:701
+#: ../../source/v1/feathers-hooks-common/index.rst:1487
+#: ../../source/v1/feathers-hooks-common/index.rst:1524
+#: ../../source/v1/feathers-hooks-common/index.rst:1571
+#: ../../source/v1/feathers-hooks-common/index.rst:1606
+#: ../../source/v1/feathers-hooks-common/index.rst:2524
+#: ../../source/v1/feathers-hooks-common/index.rst:2589
+#: ../../source/v1/feathers-hooks-common/index.rst:2598
+#: ../../source/v1/feathers-hooks-common/index.rst:2689
+#: ../../source/v1/feathers-hooks-common/index.rst:4060
+msgid "<p class=\"tip\">"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:666
+msgid "The discard hook will remove fields even if the service is being called from the server. You may want to condition the hook to run only for external transports, e.g. \\ ``iff(isProvider('external'), discard(...))``."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:671
+#: ../../source/v1/feathers-hooks-common/index.rst:708
+#: ../../source/v1/feathers-hooks-common/index.rst:1494
+#: ../../source/v1/feathers-hooks-common/index.rst:1531
+#: ../../source/v1/feathers-hooks-common/index.rst:1578
+#: ../../source/v1/feathers-hooks-common/index.rst:1613
+#: ../../source/v1/feathers-hooks-common/index.rst:2529
+#: ../../source/v1/feathers-hooks-common/index.rst:2594
+#: ../../source/v1/feathers-hooks-common/index.rst:2602
+#: ../../source/v1/feathers-hooks-common/index.rst:2694
+#: ../../source/v1/feathers-hooks-common/index.rst:4065
+msgid "</p>"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:673
+msgid "{% hooksApiFieldNames discard “One or more fields you want to remove from the record(s).” %}"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:688
+msgid "Delete the fields either from ``context.data`` (before hook) or ``context.result[.data]`` (after hook). They are not modified if they are not an object, so a ``null`` value is supported."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:693
+msgid "{% hooksApiFootnote discard %}"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:693
+msgid "<h3 id=\"discardquery\">"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:695
+msgid "discardQuery( …fieldNames )"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:699
+msgid "{% hooksApi discardQuery %}"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:703
+msgid "The keep hook will remove any fields not specified even if the service is being called from the server. You may want to condition the hook to run only for external transports, e.g. \\ ``iff(isProvider('external'), discardQuery(...))``."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:710
+msgid "{% hooksApiFieldNames discardQuery “One or more fields you want to remove from the query.” %}"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:725
+msgid "Delete the fields from ``context.params.query``."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:728
+msgid "{% hooksApiFootnote discardQuery %}"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:728
+msgid "<h3 id=\"every\">"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:730
+msgid "every( …predicates )"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:734
+msgid "{% hooksApi every %}"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:738
+#: ../../source/v1/feathers-hooks-common/index.rst:2988
+msgid "``{Array< Function >} predicates``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:743
+#: ../../source/v1/feathers-hooks-common/index.rst:2993
+msgid "``predicates ``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:743
+#: ../../source/v1/feathers-hooks-common/index.rst:2993
+msgid "``Array< Function >``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:743
+#: ../../source/v1/feathers-hooks-common/index.rst:2993
+msgid "Functions which take the current hook as a param and return a boolean result."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:753
+msgid "{% hooksApiReturns every “The logical and of predicates” %}"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:767
+msgid "``every`` is a predicate function for use in conditional hooks. The predicate functions are run in parallel, and ``true`` is returned if every predicate returns a truthy value."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:772
+msgid "{% hooksApiFootnote every %}"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:772
+msgid "<h3 id=\"fastjoin\">"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:774
+msgid "fastJoin( schema [, query] )"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:778
+msgid "{% hooksApi fastJoin %}"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:780
+#: ../../source/v1/feathers-hooks-common/index.rst:1816
+msgid "``fastJoin`` is preferred over using ``populate``."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:784
+msgid "``{Object | Function} resolvers``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:786
+msgid "``{Function} [ before ]``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:787
+msgid "``{Function} [ after ]``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:788
+msgid "``{Object} joins``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:790
+msgid "``{Object | Function} [ query ]``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:795
+#: ../../source/v1/feathers-hooks-common/index.rst:800
+msgid "``resolvers``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:795
+msgid "``Object`` or ``context`` ``=> Object``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:796
+#: ../../source/v1/feathers-hooks-common/index.rst:1863
+#: ../../source/v1/feathers-hooks-common/index.rst:3500
+#: ../../source/v1/feathers-hooks-common/index.rst:4081
+msgid "``query``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:796
+msgid "run all resolvers with ``undefined`` params"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:802
+msgid "``before``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:802
+#: ../../source/v1/feathers-hooks-common/index.rst:811
+msgid "``context`` ``=> { }``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:802
+msgid "Processing performed before the operations are started. Batch-loaders are usually created here."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:811
+msgid "``after``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:811
+msgid "Processing performed after all other operations are completed."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:817
+msgid "``joins``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:817
+msgid "Resolver functions provide a mapping between a portion of a operation and actual backend code responsible for handling it."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:831
+msgid "Read the `guide <guide.html#fastjoin>`__ for more information on the arguments."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:834
+msgid "**Example using Feathers services**"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:840
+msgid "The services in all these examples are assumed, for simplicity, to have pagination disabled. You will have to decide when to use ``paginate: false`` in your code."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:888
+msgid "**Example with recursive operations**"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:950
+msgid "**Example with a simple batch-loader**"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:992
+msgid "**Comprehensive example**"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1103
+msgid "**Example Using a Persistent Cache**"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1160
+msgid "The number of service calls needed to run the ``query`` above **the second time**:"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1164
+msgid "Using"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1164
+msgid "number of service calls"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1166
+msgid "``populate``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1166
+msgid "**22**"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1167
+msgid "``fastJoin`` alone"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1167
+msgid "**2**"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1168
+msgid "``fastJoin`` and ``cache``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1168
+msgid "**0**"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1171
+msgid "The ``cache`` hook also makes ``get`` service calls more efficient."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1178
+msgid "We often want to combine rows from two or more tables based on a relationship between them. The ``fastJoin`` hook will select records that have matching values in both tables. It can batch service calls and cache records, thereby needing roughly an order of magnitude fewer database calls than the ``populate`` hook, e.g. \\ *2* calls instead of *20*."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1185
+msgid "Relationships such as ``1:1``, ``1:m``, ``n:1``, and ``n:m`` relationships can be handled."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1188
+msgid "``fastJoin`` uses a GraphQL-like imperative API, and it is not restricted to using data from Feathers services. Resources for which there are no Feathers adapters can `be used. <../batch-loader/common-patterns.html#Using-non-Feathers-services>`__"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1193
+msgid "The companion ``@feathers-plus/cache`` implements a least recently-used cache which discards the least recently used items first. When used in conjunction with the ``cache`` hook, it can be used to implement persistent caches for BatchLoaders. BatchLoaders configured this way would retain their cache between requests, eliminating the need to *prime* the cache at the start of each request."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1202
+msgid "{% hooksApiFootnote fastJoin %}"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1202
+msgid "<h3 id=\"iff\">"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1204
+msgid "iff( predicate, …hookFuncsTrue ).else( …hookFuncsFalse )"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1208
+msgid "{% hooksApi iff %}"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1212
+#: ../../source/v1/feathers-hooks-common/index.rst:3152
+msgid "``{Boolean | Promise | Function} predicate``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1213
+msgid "``{Array< Function >} hookFuncsTrue``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1214
+msgid "``{Array< Function >} hookFuncsFalse``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1219
+#: ../../source/v1/feathers-hooks-common/index.rst:1318
+#: ../../source/v1/feathers-hooks-common/index.rst:1401
+#: ../../source/v1/feathers-hooks-common/index.rst:2538
+#: ../../source/v1/feathers-hooks-common/index.rst:3158
+msgid "``predicate` `"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1219
+#: ../../source/v1/feathers-hooks-common/index.rst:1318
+#: ../../source/v1/feathers-hooks-common/index.rst:3158
+msgid "``Boolean``, ``Promise`` or ``Function``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1219
+#: ../../source/v1/feathers-hooks-common/index.rst:1318
+msgid "Determine if ``hookFuncsT rue`` or ``hookFuncsF alse`` should be run. If a function, ``predicate` ` is called with the ``context`` as its param. It returns either a boolean or a Promise that evaluates to a boolean."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1242
+#: ../../source/v1/feathers-hooks-common/index.rst:1341
+msgid "``hookFuncsT rue``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1242
+#: ../../source/v1/feathers-hooks-common/index.rst:1253
+#: ../../source/v1/feathers-hooks-common/index.rst:1341
+#: ../../source/v1/feathers-hooks-common/index.rst:1352
+#: ../../source/v1/feathers-hooks-common/index.rst:3179
+msgid "``Array<`` ``Function >``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1242
+#: ../../source/v1/feathers-hooks-common/index.rst:1341
+#: ../../source/v1/feathers-hooks-common/index.rst:3179
+msgid "Sync or async hook functions to run if ``true``. They may include other conditional hooks."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1253
+#: ../../source/v1/feathers-hooks-common/index.rst:1352
+msgid "``hookFuncsF alse``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1253
+#: ../../source/v1/feathers-hooks-common/index.rst:1352
+msgid "Sync or async hook functions to run if ``false``. They may include other conditional hooks."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1294
+#: ../../source/v1/feathers-hooks-common/index.rst:1379
+msgid "Resolve the predicate, then run one set of hooks sequentially."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1296
+#: ../../source/v1/feathers-hooks-common/index.rst:1381
+#: ../../source/v1/feathers-hooks-common/index.rst:3211
+msgid "The predicate and hook functions will not be called with ``this`` set to the service, as is normal for hook functions. Use ``hook.service`` instead."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1301
+msgid "{% hooksApiFootnote iff %}"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1301
+msgid "<h3 id=\"iffelse\">"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1303
+msgid "iffElse( predicate, hookFuncsTrue, hookFuncsFalse )"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1307
+msgid "{% hooksApi iffElse %}"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1311
+msgid "``{Function} predicate``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1312
+msgid "``{Array< Functions >} hookFuncsTrue``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1313
+msgid "``{Array< Functions >} hookFuncsFalse``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1388
+msgid "isNot( predicate )"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1396
+#: ../../source/v1/feathers-hooks-common/index.rst:2533
+msgid "``{Function | Boolean} predicate``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1401
+msgid "``Function`` ``Boolean``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1401
+msgid "A sync or async function which take the current hook as a param and returns a boolean result."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1413
+msgid "{% hooksApiReturns isNot “The not of predicate” %}"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1428
+msgid "``isNot`` is a predicate function for use in conditional hooks."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1431
+msgid "{% hooksApiFootnote isNot %}"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1431
+msgid "<h3 id=\"isprovider\">"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1433
+msgid "isProvider( …transports )"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1437
+msgid "{% hooksApi isProvider %}"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1444
+#: ../../source/v1/feathers-hooks-common/index.rst:3561
+msgid "Name"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1446
+msgid "The transports you want to allow."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1452
+msgid "Allow calls by Socket.IO transport."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1453
+msgid "Allow calls by Primus transport."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1454
+msgid "Allow calls by REST transport."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1455
+msgid "Allow calls other than from server."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1456
+msgid "Allow calls from server."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1459
+msgid "{% hooksApiReturns isProvider “If the call was made by one of the transports.” %}"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1474
+msgid "``isProvider`` is a predicate function for use in conditional hooks. Its determines which transport provided the service call by checking ``context.params.provider``."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1481
+msgid "keep( …fieldNames )"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1489
+msgid "The keep hook will remove any fields not specified even if the service is being called from the server. You may want to condition the hook to run only for external transports, e.g. \\ ``iff(isProvider('external'), keep(...))``."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1496
+msgid "{% hooksApiFieldNames keep “The only fields you want to keep in the record(s).” %}"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1511
+#: ../../source/v1/feathers-hooks-common/index.rst:1558
+msgid "Update either ``context.data`` (before hook) or ``context.result[.data]`` (after hook). Their values are returned if they are not an object, so a ``null`` value is supported."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1516
+msgid "{% hooksApiFootnote keep %}"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1516
+#: ../../source/v1/feathers-hooks-common/index.rst:1598
+msgid "<h3 id=\"keepinarray\">"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1518
+msgid "keepInArray( arrayName, fieldNames )"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1522
+msgid "{% hooksApi keepInArray %}"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1526
+msgid "The keepInArray hook will remove any fields not specified even if the service is being called from the server. You may want to condition the hook to run only for external transports, e.g. \\ ``iff(isProvider('external'), keepInArray(...))``."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1535
+#: ../../source/v1/feathers-hooks-common/index.rst:1620
+msgid "``{String} arrayName``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1536
+#: ../../source/v1/feathers-hooks-common/index.rst:1621
+msgid "``{Array< String >} fieldNames``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1541
+#: ../../source/v1/feathers-hooks-common/index.rst:1626
+msgid "``arrayName``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1563
+msgid "{% hooksApiFootnote keepInArray %}"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1563
+msgid "<h3 id=\"keepquery\">"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1565
+msgid "keepQuery( …fieldNames )"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1569
+msgid "{% hooksApi keepQuery %}"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1573
+msgid "The keepQuery hook will remove any fields not specified even if the service is being called from the server. You may want to condition the hook to run only for external transports, e.g. \\ ``iff(isProvider('external'), keepQuery(...))``."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1580
+msgid "{% hooksApiFieldNames keepQuery “The only fields you want to keep in the query object.” %}"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1595
+msgid "Updates ``context.params.query``."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1598
+msgid "{% hooksApiFootnote keepQuery %}"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1600
+msgid "keepQueryInArray( arrayName, fieldNames )"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1604
+msgid "{% hooksApi keepQueryInArray %}"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1608
+msgid "The keepQueryInArray hook will remove any fields not specified even if the service is being called from the server. You may want to condition the hook to run only for external transports, e.g. \\ ``iff(isProvider('external'), keepQueryInArray(...))``."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1615
+msgid "{% hooksApiFieldNames keepQueryInArray “The only fields you want to keep in a nested array inside the query object.” %}"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1642
+msgid "Updates ``context.params.query``. Their values are returned if they are not an object, so a ``null`` value is supported."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1646
+msgid "{% hooksApiFootnote keepQueryInArray %}"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1646
+msgid "<h3 id=\"lowercase\">"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1648
+msgid "lowerCase( … fieldNames )"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1652
+msgid "{% hooksApi lowerCase %}"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1654
+msgid "{% hooksApiFieldNames keep “The fields in the record(s) whose values are converted to lower case.” %}"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1669
+#: ../../source/v1/feathers-hooks-common/index.rst:2367
+msgid "Update either ``context.data`` (before hook) or ``context.result[.data]`` (after hook)."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1673
+msgid "{% hooksApiFootnote lowerCase %}"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1673
+msgid "<h3 id=\"mongokeys\">"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1675
+msgid "mongoKeys(ObjectID, keys)"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1679
+msgid "{% hooksApi mongoKeys %}"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1683
+msgid "``{Function} ObjectID``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1684
+msgid "``{Array < String >} foreignKeyNames``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1689
+msgid "``ObjectID``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1689
+msgid "``require('m ongodb').Obj ectID`` or equivalent."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1695
+msgid "``foreignKey Names``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1695
+msgid "``Array < String >`` dot notation allowed"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1695
+msgid "Field names of the foreign keys."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1736
+msgid "In MongoDB, foreign keys must be wrapped in ObjectID when used in a query, e.g. \\ ``comment.find({ query: { authorId: new ObjectID('111111111111') } })``."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1740
+msgid "``mongoKeys`` automates this, given the field names of all the foreign keys in the schema. This reduces the boilerplate cluuter and reduces the chance of bugs occurring."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1747
+msgid "paramsFromClient( …whitelist )"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1755
+msgid "``{Array< String > | String} whitelist``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1760
+#: ../../source/v1/feathers-hooks-common/index.rst:4167
+msgid "``whitelist` `"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1760
+msgid "Names of the props permitted to be in ``context.pa rams``. Other props are ignored. This is a security feature."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1799
+#: ../../source/v1/feathers-hooks-common/index.rst:4211
+msgid "By default, only the ``context.params.query`` object is transferred from a Feathers client to the server, for security among other reasons. However you can explicitly transfer other ``context.params`` props with the client utility function ``paramsForServer`` in conjunction with the ``paramsFromClient`` hook on the server."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1805
+#: ../../source/v1/feathers-hooks-common/index.rst:4217
+msgid "This technique also works for service calls made on the server."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1808
+msgid "{% hooksApiFootnote paramsFromClient %}"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1808
+msgid "<h3 id=\"populate\">"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1810
+msgid "populate( options )"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1814
+msgid "{% hooksApi populate %}"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1820
+#: ../../source/v1/feathers-hooks-common/index.rst:2698
+#: ../../source/v1/feathers-hooks-common/index.rst:3302
+#: ../../source/v1/feathers-hooks-common/index.rst:3486
+msgid "``{Object} options``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1822
+#: ../../source/v1/feathers-hooks-common/index.rst:2181
+msgid "``{Object | Function} schema``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1824
+#: ../../source/v1/feathers-hooks-common/index.rst:1828
+msgid "``{String} service``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1825
+msgid "``{any} [ permissions ]``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1826
+#: ../../source/v1/feathers-hooks-common/index.rst:1839
+msgid "``{Array< Object > | Object} include``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1829
+msgid "``{String} [ nameAs ]``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1830
+msgid "``{String} [ parentField ]``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1831
+msgid "``{String} [ childField]``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1832
+msgid "``{String} [ permissions ]``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1833
+#: ../../source/v1/feathers-hooks-common/index.rst:4070
+msgid "``{Object} [ query ]``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1834
+msgid "``{Function} [ select ]``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1835
+msgid "``{Boolean} [ asArray ]``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1836
+msgid "``{Boolean | Number} [ paginate ]``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1837
+msgid "``{Boolean} [ useInnerPopulate ]``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1838
+msgid "``{undefined}} [ provider ]``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1841
+msgid "…"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1843
+msgid "``{Function} [ checkPermissions ]``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1844
+msgid "``{Boolean} [ profile ]``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1849
+#: ../../source/v1/feathers-hooks-common/index.rst:2703
+#: ../../source/v1/feathers-hooks-common/index.rst:2719
+#: ../../source/v1/feathers-hooks-common/index.rst:2732
+#: ../../source/v1/feathers-hooks-common/index.rst:3331
+#: ../../source/v1/feathers-hooks-common/index.rst:3492
+msgid "``options``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1850
+#: ../../source/v1/feathers-hooks-common/index.rst:1856
+#: ../../source/v1/feathers-hooks-common/index.rst:2193
+#: ../../source/v1/feathers-hooks-common/index.rst:3310
+msgid "``schema``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1850
+#: ../../source/v1/feathers-hooks-common/index.rst:2193
+msgid "``Object`` ``Function``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1850
+msgid "``(context, options)`` ``=> {}``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1851
+msgid "``checkPermissions``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1851
+#: ../../source/v1/feathers-hooks-common/index.rst:1862
+msgid "no permission check"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1852
+msgid "``profile``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1852
+#: ../../source/v1/feathers-hooks-common/index.rst:1865
+#: ../../source/v1/feathers-hooks-common/index.rst:1867
+#: ../../source/v1/feathers-hooks-common/index.rst:2055
+#: ../../source/v1/feathers-hooks-common/index.rst:2722
+#: ../../source/v1/feathers-hooks-common/index.rst:2723
+#: ../../source/v1/feathers-hooks-common/index.rst:2724
+#: ../../source/v1/feathers-hooks-common/index.rst:2735
+#: ../../source/v1/feathers-hooks-common/index.rst:2736
+msgid "``Boolean``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1852
+#: ../../source/v1/feathers-hooks-common/index.rst:1865
+#: ../../source/v1/feathers-hooks-common/index.rst:1866
+#: ../../source/v1/feathers-hooks-common/index.rst:1867
+#: ../../source/v1/feathers-hooks-common/index.rst:2722
+#: ../../source/v1/feathers-hooks-common/index.rst:2723
+#: ../../source/v1/feathers-hooks-common/index.rst:2735
+msgid "``false``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1858
+#: ../../source/v1/feathers-hooks-common/index.rst:1859
+msgid "``service``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1859
+msgid "``nameAs``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1860
+msgid "``parentField``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1861
+msgid "``childField``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1861
+msgid "dot notation if database supports it"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1862
+msgid "``permissions``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1862
+#: ../../source/v1/feathers-hooks-common/index.rst:3347
+#: ../../source/v1/feathers-hooks-common/index.rst:3418
+#: ../../source/v1/feathers-hooks-common/index.rst:3440
+#: ../../source/v1/feathers-hooks-common/index.rst:3939
+msgid "``any``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1864
+msgid "``select``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1864
+msgid "``(context,`` ``parentItem,`` ``depth)`` ``=> {}``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1865
+msgid "``asArray``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1866
+msgid "``paginate``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1866
+msgid "``Boolean`` ``Number``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1867
+msgid "``useInnerPopulate``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1868
+msgid "``provider``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1868
+#: ../../source/v1/feathers-hooks-common/index.rst:2426
+msgid "``undefined``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1869
+#: ../../source/v1/feathers-hooks-common/index.rst:4087
+msgid "``include``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1869
+msgid "``Array<`` ``Object >`` or ``Object``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1874
+msgid "Read the `guide <guide.html#populate>`__ for more information on the arguments."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1877
+#: ../../source/v1/feathers-hooks-common/index.rst:2739
+msgid "**Examples**"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1879
+msgid "1:1 relationship"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1906
+msgid "1:n relationship"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1933
+msgid "n:1 relationship"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:1960
+msgid "Multiple and recursive includes"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2002
+msgid "Flexible relationship, similar to the n:1 relationship example above"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2031
+msgid "We often want to combine rows from two or more tables based on a relationship between them. The ``populate`` hook will select records that have matching values in both tables."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2035
+msgid "``populate`` supports 1:1, 1:n and n:1 relationships. It can provide performance profile information."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2039
+msgid "{% hooksApiFootnote populate %}"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2039
+msgid "<h3 id=\"preventchanges\">"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2041
+msgid "preventChanges( ifThrow, …fieldNames )"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2045
+msgid "{% hooksApi preventChanges %}"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2049
+msgid "``{Boolean} ifThrow``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2050
+msgid "``{Array < String >} fieldNames``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2055
+msgid "``ifThrow``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2055
+msgid "Deletes any ``fieldNames`` if ``false``; throws if ``true``."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2056
+msgid "The fields names which may not be patched."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2071
+msgid "Consider using validateSchema if you would rather specify which fields are allowed to change."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2075
+msgid "{% hooksApiFootnote preventChanges %}"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2075
+msgid "<h3 id=\"required\">"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2077
+msgid "required(…fieldNames)"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2081
+msgid "{% hooksApi required %}"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2083
+msgid "{% hooksApiFieldNames required “These fields must exist and not be falsey. Numeric 0 is acceptable.” %}"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2097
+msgid "{% hooksApiFootnote required %}"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2097
+msgid "<h3 id=\"runparallel\">"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2099
+msgid "runParallel( hookFunc, clone [, depth ] )"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2103
+msgid "{% hooksApi runParallel %}"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2107
+#: ../../source/v1/feathers-hooks-common/index.rst:4242
+msgid "``{Function} hookFunc``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2108
+msgid "``{Function} clone``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2109
+msgid "``{Number} [ depth ]``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2112
+msgid "Descriptio n"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2115
+msgid "``hookFunc ``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2115
+msgid "The hook function to run in parallel to the rest of the service call."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2125
+msgid "Function to deep clone its only parameter."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2131
+msgid "``depth``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2131
+#: ../../source/v1/feathers-hooks-common/index.rst:3431
+#: ../../source/v1/feathers-hooks-common/index.rst:3436
+msgid "``Number``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2131
+msgid "6"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2131
+msgid "Depth to which ``context` ` is to be cloned. 0 does not clone. A depth of 5 would clone ``context. result.dat a.[].item` `."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2165
+msgid "``hookFunc`` is scheduled with a ``setTimeout``. The next hook starts immediately."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2168
+msgid "The hook was provided by bedeoverend. Thank you."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2171
+msgid "{% hooksApiFootnote runParallel %}"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2171
+msgid "<h3 id=\"serialize\">"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2173
+msgid "serialize( schema )"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2177
+msgid "{% hooksApi serialize %}"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2183
+msgid "``{Array< String> | String} only``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2184
+msgid "``{Array< String> | String} exclude``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2185
+msgid "``[fieldName]: {Object} schema``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2186
+msgid "``{Object} computed``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2188
+msgid "``[fieldName]: {Function} computeFunc``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2193
+msgid "``context`` ``=> schema``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2193
+msgid "How to serialize the items."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2197
+msgid "``schema` `"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2200
+msgid "``only``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2200
+#: ../../source/v1/feathers-hooks-common/index.rst:2221
+msgid "``Array<` ` ``String> `` or ``String` `"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2200
+msgid "The names of the fields to keep in each item. The names for included sets of items plus ``_includ e`` and ``_elapse d`` are not removed by ``only``."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2221
+msgid "``exclude ``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2221
+msgid "The names of fields to drop in each item. You may drop, at your own risk, names of included sets of items, ``_includ e`` and ``_elapse d``."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2239
+msgid "``compute d``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2239
+#: ../../source/v1/feathers-hooks-common/index.rst:3500
+#: ../../source/v1/feathers-hooks-common/index.rst:3518
+msgid "``Object` `"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2239
+msgid "The new names you want added and how to compute their values."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2250
+msgid "``schema` ` ``.comput ed``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2255
+msgid "``fieldNa me``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2255
+msgid "``String` `"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2255
+msgid "The name of the field to add to the records."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2262
+msgid "``compute Funnc``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2262
+msgid "``(record,`` ``context)`` ``=> value``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2262
+msgid "Function to calculate the computed value. ``item``: The item with all its initial values, plus all of its included items. The function can still reference values which will be later removed by only and exclude. ``context ``: The context passed to ``seriali ze``."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2301
+msgid "The schema reflects the structure of the populated records. The base records for this example have included ``post`` records, which themselves have included ``authorItem``, ``readersInfo`` and ``commentsInfo`` records."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2341
+msgid "Works with fastJoin and populate."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2344
+msgid "{% hooksApiFootnote serialize %}"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2344
+msgid "<h3 id=\"setnow\">"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2346
+msgid "setNow( …fieldNames )"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2350
+msgid "{% hooksApi setNow %}"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2352
+msgid "{% hooksApiFieldNames setNow “The fields that you want to add or set to the current date-time.” %}"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2371
+msgid "{% hooksApiFootnote setNow %}"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2371
+msgid "<h3 id=\"setslug\">"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2373
+msgid "setSlug( slug [, fieldName] )"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2377
+msgid "{% hooksApi setSlug %}"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2381
+msgid "``{String} slug``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2382
+msgid "``{String} [ fieldName ]``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2387
+msgid "``slug``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2387
+msgid "The slug as it appears in the route, e.g. \\ ``sto reId`` for\\ ``/stor es/:storeId/ candies``."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2397
+#: ../../source/v1/feathers-hooks-common/index.rst:2611
+#: ../../source/v1/feathers-hooks-common/index.rst:3037
+msgid "``fieldName` `"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2397
+msgid "``query[slug ]``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2397
+msgid "The field to contain the slug value."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2417
+msgid "A service may have a slug in its URL, e.g. \\ ``storeId`` in ``app.use(`` ``'/stores/:storeId/candies',`` ``new Service());``. The service gets slightly different values depending on the transport used by the client."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2423
+msgid "transport"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2423
+msgid "``hook.data`` ``.storeId``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2423
+msgid "``hook.params`` ``.query``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2423
+msgid "code run on client"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2426
+msgid "socketio"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2426
+msgid "``{ size: 'larg e',`` ``storeId: '123 ' }``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2426
+msgid "``candies.creat e({ name: 'Gumm i',qty: 100 },` ` ``{ query: { si ze: 'large', st oreId: '123' } })``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2435
+msgid "rest"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2435
+msgid "``:storeId``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2435
+#: ../../source/v1/feathers-hooks-common/index.rst:2435
+msgid "same as above"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2437
+msgid "raw HTTP"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2437
+msgid "``123``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2437
+msgid "``{ size: 'larg e' }``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2437
+msgid "``fetch('/store s/123/candies?s ize=large', ..` `"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2443
+msgid "This hook normalizes the difference between the transports."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2446
+msgid "{% hooksApiFootnote setSlug %}"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2446
+msgid "<h3 id=\"sifter\">"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2448
+msgid "sifter( siftFunc )"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2452
+msgid "{% hooksApi sifter %}"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2456
+msgid "``{Function} siftFunc``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2461
+msgid "``siftFunc``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2461
+msgid "Function similar to ``context =>"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2464
+msgid "sift(mongoQ"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2465
+msgid "ueryObj)``. Information about the mongoQueryOb j syntax is available at `crcn/sift < https://gith ub.com/crcn/ sift.js>`__."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2504
+msgid "All official Feathers database adapters support a common way for querying, sorting, limiting and selecting find method calls. These are limited to what is commonly supported by all the databases."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2508
+msgid "The ``sifter`` hook provides an extensive MongoDB-like selection capabilities, and it may be used to more extensively select records."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2511
+msgid "``sifter`` filters the result of a find call. Therefore more records will be physically read than needed. You can use the Feathers database adapters query to reduce this number.\\`"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2516
+msgid "{% hooksApiFootnote sifter %}"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2516
+msgid "<h3 id=\"skipremaininghooks\">"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2518
+msgid "skipRemainingHooks( predicate )"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2522
+msgid "{% hooksApi skipRemainingHooks %}"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2526
+msgid "The service call will only be skipped if ``context.result`` has been set manually."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2538
+msgid "``Function``, ``Boolean``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2538
+msgid "``content =>"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2539
+msgid "content.res"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2540
+msgid "ult``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2538
+msgid "A predicate. If true the remaining hooks are skipped. The default checks if ``context.re sult`` has been set."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2553
+msgid "Skip the remaining hooks if the record was found in the cache."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2563
+msgid "Skip all the ``after`` hooks if the service call was initiated by the server."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2574
+msgid "The remaining before hooks will be skipped is you use ``shipRemainingHooks`` as a before hook. However the after hooks will still be run."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2578
+msgid "``shipRemainingHooks`` skips the remaining hooks in the before, after or error hooks. It will skip the remaining hooks if used within the ``combine`` hook."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2583
+msgid "{% hooksApiFootnote skipRemainingHooks %}"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2583
+msgid "<h3 id=\"softdelete\">"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2585
+msgid "softDelete( fieldName )"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2591
+msgid "DEPRECATED. Use the **softDelete2** hook instead. It is a noteable improvement over softDelete."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2596
+msgid "{% hooksApi softDelete %}"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2600
+msgid "The softDelete2 hooks must be correctly positioned."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2606
+#: ../../source/v1/feathers-hooks-common/index.rst:3032
+msgid "``{String} fieldName``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2611
+msgid "``'deleted'` `"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2611
+msgid "The name of the field for the logically deleted flag."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2636
+#: ../../source/v1/feathers-hooks-common/index.rst:2823
+msgid "**Detail**"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2638
+msgid "Marks items as ``{ deleted: true }`` instead of physically removing them. This is useful when you want to discontinue use of, say, a department, but you have historical information which continues to refer to the discontinued department."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2643
+msgid "The hook performs its own preliminary ``get`` call if the original service call was not itself a ``get``. The calling params for this prelinary ``get`` are formed from the original calling context:"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2660
+msgid "The ``user`` record is read by feathers-authentication\\ ``with a``\\ get\\ ``. The``\\ softDelete\\` hook will be run for this call unless it is conditioned to ignore it. This situation raises the most issues for this hook."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2673
+msgid "The hook will not function properly if you remove the ``deleted`` flag in your hooks. It has to returned in the record."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2681
+msgid "{% hooksApiFootnote softDelete %}"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2681
+msgid "<h3 id=\"softdelete2\">"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2683
+msgid "softDelete2( options )"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2687
+msgid "{% hooksApi softDelete2 %}"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2691
+msgid "softDelete2 must be correctly positioned as both a before and an after hook. Refer to the **Details** section and the **Examples**."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2703
+#: ../../source/v1/feathers-hooks-common/index.rst:3518
+#: ../../source/v1/feathers-hooks-common/index.rst:4247
+msgid "``{}``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2703
+msgid "The options for the hook. The allowed options differ depending on whether the hook is used in before or after."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2716
+msgid "When used as a before hook:"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2721
+#: ../../source/v1/feathers-hooks-common/index.rst:2734
+msgid "``deletedAt``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2721
+#: ../../source/v1/feathers-hooks-common/index.rst:2734
+msgid "``'deletedAt'``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2722
+msgid "``keepOnCreate``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2723
+#: ../../source/v1/feathers-hooks-common/index.rst:2735
+msgid "``skipProbeOnGet``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2724
+#: ../../source/v1/feathers-hooks-common/index.rst:2736
+msgid "``allowIgnore`` ``DeletedAt``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2724
+#: ../../source/v1/feathers-hooks-common/index.rst:2736
+msgid "``true``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2725
+msgid "``probeCall``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2725
+#: ../../source/v1/feathers-hooks-common/index.rst:2726
+msgid "built-in default"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2726
+msgid "``patchCall``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2729
+msgid "When used as an after hook:"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2741
+msgid "Usage without authentication:"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2764
+msgid "Usage with authentication:"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2825
+msgid "softDelete2 makes a probing get call to check if a record is logically deleted before allowing it to be accessed or mutated. It also replaces remove calls with ones to patch ``deletedAt: Date.now()`` into the record."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2830
+msgid "Find calls, plus patch or remove calls with a ``null`` id, do not need a probing get. softDelete2 modifies their ``params.query`` to ignore logically deleted records."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2834
+msgid "**An issue with hooks**"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2836
+msgid "As mentioned, softDelete2 makes get and patch calls. You may want to use the authentication hook ``restrictToOwner``, but that makes its own version of a probing get call. Other hooks, such as ``stashBefore``, also make get calls."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2841
+msgid "A problem may arise because all such calls run the hooks associated with that call. Let’s say, for example, the hooks on your get method include ``fastJoin``. The ``restrictToOwner`` probing get call will run the ``fastJoin`` on its probing get call, degrading performance significantly. You have to find ways of explicitly disabling hooks like ``fastJoin``."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2848
+msgid "Even worse, the nested running of such hooks can create incompatibilities resulting in errors."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2851
+msgid "**How softDelete2 controls hooks**"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2853
+msgid "softDelete2 is run for every call on a service, so its careful to not run unnecessary hooks during its probing get and removal patch calls. The hooks following the before ``softDelete2()`` are skipped, as are those following the after ``softDelete2()``. *This skipping occurs only for the probing get and removal patch calls. All hooks are executed for the original call.*"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2860
+msgid "In the example below:"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2862
+msgid "The hooks21 & hooks41 hooks on get and patch are run during the probing get and removing patch."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2864
+msgid "The hooks22 & hooks42 hooks are not run during those calls."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2865
+msgid "So on an update: hooks31 (for update), hooks21 (probing get), hooks32 (for update) are run."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2867
+msgid "So on a remove: hooks51 (for remove), hooks21 (probing get), hooks41 (removal patch) are run."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2886
+msgid "**options.allowIgnoreDeletedAt**"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2888
+msgid "softDelete2 will allow access to logically deleted records if the call’s params includes ``$ignoreDeletedAt: true`` while options.allowIgnoreDeletedAt is ``true`` (the default). Be careful setting it to ``false`` as not even server calls will be able to read logically deleted records."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2894
+msgid "You can prevent just client calls from using ``$ignoreDeletedAt: true`` by not specifying ``$ignoreDeletedAt`` in the ```paramsFromClient`` <#paramsFromClient>`__ hook."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2898
+msgid "You may need to prevent other hooks from running as well. You can use code similar to"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2905
+msgid "**options.probeCall**"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2907
+msgid "The default probing get call function is"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2921
+#: ../../source/v1/feathers-hooks-common/index.rst:2959
+msgid "where ``options`` is the options provided softDelete2. Its resulting params will be:"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2933
+msgid "You can change the params produced by the default function by calling ```callingParamsDefaults`` <#callingparamsdefaults>`__. You can instead provide your own probing call function using options.probeCall."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2938
+msgid "**options.patchCall**"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2940
+msgid "The default function to perform the patch call which marks the record as deleted is"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2972
+msgid "You can change the params produced by the default function by calling ```callingParamsDefaults`` <#callingparamsdefaults>`__. You can instead provide your own probing call function using options.patchCall."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2978
+msgid "{% hooksApiFootnote softDelete2 %}"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2978
+msgid "<h3 id=\"some\">"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2980
+msgid "some( …predicates )"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:2984
+msgid "{% hooksApi some %}"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3003
+msgid "{% hooksApiReturns some “The logical or of predicates” %}"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3017
+msgid "``some`` is a predicate function for use in conditional hooks. The predicate functions are run in parallel, and ``true`` is returned if any predicate returns a truthy value."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3022
+msgid "{% hooksApiFootnote some %}"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3022
+msgid "<h3 id=\"stashbefore\">"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3024
+msgid "stashBefore( fieldName )"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3028
+msgid "{% hooksApi stashBefore %}"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3037
+msgid "``'before'``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3037
+msgid "The name of the ``context.pa rams`` property to contain the current record value."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3060
+msgid "The hook always performs its own preliminary ``get`` call. If the original service call is also a ``get``, its ``context.params`` is used for the preliminary ``get``."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3064
+msgid "For any other method the calling params are formed from the original calling context:"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3074
+msgid "{% hooksApiFootnote stashBefore %}"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3074
+msgid "<h3 id=\"traverse\">"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3076
+msgid "traverse( transformer [, getObject] )"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3080
+msgid "{% hooksApi traverse %}"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3084
+msgid "``{Function} transformer``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3085
+msgid "``{Function} [ getObject ]``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3090
+msgid "``transforme r``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3090
+msgid "Called for every node in every record(s). May change the node in place."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3098
+msgid "``getObject` `"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3098
+msgid "``context.da ta`` or ``context.re sult[.data]` `"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3098
+msgid "Function with signature ``context =>"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3102
+msgid "{}``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3103
+msgid "which returns the object to traverse."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3133
+msgid "Traverse and transform objects in place by visiting every node on a recursive walk. Any object in the hook may be traversed, including the query object."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3137
+msgid "`substack/js-traverse <https://github.com/substack/js-traverse>`__ documents the extensive methods and context available to the transformer function."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3142
+msgid "{% hooksApiFootnote traverse %}"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3142
+msgid "<h3 id=\"unless\">"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3144
+msgid "unless( predicate, …hookFuncs )"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3148
+msgid "{% hooksApi unless %}"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3153
+#: ../../source/v1/feathers-hooks-common/index.rst:3750
+msgid "``{Array< Function >} hookFuncs``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3158
+msgid "Run ``hookFunc`` if the ``predicate` ` is false. If a function, ``predicate` ` is called with the ``context`` as its param. It returns either a boolean or a Promise that evaluates to a boolean."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3179
+#: ../../source/v1/feathers-hooks-common/index.rst:3755
+msgid "``hookFuncs` `"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3208
+msgid "Resolve the predicate to a boolean. Run the hooks sequentially if the result is falsey."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3216
+msgid "{% hooksApiFootnote unless %}"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3216
+msgid "<h3 id=\"validate\">"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3218
+msgid "validate( validator )"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3222
+msgid "{% hooksApi validate %}"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3226
+msgid "``{Function} validator``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3231
+msgid "``validator``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3231
+msgid "Validation function. See Details below.."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3250
+msgid "The validation function may be sync or return a Promise. Sync functions return either an error object like ``{ fieldName1: 'message', ... }`` or ``null``. They may also throw with ``throw new errors.BadRequest({ errors: errors });``."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3255
+msgid "Promise functions should throw on an error or reject with ``new errors.BadRequest('Error message', { errors: { fieldName1: 'message', ... } });``. Their ``.then`` returns either sanitized values to replace ``context.data``, or ``null``."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3260
+msgid "The validator’s parameters are"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3262
+msgid "``{Object} formValues``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3265
+msgid "Sync functions return either an error object like ``{ fieldName1: 'message', ... }`` or ``null``. ``Validate`` will throw on an error object with ``throw new errors.BadRequest({ errors: errorObject });``."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3270
+msgid "``{Object | null} errors``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3275
+msgid "``formValues``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3275
+msgid "The data, e.g. \\ ``{ name: 'John', ... }``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3276
+#: ../../source/v1/feathers-hooks-common/index.rst:3692
+#: ../../source/v1/feathers-hooks-common/index.rst:3973
+#: ../../source/v1/feathers-hooks-common/index.rst:4021
+msgid "The hook context."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3277
+msgid "``errors``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3277
+msgid "``Object`` ``null``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3277
+msgid "An error object like ``{ fieldName1: 'message', ... }``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3282
+msgid "If you have a different signature for the validator then pass a wrapper as the validator e.g. \\ ``values => myValidator(..., values, ...)``."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3286
+msgid "Wrap your validator in Node’s ``util.promisify`` if it uses a callback."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3290
+msgid "{% hooksApiFootnote validate %}"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3290
+msgid "<h3 id=\"validateschema\">"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3292
+msgid "validateSchema( schema, ajv [, options] )"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3296
+msgid "{% hooksApi validateSchema %}"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3300
+msgid "``{Object} schema``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3301
+msgid "``{Function | Object} ajv``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3304
+msgid "``{Function} [ addNewError ]``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3305
+msgid "``...``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3310
+msgid "The `JSON-schema . <https://c ode.tutsplus .com/tutoria ls/validatin g-data-with- json-schema- part-1--cms- 25343>`__"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3321
+msgid "``ajv``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3321
+msgid "``Function`` ``Object``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3321
+msgid "The ajv validator. Could be either the Ajv constructor or an instance of it."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3331
+msgid "Options for ``validateSc hema`` and ``ajv``."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3341
+msgid "``addNewE rror``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3341
+msgid "see below"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3341
+msgid "Custom error message formatter ."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3347
+msgid "other"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3347
+msgid "Any ``ajv`` options. Only effective when the second parameter is the ``Ajv`` construct or."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3386
+msgid "There are some good `tutorials <https://code.tutsplus.com/tutorials/validating-data-with-json-schema-part-1--cms-25343>`__ on using JSON-Schema with `Ajv <https://github.com/epoberezkin/ajv>`__."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3391
+msgid "If you need to customize ``Ajv`` with new keywords, formats or schemas, then instead of passing the ``Ajv`` constructor, you may pass in an instance of ``Ajv`` as the second parameter. In this case you need to pass ``Ajv`` options to the ``Ajv`` instance when ``new``\\ ing, rather than passing them in the third parameter of ``validateSchema``. See the examples."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3398
+msgid "**options.addNewError**"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3400
+msgid "The hook will throw if the data does not match the JSON-Schema. ``error.errors`` will, by default, contain an array of error messages. You may change this with a custom formatting function. Its a reducing function which works similarly to ``Array.reduce()``. Its parameters are"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3406
+msgid "``{any} currentFormattedMessages``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3407
+msgid "``{Object} ajvErrorObject``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3408
+msgid "``{Number} itemsLen``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3409
+msgid "``{Number} index``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3413
+msgid "``{any} newFormattedMessages``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3418
+msgid "``currentFor mattedMessag es``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3418
+msgid "initially ``null``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3418
+msgid "Formatted messages so far. Initially null."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3424
+msgid "``ajvErrorOb ject``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3424
+msgid "`ajv error object <http s://github.c om/epoberezk in/ajv#error -objects>`__"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3431
+msgid "``itemsLen``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3431
+msgid "How many data items there are. 1-based."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3436
+msgid "Which item this is. 0-based."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3440
+msgid "``newFormatt edMessages``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3440
+msgid "The function returns the updated formatted messages."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3447
+msgid "``error.errors`` will, by default, contain an array of error messages. By default the message will look like ``js   [ \"'in row 1 of 3, first' should match format \\\"startWithJo\\\"\",     \"in row 1 of 3, should have required property 'last'\",     \"'in row 2 of 3, first' should match format \\\"startWithJo\\\"\",     \"in row 3 of 3, should have required property 'last'\" ]``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3451
+msgid "You could, for example, return ``{ name1: message, name2: message }`` which might be more suitable for a UI."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3454
+msgid "**Internationalization of Messages**"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3456
+msgid "You can consider using `ajv-i18n <https://github.com/epoberezkin/ajv-i18n>`__, together with ajv’s ``messages`` option, to internationalize your error messages."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3460
+msgid "You can also consider copying ``addNewErrorDflt``, the default error message formatter, modifying it for your needs, and using that as ``newFormattedMessages``."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3465
+msgid "{% hooksApiFootnote validateSchema %}"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3465
+msgid "<h3 id=\"when\">"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3467
+msgid "when( predicate, …hookFuncs )"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3471
+msgid "An alias for `iff <#iff>`__."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3473
+msgid "{% hooksApiFootnote when %} Utilities ---------"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3476
+msgid "<h3 id=\"callingparams\">"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3478
+msgid "callingParams(options)(context)"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3482
+msgid "{% hooksApi callingParams %}"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3492
+msgid "How to construct params for service call."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3493
+msgid "The ``context`` of the hook which will make the service call."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3500
+msgid "The ``params. query`` for the calling params."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3507
+msgid "``propNam es``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3507
+#: ../../source/v1/feathers-hooks-common/index.rst:3525
+msgid "``Array< String >` `"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3507
+#: ../../source/v1/feathers-hooks-common/index.rst:3525
+msgid "``[]``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3507
+msgid "The names of the props in ``context .params`` to include in the new params."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3518
+msgid "``newProp s``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3518
+msgid "Additiona l props to add to the new params."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3525
+msgid "``hooksTo Disable``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3525
+msgid "The names of hooks to disable during the service call. ``populat e``, ``fastJoi n``, ``softDel ete`` and ``stashBe fore`` are supported ."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3546
+msgid "``ignoreD efaults``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3546
+msgid "``Boolean ``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3546
+msgid "Ignore the defaults ``propNam es`` and ``newProp s``."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3558
+msgid "``{Object} newParams``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3563
+msgid "``newParams``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3563
+msgid "The params for the service call."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3587
+#: ../../source/v1/feathers-hooks-common/index.rst:3658
+msgid "When calling another service within a hook, `consideration must be given <https://auk.docs.feathersjs.com/guides/step-by-step/basic-feathers/writing-hooks.html#calling-a-service>`__ to what the ``params`` should be for the called service. For example, should the called service see that a client is making the call, or the server? What authentication and authorization information should be provided? You can use this convenience function to help create that ``params``."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3595
+#: ../../source/v1/feathers-hooks-common/index.rst:3666
+msgid "The properties ``provider``, ``authenticated`` and ``user`` are the standard authentication properties used by Feathers. They are copied automatically."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3599
+#: ../../source/v1/feathers-hooks-common/index.rst:3670
+msgid "These defaults and others can be changed app-wide by calling the ``callingParamsDefaults`` utility."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3603
+msgid "{% hooksApiFootnote callingParams %}"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3603
+msgid "<h3 id=\"callingparamsdefaults\">"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3605
+msgid "callingParamsDefaults(propNames, newProps)"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3609
+msgid "{% hooksApi callingParamsDefaults %}"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3613
+msgid "``{Array< String >} propNames``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3614
+msgid "``{Object} newProps``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3619
+msgid "``propNames` `"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3619
+msgid "The names of the props in ``context.pa rams`` to automaticall y include in the new params."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3630
+msgid "``newProps``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3630
+msgid "Additional props to add to the new params."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3674
+msgid "{% hooksApiFootnote callingParamsDefaults %}"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3674
+msgid "<h3 id=\"checkcontext\">"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3676
+msgid "checkContext( context [, type ] [, methods ] [, label ] )"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3680
+msgid "{% hooksApi checkContext %}"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3685
+msgid "``{String} [ type ]``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3686
+msgid "``{Array< String >} [ methods ]``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3687
+msgid "``{String} [ label ]``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3695
+msgid "``type``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3695
+msgid "all types"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3695
+msgid "The service type allowed - before, after."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3700
+msgid "``methods``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3700
+msgid "all methods"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3700
+msgid "The service methods allowed - find, get, update, patch, remove."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3708
+msgid "``'anonymous '``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3708
+msgid "Name of hook to use with ``throw``."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3735
+msgid "Its important to ensure the hook is being used as intended. ``checkContext`` let’s you restrict the hook to a hook type and a set of service methods."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3740
+msgid "{% hooksApiFootnote checkContext %}"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3740
+msgid "<h3 id=\"combine\">"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3742
+msgid "combine( …hookFuncs )"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3746
+msgid "{% hooksApi combine %}"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3755
+msgid "``Array<Function >``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3755
+msgid "Hooks, used the same way as when you register them."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3775
+msgid "``combine`` has the signature of a hook, but is primarily intended to be used within your custom hooks, not when registering hooks."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3778
+msgid "The following is a better technique to use when registering hooks."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3790
+msgid "{% hooksApiFootnote combine %}"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3790
+msgid "<h3 id=\"deletebydot\">"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3792
+msgid "deleteByDot( obj, path )"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3796
+msgid "{% hooksApi deleteByDot %}"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3800
+#: ../../source/v1/feathers-hooks-common/index.rst:3842
+#: ../../source/v1/feathers-hooks-common/index.rst:3887
+#: ../../source/v1/feathers-hooks-common/index.rst:3930
+msgid "``{Object} obj``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3801
+#: ../../source/v1/feathers-hooks-common/index.rst:3843
+#: ../../source/v1/feathers-hooks-common/index.rst:3888
+#: ../../source/v1/feathers-hooks-common/index.rst:3931
+msgid "``{String} path``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3806
+#: ../../source/v1/feathers-hooks-common/index.rst:3848
+#: ../../source/v1/feathers-hooks-common/index.rst:3893
+#: ../../source/v1/feathers-hooks-common/index.rst:3937
+msgid "``obj``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3806
+#: ../../source/v1/feathers-hooks-common/index.rst:3848
+#: ../../source/v1/feathers-hooks-common/index.rst:3893
+#: ../../source/v1/feathers-hooks-common/index.rst:3937
+msgid "The object."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3807
+#: ../../source/v1/feathers-hooks-common/index.rst:3849
+#: ../../source/v1/feathers-hooks-common/index.rst:3894
+#: ../../source/v1/feathers-hooks-common/index.rst:3938
+msgid "``path``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3807
+#: ../../source/v1/feathers-hooks-common/index.rst:3849
+#: ../../source/v1/feathers-hooks-common/index.rst:3894
+#: ../../source/v1/feathers-hooks-common/index.rst:3938
+msgid "The path to the property, e.g. \\ ``address.city``."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3826
+#: ../../source/v1/feathers-hooks-common/index.rst:0
+msgid "You can use ``phones.home.0.main`` to handle arrays."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3828
+msgid "If you delete an array element, e.g. \\ ``phones.home.1``, that element will be removed from the array."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3832
+msgid "{% hooksApiFootnote deleteByDot %}"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3832
+msgid "<h3 id=\"existsbydot\">"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3834
+msgid "existsByDot( obj, path )"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3838
+msgid "{% hooksApi existsByDot %}"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3852
+msgid "{% hooksApiReturns getItems “If a property exists at path.” %}"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:0
+msgid "Properties with a value of ``undefined`` are considered to exist."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3877
+msgid "{% hooksApiFootnote existsByDot %}"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3877
+msgid "<h3 id=\"getbydot\">"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3879
+msgid "getByDot( obj, path )"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3883
+msgid "{% hooksApi getByDot %}"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3897
+msgid "{% hooksApiReturns getItems “The property value.” “result” “any” %}"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3916
+msgid "``getByDot`` does not differentiate between non-existent paths and a value of ``undefined``."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3920
+msgid "{% hooksApiFootnote getByDot %}"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3920
+msgid "<h3 id=\"setbydot\">"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3922
+msgid "setByDot( obj, path, value )"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3926
+msgid "{% hooksApi setByDot %}"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3932
+msgid "``{any} value``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3939
+msgid "``value``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3939
+msgid "The value to set the property to."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3958
+msgid "{% hooksApiFootnote setByDot %}"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3958
+msgid "<h3 id=\"getitems\">"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3960
+msgid "getItems( context )"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3964
+msgid "{% hooksApi getItems %}"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:3976
+msgid "{% hooksApiReturns getItems “The records.”, ‘records’, ‘Array< Object > \\| Object \\| undefined’ %}"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:4001
+msgid "``getItems`` gets the records from the hook context: ``context.data`` (before hook) or ``context.result[.data]`` (after hook)."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:4005
+msgid "{% hooksApiFootnote getItems %}"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:4005
+msgid "<h3 id=\"replaceitems\">"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:4007
+msgid "replaceItems( context, records )"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:4011
+msgid "{% hooksApi replaceItems %}"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:4016
+msgid "``{Array< Object > | Object} records``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:4022
+msgid "``records``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:4022
+msgid "``Array< Object >`` ``Object``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:4022
+msgid "The new records."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:4047
+msgid "``replaceItems`` replaces the records in the hook context: ``context.data`` (before hook) or ``context.result[.data]`` (after hook)."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:4052
+msgid "{% hooksApiFootnote replaceItems %}"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:4052
+msgid "<h3 id=\"makecallingparams\">"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:4054
+msgid "makeCallingParams( context, query, include, inject )"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:4058
+msgid "{% hooksApi makeCallingParams %}"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:4062
+msgid "You should prefer using the ``callingParams`` utility to ``makeCallingParams``."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:4071
+msgid "``{Array< String > | String} [ include ]``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:4072
+msgid "``{Object} [ inject ]``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:4077
+msgid "The existing hook context."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:4081
+msgid "The ``context.pa rams.query`` for the new context."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:4087
+msgid "The names of the props in ``context`` to include in the new context."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:4094
+msgid "``inject``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:4094
+msgid "Additional props to add to the new context."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:4102
+msgid "``{Object} newContext``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:4105
+msgid "Variable"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:4107
+msgid "``newContext``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:4107
+msgid "The new context created."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:4127
+msgid "When calling another service within a hook, `consideration must be given <https://auk.feathersjs.com/guides/step-by-step/basic-feathers/writing-hooks.html#calling-a-service>`__ to what the ``context.params`` should be for the called service. For example, should the called service see that a client is making the call, or the server? What authentication and authorization information should be provided? You can use this convenience function to help create that ``context.params``."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:4135
+msgid "The value ``context.params._populate: 'skip'`` is automatically added to skip any ``fastJoin`` or ``populate`` hooks registered on the called service. Set it to ``false``, like in the example above, to make those hooks run."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:4141
+msgid "{% hooksApiFootnote makeCallingParams %}"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:4141
+msgid "<h3 id=\"paramsforserver\">"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:4143
+msgid "paramsForServer( params [, … whitelist] )"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:4147
+msgid "{% hooksApi paramsForServer %}"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:4151
+msgid "``{Object} params``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:4152
+msgid "``{Array< String >} [ whitelist ]``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:4157
+msgid "``params``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:4157
+msgid "The ``context.pa rams`` to use for the service call, including any query object."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:4167
+msgid "all props in ``context.pa rams``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:4167
+msgid "Names of the props in ``context.pa rams`` to transfer to the server. This is a security feature. All props are transferred if no ``whitelist` ` is provided."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:4223
+msgid "The data is transfered using ``context.params.query.$client``. If that field already exists, it must be an Object."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:4231
+msgid "{% hooksApiFootnote paramsForServer %}"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:4231
+msgid "<h3 id=\"runhook\">"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:4233
+msgid "runHook( [ hookContext ] )( hookFunc )"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:4237
+msgid "{% hooksApi runHook %}"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:4241
+msgid "``{Object} [ hookContext ]``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:4247
+msgid "``hookContext``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:4247
+msgid "The ``context`` for ``hookFunc``."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:4248
+msgid "``hookFunc``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:4248
+msgid "The hook to run."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:4308
+msgid "\\*\\* Details*\\*"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:4310
+msgid "Hooks are normally registered for a service, e.g. in ``project/src/services`` ``/posts/posts.hooks.js``. This is nice and simple when, for example, all the ``find`` hooks have to run for every ``find`` call."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:4315
+msgid "The `conditional hooks <#tag-Conditionals>`__ can be used when hooks have to be conditionally run based on the current environment. For example, we can discard the ``password`` field when the call is made by a client."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:4320
+msgid "However things are not always so straightforward. There can be that one call for which we want to join specific records. We could add a conditional hook that runs just for that one call, however we may soon find ourselves with a second and a third special case."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:4325
+msgid "``runHook`` is designed for such cases. Instead of having to register a conditioned hook, it allows us to run the hook in a ``.then()`` right after the service call."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:4329
+msgid "{% hooksApiFootnote runHook %}   <h3 id=\"???\">"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:4331
+msgid "???"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:4335
+msgid "{% hooksApi ??? %}"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:4339
+msgid "``???``"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:4359
+msgid "{% hooksApiFootnote ??? %} F.A.Q. ------"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:4362
+msgid "<h3 id=\"coerce\">"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:4364
+msgid "Coerce data types"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:4368
+msgid "A common need is converting fields coming in from query params. These fields are provided as string values by default and you may need them as numbers, booleans, etc."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:4372
+msgid "The ```validateSchema`` <#validateSchema>`__ does a wide selection of `type coercions <https://github.com/epoberezkin/ajv/blob/master/COERCION.md>`__, as well as checking for missing and unexpected fields. New Features in Buzzard -----------------------"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:4379
+msgid "Features added since the initial Buzzard release are listed in the `What’s New section <#whats-new>`__."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:4382
+msgid "These features are new in the Buzzard version."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:4384
+msgid "The docs `have been rewritten. <https://feathers-plus.github.io/v1/feathers-hooks-common>`__"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:4387
+msgid "You can now find hooks using `tags. <#Find-Hooks-using-Tags>`__ Each Feathers hook and utility function is listed under all the tags relevant to it."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:4391
+msgid "The new ``fastJoin`` hook is a much faster, more flexible alternative to ``populate``."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:4394
+msgid "It makes only about 10% of the service calls, i.e. it makes *2* calls when ``populate`` would make *20*."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:4396
+msgid "It operates on record formats which ``populate`` can’t process."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:4397
+msgid "It provides any Feathers service with GraphQL-light capabilities. (The new ``@feathers-plus/graphql`` service adapter provides similar performance with full GraphQL compatibility.)"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:4401
+msgid "The new ``runHook`` utility may help simplify your registered hooks. It let’s you call a hook with ``service.get(...).then(runHook()(populate(...)));``."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:4405
+msgid "Other new hooks and utility functions."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:4407
+msgid "``alterItems`` - Flexibly mutate data and results. Powerful."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:4408
+msgid "``cache`` - Persistent, least-recently-used record cache for services."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:4410
+msgid "``disablePagination`` - Disables pagination when ``query.$limit`` is -1 or ‘-1’."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:4412
+msgid "``discardQuery``, ``keep``, ``keepQuery`` - See Migration below."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:4413
+msgid "``makeCallingParams`` utility - Help construct ``context.params`` when calling services within hooks."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:4415
+msgid "``required`` - Check selected fields exist and are not falsey. Numeric 0 is acceptable."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:4417
+msgid "``runParallel`` - Run a hook in parallel to the other hooks and the service call."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:4420
+msgid "Enhancements to existing hooks."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:4422
+msgid "``debug`` now displays ``context.params`` property names and displays the values of selected ones."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:4424
+msgid "``preventChanges`` can now optionally remove unacceptable changes instead of throwing."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:4427
+msgid "Migrating from Auk to Buzzard"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:4429
+msgid "These changes may affect your projects when you switch from this repo’s last Feathers *Auk* version (v3.10.0) to its first Feathers *Buzzard* version (v4.0.0)."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:4433
+msgid "These hooks are deprecated and will be removed in the next FeathersJS version *Crow*."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:4436
+msgid "Deprecated ``pluck`` in favor of ``keep``, e.g. \\ ``iff(isProvider('external'),`` ``keep(...fieldNames))``. This deprecates the last hook with unexpected internal “magic”. **Be careful!**"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:4440
+msgid "Deprecated ``pluckQuery`` in favor of ``keepQuery`` for naming consistency."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:4442
+msgid "Deprecated ``removeQuery`` in favor of ``discardQuery`` for naming consistency."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:4444
+msgid "Deprecated ``client`` in favor of ``paramsFromClient`` for naming consistency."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:4446
+msgid "Deprecated ``createdAt`` and ``updatedAt`` in favor of ``setNow``."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:4447
+msgid "Deprecated ``callbackToPromise`` in favor of Node’s ``require('util').promisify``."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:4449
+msgid "Deprecated ``promiseToCallback`` as there’s probably no need for it anymore."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:4452
+msgid "Removed hooks previously deprecated in *Auk*.:"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:4454
+msgid "Removed support for the deprecated legacy syntax in ``populate``."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:4455
+msgid "Removed ``remove``."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:4457
+msgid "The license now includes a clause which prevents the repo from being published on npm under another name. That is its only purpose; you can otherwise continue using the repo just as you have in the past. <h2 id=\"whats-new\">"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:4462
+msgid "What’s New"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:4464
+msgid "</h2>"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:4466
+msgid "The details are at Changelog."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:4469
+msgid "February 2018"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:4471
+msgid "Buzzard version published as **npm** as v4.x.x."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:4472
+msgid "``alterItems`` may now optionally return the items rather than modifying them in place."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:4474
+msgid "``disableMultiItemCreate`` introduced. It prevents a service from creating multiple records in one service call."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:4476
+msgid "``mongoKeys`` introduced for MongoDB services. Its wraps foreign keys found in ``query`` in ObjectID."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:4480
+msgid "March 2018"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:4482
+msgid "Documented how to `make any hook parameter dynamic <guide.html#Making-Hook-Params-Dynamic>`__."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:4484
+msgid "``skipRemainingHooks`` introduced. It conditionally skips running all remaining hooks."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:4486
+msgid "``actOnDispatch(...hooks)`` and ``actOnDefault(...hooks)``. You can use them to run most common hooks, and any hooks using ``getItems`` and ``replaceItems`` so they mutate ``context.dispatch`` rather than ``context.data`` or ``context.result``."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:4490
+msgid "``mongoKeys`` can now be used with any type of service call, not just ``find``."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:4494
+msgid "June 2018"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:4496
+msgid "``discard`` and ``keep`` support records which are ``null``."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:4497
+msgid "A new, more convenient signature for async functions has been introduced for ``alterItems``."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:4499
+msgid "``callingParams`` and ``callingParamsDefaults`` utility functions added. ``callingParams`` should now be used rather than ``makeCallingParams``."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:4504
+msgid "July 2018"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:4506
+msgid "``softDelete2`` is a notable improvement over ``softDelete``. It cooperates well with authentication and the ``restrictToOwner`` hook. Custom functions are supported for its probing get and removal patch calls. Hooks defined on these call methods will, by default,not be executed to eliminate interactions."
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:4513
+msgid "Auguset 2018"
+msgstr ""
+
+#: ../../source/v1/feathers-hooks-common/index.rst:4515
+msgid "``keepInArray`` For an array of objects, keeps selected field in each object. Contributed by Dekel Barzilay (dekelev)."
+msgstr ""
+

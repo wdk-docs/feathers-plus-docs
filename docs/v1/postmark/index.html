@@ -1,0 +1,236 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>postmark Usage &mdash; feathers-plus docs v2019.06.26 文档</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="搜索" href="../../search.html" />
+    <link rel="next" title="feathers-vuex" href="../feathers-vuex/index.html" />
+    <link rel="prev" title="graphql Usage" href="../graphql/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../contents.html" class="icon icon-home"> feathers-plus docs
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">v1</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../index.html#extend-feathersjs">扩展FeathersJS</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html#service-adapters">服务适配器</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../mongoose-advanced/index.html">mongoose-advanced Usage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../mongoose-advanced/guide.html">mongoose-advanced guide</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../graphql/index.html">graphql Usage</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">postmark Usage</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#framework-integration">框架集成</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../whats-new/index.html">whats new</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../contents.html">feathers-plus docs</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../contents.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">v1</a> &raquo;</li>
+        
+      <li>postmark Usage</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/v1/postmark/index.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="postmark-usage">
+<h1>postmark Usage<a class="headerlink" href="#postmark-usage" title="永久链接至标题">¶</a></h1>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>npm install --save @feathers-plus/batch-loader
+</pre></div>
+</div>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="kr">const</span> <span class="nx">BatchLoader</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;@feathers-plus/batch-loader&#39;</span><span class="p">);</span>
+<span class="kr">const</span> <span class="p">{</span> <span class="nx">getResultsByKey</span><span class="p">,</span> <span class="nx">getUniqueKeys</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">BatchLoader</span><span class="p">;</span>
+
+<span class="kr">const</span> <span class="nx">usersLoader</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">BatchLoader</span><span class="p">(</span><span class="nx">async</span> <span class="p">(</span><span class="nx">keys</span><span class="p">,</span> <span class="nx">context</span><span class="p">)</span> <span class="p">=&gt;</span>
+    <span class="kr">const</span> <span class="nx">usersRecords</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">users</span><span class="p">.</span><span class="nx">find</span><span class="p">({</span> <span class="nx">query</span><span class="o">:</span> <span class="p">{</span> <span class="nx">id</span><span class="o">:</span> <span class="p">{</span> <span class="nx">$in</span><span class="o">:</span> <span class="nx">getUniqueKeys</span><span class="p">(</span><span class="nx">keys</span><span class="p">)</span> <span class="p">}</span> <span class="p">}</span> <span class="p">});</span>
+    <span class="k">return</span> <span class="nx">getResultsByKey</span><span class="p">(</span><span class="nx">keys</span><span class="p">,</span> <span class="nx">usersRecords</span><span class="p">,</span> <span class="nx">user</span> <span class="p">=&gt;</span> <span class="nx">user</span><span class="p">.</span><span class="nx">id</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>
+  <span class="p">),</span>
+  <span class="p">{</span> <span class="nx">context</span><span class="o">:</span> <span class="p">{}</span> <span class="p">}</span>
+<span class="p">);</span>
+
+<span class="kr">const</span> <span class="nx">user</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">usersLoader</span><span class="p">.</span><span class="nx">load</span><span class="p">(</span><span class="nx">key</span><span class="p">);</span>
+</pre></div>
+</div>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="kr">class</span> <span class="nx">BatchLoader</span><span class="p">(</span> <span class="nx">batchLoadFunc</span> <span class="p">[,</span> <span class="nx">options</span><span class="p">]</span> <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../feathers-vuex/index.html" class="btn btn-neutral float-right" title="feathers-vuex" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../graphql/index.html" class="btn btn-neutral float-left" title="graphql Usage" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, BandCap
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

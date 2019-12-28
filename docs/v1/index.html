@@ -1,0 +1,290 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>v1 &mdash; feathers-plus docs v2019.06.26 文档</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="next" title="feathers-hooks-common Usage" href="feathers-hooks-common/index.html" />
+    <link rel="prev" title="Feathers-Plus(桥接FeathersJS和现实世界的应用程序)" href="../index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../contents.html" class="icon icon-home"> feathers-plus docs
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Feathers-Plus(桥接FeathersJS和现实世界的应用程序)</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">v1</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#extend-feathersjs">扩展FeathersJS</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="feathers-hooks-common/index.html">feathers-hooks-common Usage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="feathers-hooks-common/guide.html">feathers hooks common guide</a></li>
+<li class="toctree-l3"><a class="reference internal" href="batch-loader/index.html">batch-loader Usage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="batch-loader/guide.html">batch-loader guide</a></li>
+<li class="toctree-l3"><a class="reference internal" href="batch-loader/common-patterns.html">batch-loader common patterns</a></li>
+<li class="toctree-l3"><a class="reference internal" href="authentication-management/index.html">authentication-management Usage</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#service-adapters">服务适配器</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="mongoose-advanced/index.html">mongoose-advanced Usage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mongoose-advanced/guide.html">mongoose-advanced guide</a></li>
+<li class="toctree-l3"><a class="reference internal" href="graphql/index.html">graphql Usage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="postmark/index.html">postmark Usage</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#framework-integration">框架集成</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="feathers-vuex/index.html">feathers-vuex</a></li>
+<li class="toctree-l3"><a class="reference internal" href="redux/index.html">redux Usage</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../whats-new/index.html">whats new</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../contents.html">feathers-plus docs</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../contents.html">Docs</a> &raquo;</li>
+        
+      <li>v1</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/v1/index.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="v1">
+<h1>v1<a class="headerlink" href="#v1" title="永久链接至标题">¶</a></h1>
+<div class="section" id="extend-feathersjs">
+<h2>扩展FeathersJS<a class="headerlink" href="#extend-feathersjs" title="永久链接至标题">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="feathers-hooks-common/index.html">feathers-hooks-common Usage</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="feathers-hooks-common/index.html#find-hooks-using-tags">Find Hooks using Tags</a></li>
+<li class="toctree-l2"><a class="reference internal" href="feathers-hooks-common/index.html#migrating-from-auk-to-buzzard">Migrating from Auk to Buzzard</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="feathers-hooks-common/guide.html">feathers hooks common guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="feathers-hooks-common/guide.html#making-hook-params-dynamic">Making Hook Params Dynamic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="feathers-hooks-common/guide.html#fastjoin">fastJoin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="feathers-hooks-common/guide.html#populate">Populate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="feathers-hooks-common/guide.html#validate">Validate</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="batch-loader/index.html">batch-loader Usage</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="batch-loader/index.html#feb-2018">Feb. 2018</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="batch-loader/guide.html">batch-loader guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="batch-loader/guide.html#batching">Batching</a></li>
+<li class="toctree-l2"><a class="reference internal" href="batch-loader/guide.html#caching">Caching</a></li>
+<li class="toctree-l2"><a class="reference internal" href="batch-loader/guide.html#explore-performance-gains">Explore Performance Gains</a></li>
+<li class="toctree-l2"><a class="reference internal" href="batch-loader/guide.html#see-also">See also</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="batch-loader/common-patterns.html">batch-loader common patterns</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="batch-loader/common-patterns.html#creating-a-new-batch-loader-per-request">Creating a new batch-loader per Request.</a></li>
+<li class="toctree-l2"><a class="reference internal" href="batch-loader/common-patterns.html#loading-by-alternative-keys">Loading by alternative keys.</a></li>
+<li class="toctree-l2"><a class="reference internal" href="batch-loader/common-patterns.html#persistent-caches">Persistent caches</a></li>
+<li class="toctree-l2"><a class="reference internal" href="batch-loader/common-patterns.html#using-non-feathers-services">Using non-Feathers services</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="authentication-management/index.html">authentication-management Usage</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="service-adapters">
+<h2>服务适配器<a class="headerlink" href="#service-adapters" title="永久链接至标题">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="mongoose-advanced/index.html">mongoose-advanced Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mongoose-advanced/guide.html">mongoose-advanced guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mongoose-advanced/guide.html#bulk-creates">Bulk Creates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mongoose-advanced/guide.html#errors">Errors</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="graphql/index.html">graphql Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="postmark/index.html">postmark Usage</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="framework-integration">
+<h2>框架集成<a class="headerlink" href="#framework-integration" title="永久链接至标题">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="feathers-vuex/index.html">feathers-vuex</a></li>
+<li class="toctree-l1"><a class="reference internal" href="redux/index.html">redux Usage</a></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="feathers-hooks-common/index.html" class="btn btn-neutral float-right" title="feathers-hooks-common Usage" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../index.html" class="btn btn-neutral float-left" title="Feathers-Plus(桥接FeathersJS和现实世界的应用程序)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, BandCap
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

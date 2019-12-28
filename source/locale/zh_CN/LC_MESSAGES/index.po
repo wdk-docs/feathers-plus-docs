@@ -1,0 +1,84 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, BandCap
+# This file is distributed under the same license as the feathers-plus docs
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: feathers-plus docs \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-06-26 16:23+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../source/index.rst:3
+msgid "Feathers-Plus(Bridging FeathersJS and real world apps)"
+msgstr "Feathers-Plus(桥接FeathersJS和现实世界的应用程序)"
+
+#: ../../source/index.rst:5
+msgid "Extensions  Adapters  Frameworks"
+msgstr "扩展适配器框架"
+
+#: ../../source/index.rst:7
+msgid "What's New"
+msgstr ""
+
+#: ../../source/index.rst:9
+msgid "GitHub"
+msgstr ""
+
+#: ../../source/index.rst:12
+msgid "Extend FeathersJS"
+msgstr "扩展FeathersJS"
+
+#: ../../source/index.rst:14
+msgid "feathers-hooks-common contains the FeathersJS common hooks."
+msgstr ""
+
+#: ../../source/index.rst:16
+msgid "batch-loader transparently reduces the number of database calls."
+msgstr ""
+
+#: ../../source/index.rst:18
+msgid "authentication-management sign up verification, password reset, etc."
+msgstr ""
+
+#: ../../source/index.rst:20
+msgid "offline-* offline-first, realtime synchronization."
+msgstr ""
+
+#: ../../source/index.rst:24
+msgid "Service Adapters"
+msgstr ""
+
+#: ../../source/index.rst:26
+msgid "mongoose-advanced full access to Mongoose schema features."
+msgstr ""
+
+#: ../../source/index.rst:28
+msgid "graphql, the GraphQL service for SQL and non-SQL databases."
+msgstr ""
+
+#: ../../source/index.rst:30
+msgid "postmark for Postmark."
+msgstr ""
+
+#: ../../source/index.rst:34
+msgid "Framework Integration"
+msgstr ""
+
+#: ../../source/index.rst:36
+msgid "feathers-vuex for Vue/Vuex."
+msgstr ""
+
+#: ../../source/index.rst:38
+msgid "redux for React/Redux."
+msgstr ""
+

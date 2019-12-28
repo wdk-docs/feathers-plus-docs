@@ -1,0 +1,86 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, BandCap
+# This file is distributed under the same license as the feathers-plus docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: feathers-plus docs \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-06-26 14:06+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/whats-new/index.rst:2
+msgid "whats new"
+msgstr ""
+
+#: ../../source/whats-new/index.rst:5
+msgid "Nov. 2017"
+msgstr ""
+
+#: ../../source/whats-new/index.rst:8
+msgid "batch-loader"
+msgstr ""
+
+#: ../../source/whats-new/index.rst:10
+msgid "Released."
+msgstr ""
+
+#: ../../source/whats-new/index.rst:13
+msgid "feathers-hooks-common"
+msgstr ""
+
+#: ../../source/whats-new/index.rst:19
+msgid "Use feathers-hooks-common v3.10.0 with FeathersJS v3 (Auk). Use feathers-hooks-common v4.x.x with FeathersJS v4 (Buzzard)."
+msgstr ""
+
+#: ../../source/whats-new/index.rst:26
+msgid "Docs moved to `Feathers-Plus web site. <https://feathers-plus.github.io/v1/feathers-hooks-common/guide.html>`__"
+msgstr ""
+
+#: ../../source/whats-new/index.rst:28
+msgid "v4.x.x now supports FeathersJS v3 (Buzzard). Continue using v3.10.0 for FeathersJS v2 (Auk)."
+msgstr ""
+
+#: ../../source/whats-new/index.rst:31
+msgid "Removed:"
+msgstr ""
+
+#: ../../source/whats-new/index.rst:33
+msgid "Removed support for the deprecated legacy syntax in ``populate``."
+msgstr ""
+
+#: ../../source/whats-new/index.rst:35
+msgid "Removed the deprecated ``remove`` hook."
+msgstr ""
+
+#: ../../source/whats-new/index.rst:37
+msgid "Deprecated. These will be removed in FeathersJS v3 (Crow)."
+msgstr ""
+
+#: ../../source/whats-new/index.rst:39
+msgid "Deprecated ``pluck`` in favor of ``iff(isProvider('external'),`` ``keep(...fieldNames))``. **Be careful!**"
+msgstr ""
+
+#: ../../source/whats-new/index.rst:42
+msgid "Deprecated the ``client`` in favor of the ``paramsFromClient``."
+msgstr ""
+
+#: ../../source/whats-new/index.rst:44
+msgid "Added modules. They work with both FeathersJS v2 and v3."
+msgstr ""
+
+#: ../../source/whats-new/index.rst:46
+msgid "``fastJoin`` hook - Very fast alternative to ``populate``."
+msgstr ""
+
+#: ../../source/whats-new/index.rst:47
+msgid "``makeCallingParams`` utility - Help construct ``context.params`` when calling services."
+msgstr ""
+

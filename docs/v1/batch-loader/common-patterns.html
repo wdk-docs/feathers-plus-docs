@@ -1,0 +1,441 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>batch-loader common patterns &mdash; feathers-plus docs v2019.06.26 文档</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="搜索" href="../../search.html" />
+    <link rel="next" title="authentication-management Usage" href="../authentication-management/index.html" />
+    <link rel="prev" title="batch-loader guide" href="guide.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../contents.html" class="icon icon-home"> feathers-plus docs
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../index.html">Feathers-Plus(Bridging FeathersJS and real world apps)</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">v1</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html#extend-feathersjs">扩展FeathersJS</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../feathers-hooks-common/index.html">feathers-hooks-common Usage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../feathers-hooks-common/guide.html">feathers hooks common guide</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html">batch-loader Usage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="guide.html">batch-loader guide</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">batch-loader common patterns</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#creating-a-new-batch-loader-per-request">Creating a new batch-loader per Request.</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#loading-by-alternative-keys">Loading by alternative keys.</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#persistent-caches">Persistent caches</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#using-non-feathers-services">Using non-Feathers services</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../authentication-management/index.html">authentication-management Usage</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#service-adapters">服务适配器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#framework-integration">框架集成</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../whats-new/index.html">whats new</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../contents.html">feathers-plus docs</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../contents.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">v1</a> &raquo;</li>
+        
+      <li>batch-loader common patterns</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/v1/batch-loader/common-patterns.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="batch-loader-common-patterns">
+<h1>batch-loader common patterns<a class="headerlink" href="#batch-loader-common-patterns" title="永久链接至标题">¶</a></h1>
+<div class="section" id="creating-a-new-batch-loader-per-request">
+<h2>Creating a new batch-loader per Request.<a class="headerlink" href="#creating-a-new-batch-loader-per-request" title="永久链接至标题">¶</a></h2>
+<p>In many applications, a server using batch-loader serves requests to
+many different users with different access permissions. It may be
+dangerous to use one cache across many users, and it is encouraged to
+create a new batch-loader per request:</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="kd">function</span> <span class="nx">createLoaders</span><span class="p">(</span><span class="nx">authToken</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="p">{</span>
+    <span class="nx">users</span><span class="o">:</span> <span class="k">new</span> <span class="nx">BatchLoader</span><span class="p">(</span><span class="nx">ids</span> <span class="p">=&gt;</span> <span class="nx">genUsers</span><span class="p">(</span><span class="nx">authToken</span><span class="p">,</span> <span class="nx">ids</span><span class="p">)),</span>
+    <span class="nx">cdnUrls</span><span class="o">:</span> <span class="k">new</span> <span class="nx">BatchLoader</span><span class="p">(</span><span class="nx">rawUrls</span> <span class="p">=&gt;</span> <span class="nx">genCdnUrls</span><span class="p">(</span><span class="nx">authToken</span><span class="p">,</span> <span class="nx">rawUrls</span><span class="p">)),</span>
+    <span class="nx">stories</span><span class="o">:</span> <span class="k">new</span> <span class="nx">BatchLoader</span><span class="p">(</span><span class="nx">keys</span> <span class="p">=&gt;</span> <span class="nx">genStories</span><span class="p">(</span><span class="nx">authToken</span><span class="p">,</span> <span class="nx">keys</span><span class="p">)),</span>
+  <span class="p">};</span>
+<span class="p">}</span>
+
+<span class="c1">// When handling an incoming request:</span>
+<span class="kd">var</span> <span class="nx">loaders</span> <span class="o">=</span> <span class="nx">createLoaders</span><span class="p">(</span><span class="nx">request</span><span class="p">.</span><span class="nx">query</span><span class="p">.</span><span class="nx">authToken</span><span class="p">);</span>
+
+<span class="c1">// Then, within application logic:</span>
+<span class="kd">var</span> <span class="nx">user</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">loaders</span><span class="p">.</span><span class="nx">users</span><span class="p">.</span><span class="nx">load</span><span class="p">(</span><span class="mi">4</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">pic</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">loaders</span><span class="p">.</span><span class="nx">cdnUrls</span><span class="p">.</span><span class="nx">load</span><span class="p">(</span><span class="nx">user</span><span class="p">.</span><span class="nx">rawPicUrl</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="loading-by-alternative-keys">
+<h2>Loading by alternative keys.<a class="headerlink" href="#loading-by-alternative-keys" title="永久链接至标题">¶</a></h2>
+<p>Occasionally, some kind of value can be accessed in multiple ways. For
+example, perhaps a “User” type can be loaded not only by an “id” but
+also by a “username” value. If the same user is loaded by both keys,
+then it may be useful to fill both caches when a user is loaded from
+either source:</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="kd">let</span> <span class="nx">userByIDLoader</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">BatchLoader</span><span class="p">(</span><span class="nx">ids</span> <span class="p">=&gt;</span> <span class="nx">genUsersByID</span><span class="p">(</span><span class="nx">ids</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span><span class="nx">users</span> <span class="p">=&gt;</span> <span class="p">{</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">user</span> <span class="k">of</span> <span class="nx">users</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">usernameLoader</span><span class="p">.</span><span class="nx">prime</span><span class="p">(</span><span class="nx">user</span><span class="p">.</span><span class="nx">username</span><span class="p">,</span> <span class="nx">user</span><span class="p">);</span>
+  <span class="p">}</span>
+  <span class="k">return</span> <span class="nx">users</span><span class="p">;</span>
+<span class="p">}));</span>
+
+<span class="kd">let</span> <span class="nx">usernameLoader</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">BatchLoader</span><span class="p">(</span><span class="nx">names</span> <span class="p">=&gt;</span> <span class="nx">genUsernames</span><span class="p">(</span><span class="nx">names</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span><span class="nx">users</span> <span class="p">=&gt;</span> <span class="p">{</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">user</span> <span class="k">of</span> <span class="nx">users</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">userByIDLoader</span><span class="p">.</span><span class="nx">prime</span><span class="p">(</span><span class="nx">user</span><span class="p">.</span><span class="nx">id</span><span class="p">,</span> <span class="nx">user</span><span class="p">);</span>
+  <span class="p">}</span>
+  <span class="k">return</span> <span class="nx">users</span><span class="p">;</span>
+<span class="p">}));</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="persistent-caches">
+<h2>Persistent caches<a class="headerlink" href="#persistent-caches" title="永久链接至标题">¶</a></h2>
+<p>By default, batch-loader uses the standard Map which simply grows until
+the batch-loader is released. A custom cache is provided as a
+convenience if you want to persist caches for longer periods of time. It
+implements a <strong>least-recently-used</strong> algorithm and allows you to limit
+the number of records cached.</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="kr">const</span> <span class="nx">BatchLoader</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;@feathers-plus/batch-loader&#39;</span><span class="p">);</span>
+<span class="kr">const</span> <span class="nx">cache</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;@feathers-plus/cache&#39;</span><span class="p">);</span>
+
+<span class="kr">const</span> <span class="nx">usersLoader</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">BatchLoader</span><span class="p">(</span>
+  <span class="nx">keys</span> <span class="p">=&gt;</span> <span class="p">{</span> <span class="p">...</span> <span class="p">},</span>
+  <span class="p">{</span> <span class="nx">cacheMap</span><span class="o">:</span> <span class="nx">cache</span><span class="p">({</span> <span class="nx">max</span><span class="o">:</span> <span class="mi">100</span> <span class="p">})</span>
+<span class="p">);</span>
+</pre></div>
+</div>
+<p class="tip"><p>The default cache is appropriate when requests to your application are
+short-lived.</p>
+</p></div>
+<div class="section" id="using-non-feathers-services">
+<h2>Using non-Feathers services<a class="headerlink" href="#using-non-feathers-services" title="永久链接至标题">¶</a></h2>
+<p>batch-loader provides a simplified and consistent API over various data
+sources, when its used as part of your application’s data fetching
+layer. Custom Feathers services can use batch-loaders to natively
+accesses local and remote resources.</p>
+<div class="section" id="redis">
+<h3>Redis<a class="headerlink" href="#redis" title="永久链接至标题">¶</a></h3>
+<p>Redis is a very simple key-value store which provides the batch load
+method MGET which makes it very well suited for use with batch-loader.</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="kr">const</span> <span class="nx">BatchLoader</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;@feathers-plus/batch-loader&#39;</span><span class="p">);</span>
+<span class="kr">const</span> <span class="nx">redis</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;redis&#39;</span><span class="p">);</span>
+
+<span class="kr">const</span> <span class="nx">client</span> <span class="o">=</span> <span class="nx">redis</span><span class="p">.</span><span class="nx">createClient</span><span class="p">();</span>
+
+<span class="kr">const</span> <span class="nx">redisLoader</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">BatchLoader</span><span class="p">(</span><span class="nx">keys</span> <span class="p">=&gt;</span> <span class="k">new</span> <span class="nb">Promise</span><span class="p">((</span><span class="nx">resolve</span><span class="p">,</span> <span class="nx">reject</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+  <span class="nx">client</span><span class="p">.</span><span class="nx">mget</span><span class="p">(</span><span class="nx">keys</span><span class="p">,</span> <span class="p">(</span><span class="nx">error</span><span class="p">,</span> <span class="nx">results</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="k">return</span> <span class="nx">reject</span><span class="p">(</span><span class="nx">error</span><span class="p">);</span>
+
+    <span class="nx">resolve</span><span class="p">(</span><span class="nx">results</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">result</span><span class="p">,</span> <span class="nx">index</span><span class="p">)</span> <span class="p">=&gt;</span>
+      <span class="nx">result</span> <span class="o">!==</span> <span class="kc">null</span> <span class="o">?</span> <span class="nx">result</span> <span class="o">:</span> <span class="k">new</span> <span class="nb">Error</span><span class="p">(</span><span class="sb">`No key: </span><span class="si">${</span><span class="nx">keys</span><span class="p">[</span><span class="nx">index</span><span class="p">]</span><span class="si">}</span><span class="sb">`</span><span class="p">)</span>
+    <span class="p">));</span>
+  <span class="p">});</span>
+<span class="p">}));</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="sqlite">
+<h3>SQLite<a class="headerlink" href="#sqlite" title="永久链接至标题">¶</a></h3>
+<p>While not a key-value store, SQL offers a natural batch mechanism with
+SELECT * WHERE IN statements. While batch-loader is best suited for
+key-value stores, it is still suited for SQL when queries remain simple.
+This example requests the entire row at a given id, however your usage
+may differ.</p>
+<p>This example uses the sqlite3 client which offers a parallelize method
+to further batch queries together. Another non-caching batch-loader
+utilizes this method to provide a similar API. batch-loaders can access
+other batch-loaders.</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="kr">const</span> <span class="nx">BatchLoader</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;@feathers-plus/batch-loader&#39;</span><span class="p">);</span>
+<span class="kr">const</span> <span class="nx">sqlite3</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;sqlite3&#39;</span><span class="p">);</span>
+
+<span class="kr">const</span> <span class="nx">db</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">sqlite3</span><span class="p">.</span><span class="nx">Database</span><span class="p">(</span><span class="s1">&#39;./to/your/db.sql&#39;</span><span class="p">);</span>
+
+<span class="c1">// Dispatch a WHERE-IN query, ensuring response has rows in correct order.</span>
+<span class="kr">const</span> <span class="nx">userLoader</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">BatchLoader</span><span class="p">(</span><span class="nx">ids</span> <span class="p">=&gt;</span> <span class="p">{</span>
+  <span class="kr">const</span> <span class="nx">params</span> <span class="o">=</span> <span class="nx">ids</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">id</span> <span class="p">=&gt;</span> <span class="s1">&#39;?&#39;</span> <span class="p">).</span><span class="nx">join</span><span class="p">();</span>
+  <span class="kr">const</span> <span class="nx">query</span> <span class="o">=</span> <span class="sb">`SELECT * FROM users WHERE id IN (</span><span class="si">${</span><span class="nx">params</span><span class="si">}</span><span class="sb">)`</span><span class="p">;</span>
+  <span class="k">return</span> <span class="nx">queryLoader</span><span class="p">.</span><span class="nx">load</span><span class="p">([</span><span class="nx">query</span><span class="p">,</span> <span class="nx">ids</span><span class="p">]).</span><span class="nx">then</span><span class="p">(</span>
+    <span class="nx">rows</span> <span class="p">=&gt;</span> <span class="nx">ids</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span>
+      <span class="nx">id</span> <span class="p">=&gt;</span> <span class="nx">rows</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="nx">row</span> <span class="p">=&gt;</span> <span class="nx">row</span><span class="p">.</span><span class="nx">id</span> <span class="o">===</span> <span class="nx">id</span><span class="p">)</span> <span class="o">||</span> <span class="k">new</span> <span class="nb">Error</span><span class="p">(</span><span class="sb">`Row not found: </span><span class="si">${</span><span class="nx">id</span><span class="si">}</span><span class="sb">`</span><span class="p">)</span>
+    <span class="p">)</span>
+  <span class="p">);</span>
+<span class="p">});</span>
+
+<span class="c1">// Parallelize all queries, but do not cache.</span>
+<span class="kr">const</span> <span class="nx">queryLoader</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">BatchLoader</span><span class="p">(</span><span class="nx">queries</span> <span class="p">=&gt;</span> <span class="k">new</span> <span class="nb">Promise</span><span class="p">(</span><span class="nx">resolve</span> <span class="p">=&gt;</span> <span class="p">{</span>
+  <span class="kr">const</span> <span class="nx">waitingOn</span> <span class="o">=</span> <span class="nx">queries</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span>
+  <span class="kr">const</span> <span class="nx">results</span> <span class="o">=</span> <span class="p">[];</span>
+  <span class="nx">db</span><span class="p">.</span><span class="nx">parallelize</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+    <span class="nx">queries</span><span class="p">.</span><span class="nx">forEach</span><span class="p">((</span><span class="nx">query</span><span class="p">,</span> <span class="nx">index</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+      <span class="nx">db</span><span class="p">.</span><span class="nx">all</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="nx">db</span><span class="p">,</span> <span class="nx">query</span><span class="p">.</span><span class="nx">concat</span><span class="p">((</span><span class="nx">error</span><span class="p">,</span> <span class="nx">result</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+        <span class="nx">results</span><span class="p">[</span><span class="nx">index</span><span class="p">]</span> <span class="o">=</span> <span class="nx">error</span> <span class="o">||</span> <span class="nx">result</span><span class="p">;</span>
+        <span class="k">if</span> <span class="p">(</span><span class="o">--</span><span class="nx">waitingOn</span> <span class="o">===</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+          <span class="nx">resolve</span><span class="p">(</span><span class="nx">results</span><span class="p">);</span>
+        <span class="p">}</span>
+      <span class="p">}));</span>
+    <span class="p">});</span>
+  <span class="p">});</span>
+<span class="p">}),</span> <span class="p">{</span> <span class="nx">cache</span><span class="o">:</span> <span class="kc">false</span> <span class="p">});</span>
+
+<span class="c1">// Usage</span>
+
+<span class="kr">const</span> <span class="nx">promise1</span> <span class="o">=</span> <span class="nx">userLoader</span><span class="p">.</span><span class="nx">load</span><span class="p">(</span><span class="s1">&#39;1234&#39;</span><span class="p">);</span>
+<span class="kr">const</span> <span class="nx">promise2</span> <span class="o">=</span> <span class="nx">userLoader</span><span class="p">.</span><span class="nx">load</span><span class="p">(</span><span class="s1">&#39;5678&#39;</span><span class="p">);</span>
+
+<span class="nb">Promise</span><span class="p">.</span><span class="nx">all</span><span class="p">([</span> <span class="nx">promise1</span><span class="p">,</span> <span class="nx">promise2</span> <span class="p">]).</span><span class="nx">then</span><span class="p">(([</span> <span class="nx">user1</span><span class="p">,</span> <span class="nx">user2</span><span class="p">])</span> <span class="p">=&gt;</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">user1</span><span class="p">,</span> <span class="nx">user2</span><span class="p">);</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="knex-js">
+<h3>Knex.js<a class="headerlink" href="#knex-js" title="永久链接至标题">¶</a></h3>
+<p>This example demonstrates how to use batch-loader with SQL databases via
+Knex.js, which is a SQL query builder and a client for popular databases
+such as PostgreSQL, MySQL, MariaDB etc.</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="kr">const</span> <span class="nx">BatchLoader</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;@feathers-plus/batch-loader&#39;</span><span class="p">);</span>
+<span class="kr">const</span> <span class="nx">db</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;./db&#39;</span><span class="p">);</span> <span class="c1">// an instance of Knex client</span>
+
+<span class="c1">// The list of batch loaders</span>
+
+<span class="kr">const</span> <span class="nx">batchLoader</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="nx">user</span><span class="o">:</span> <span class="k">new</span> <span class="nx">BatchLoader</span><span class="p">(</span><span class="nx">ids</span> <span class="p">=&gt;</span> <span class="nx">db</span><span class="p">.</span><span class="nx">table</span><span class="p">(</span><span class="s1">&#39;users&#39;</span><span class="p">)</span>
+    <span class="p">.</span><span class="nx">whereIn</span><span class="p">(</span><span class="s1">&#39;id&#39;</span><span class="p">,</span> <span class="nx">ids</span><span class="p">).</span><span class="nx">select</span><span class="p">()</span>
+    <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">rows</span> <span class="p">=&gt;</span> <span class="nx">ids</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">id</span> <span class="p">=&gt;</span> <span class="nx">rows</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="nx">x</span> <span class="p">=&gt;</span> <span class="nx">x</span><span class="p">.</span><span class="nx">id</span> <span class="o">===</span> <span class="nx">id</span><span class="p">)))),</span>
+
+  <span class="nx">story</span><span class="o">:</span> <span class="k">new</span> <span class="nx">BatchLoader</span><span class="p">(</span><span class="nx">ids</span> <span class="p">=&gt;</span> <span class="nx">db</span><span class="p">.</span><span class="nx">table</span><span class="p">(</span><span class="s1">&#39;stories&#39;</span><span class="p">)</span>
+    <span class="p">.</span><span class="nx">whereIn</span><span class="p">(</span><span class="s1">&#39;id&#39;</span><span class="p">,</span> <span class="nx">ids</span><span class="p">).</span><span class="nx">select</span><span class="p">()</span>
+    <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">rows</span> <span class="p">=&gt;</span> <span class="nx">ids</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">id</span> <span class="p">=&gt;</span> <span class="nx">rows</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="nx">x</span> <span class="p">=&gt;</span> <span class="nx">x</span><span class="p">.</span><span class="nx">id</span> <span class="o">===</span> <span class="nx">id</span><span class="p">)))),</span>
+
+  <span class="nx">storiesByUserId</span><span class="o">:</span> <span class="k">new</span> <span class="nx">BatchLoader</span><span class="p">(</span><span class="nx">ids</span> <span class="p">=&gt;</span> <span class="nx">db</span><span class="p">.</span><span class="nx">table</span><span class="p">(</span><span class="s1">&#39;stories&#39;</span><span class="p">)</span>
+    <span class="p">.</span><span class="nx">whereIn</span><span class="p">(</span><span class="s1">&#39;author_id&#39;</span><span class="p">,</span> <span class="nx">ids</span><span class="p">).</span><span class="nx">select</span><span class="p">()</span>
+    <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">rows</span> <span class="p">=&gt;</span> <span class="nx">ids</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">id</span> <span class="p">=&gt;</span> <span class="nx">rows</span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">x</span> <span class="p">=&gt;</span> <span class="nx">x</span><span class="p">.</span><span class="nx">author_id</span> <span class="o">===</span> <span class="nx">id</span><span class="p">)))),</span>
+<span class="p">};</span>
+
+<span class="c1">// Usage</span>
+
+<span class="nb">Promise</span><span class="p">.</span><span class="nx">all</span><span class="p">([</span>
+  <span class="nx">batchLoader</span><span class="p">.</span><span class="nx">user</span><span class="p">.</span><span class="nx">load</span><span class="p">(</span><span class="s1">&#39;1234&#39;</span><span class="p">),</span>
+  <span class="nx">batchLoader</span><span class="p">.</span><span class="nx">storiesByUserId</span><span class="p">.</span><span class="nx">load</span><span class="p">(</span><span class="s1">&#39;1234&#39;</span><span class="p">),</span>
+<span class="p">]).</span><span class="nx">then</span><span class="p">(([</span><span class="nx">user</span><span class="p">,</span> <span class="nx">stories</span><span class="p">])</span> <span class="p">=&gt;</span> <span class="p">{</span><span class="cm">/* ... */</span><span class="p">});</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="rethinkdb">
+<h3>RethinkDB<a class="headerlink" href="#rethinkdb" title="永久链接至标题">¶</a></h3>
+<p>Full implementation:</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="kr">const</span> <span class="nx">BatchLoader</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;@feathers-plus/batch-loader&#39;</span><span class="p">);</span>
+<span class="kr">const</span> <span class="nx">r</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;rethinkdb&#39;</span><span class="p">);</span>
+<span class="kr">const</span> <span class="nx">db</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">r</span><span class="p">.</span><span class="nx">connect</span><span class="p">();</span>
+
+<span class="kr">const</span> <span class="nx">batchLoadFunc</span> <span class="o">=</span> <span class="nx">keys</span> <span class="p">=&gt;</span> <span class="nx">db</span><span class="p">.</span><span class="nx">table</span><span class="p">(</span><span class="s1">&#39;example_table&#39;</span><span class="p">)</span>
+  <span class="p">.</span><span class="nx">getAll</span><span class="p">(...</span><span class="nx">keys</span><span class="p">)</span>
+  <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">res</span> <span class="p">=&gt;</span> <span class="nx">res</span><span class="p">.</span><span class="nx">toArray</span><span class="p">())</span>
+  <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">normalizeRethinkDbResults</span><span class="p">(</span><span class="nx">keys</span><span class="p">,</span> <span class="s1">&#39;id&#39;</span><span class="p">));</span>
+
+<span class="kr">const</span> <span class="nx">exampleLoader</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">BatchLoader</span><span class="p">(</span><span class="nx">batchLoadFunc</span><span class="p">);</span>
+
+<span class="nx">await</span> <span class="nx">exampleLoader</span><span class="p">.</span><span class="nx">loadMany</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]);</span> <span class="c1">// [{&quot;id&quot;: 1, &quot;name&quot;: &quot;Document 1&quot;}, {&quot;id&quot;: 2, &quot;name&quot;: &quot;Document 2&quot;}, Error];</span>
+
+<span class="nx">await</span> <span class="nx">exampleLoader</span><span class="p">.</span><span class="nx">load</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span> <span class="c1">// {&quot;id&quot;: 1, &quot;name&quot;: &quot;Document 1&quot;}</span>
+
+<span class="kd">function</span> <span class="nx">indexResults</span><span class="p">(</span><span class="nx">results</span><span class="p">,</span> <span class="nx">indexField</span><span class="p">,</span> <span class="nx">cacheKeyFn</span> <span class="o">=</span> <span class="nx">key</span> <span class="p">=&gt;</span> <span class="nx">key</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kr">const</span> <span class="nx">indexedResults</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Map</span><span class="p">();</span>
+  <span class="nx">results</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="nx">res</span> <span class="p">=&gt;</span> <span class="p">{</span>
+    <span class="nx">indexedResults</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="nx">cacheKeyFn</span><span class="p">(</span><span class="nx">res</span><span class="p">[</span><span class="nx">indexField</span><span class="p">]),</span> <span class="nx">res</span><span class="p">);</span>
+  <span class="p">});</span>
+  <span class="k">return</span> <span class="nx">indexedResults</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kd">function</span> <span class="nx">normalizeRethinkDbResults</span><span class="p">(</span><span class="nx">keys</span><span class="p">,</span> <span class="nx">indexField</span><span class="p">,</span> <span class="nx">cacheKeyFn</span> <span class="o">=</span> <span class="nx">key</span> <span class="p">=&gt;</span> <span class="nx">key</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="nx">results</span> <span class="p">=&gt;</span> <span class="p">{</span>
+    <span class="kr">const</span> <span class="nx">indexedResults</span> <span class="o">=</span> <span class="nx">indexResults</span><span class="p">(</span><span class="nx">results</span><span class="p">,</span> <span class="nx">indexField</span><span class="p">,</span> <span class="nx">cacheKeyFn</span><span class="p">);</span>
+    <span class="k">return</span> <span class="nx">keys</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">val</span> <span class="p">=&gt;</span> <span class="nx">indexedResults</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="nx">cacheKeyFn</span><span class="p">(</span><span class="nx">val</span><span class="p">))</span> <span class="o">||</span> <span class="k">new</span> <span class="nb">Error</span><span class="p">(</span><span class="sb">`Key not found : </span><span class="si">${</span><span class="nx">val</span><span class="si">}</span><span class="sb">`</span><span class="p">));</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../authentication-management/index.html" class="btn btn-neutral float-right" title="authentication-management Usage" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="guide.html" class="btn btn-neutral float-left" title="batch-loader guide" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, BandCap
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

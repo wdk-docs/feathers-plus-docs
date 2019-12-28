@@ -1,0 +1,1642 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>feathers hooks common guide &mdash; feathers-plus docs v2019.06.26 文档</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="搜索" href="../../search.html" />
+    <link rel="next" title="batch-loader Usage" href="../batch-loader/index.html" />
+    <link rel="prev" title="feathers-hooks-common Usage" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../contents.html" class="icon icon-home"> feathers-plus docs
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">v1</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html#extend-feathersjs">扩展FeathersJS</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="index.html">feathers-hooks-common Usage</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">feathers hooks common guide</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#making-hook-params-dynamic">Making Hook Params Dynamic</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#fastjoin">fastJoin</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#populate">Populate</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#validate">Validate</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../batch-loader/index.html">batch-loader Usage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../batch-loader/guide.html">batch-loader guide</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../batch-loader/common-patterns.html">batch-loader common patterns</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../authentication-management/index.html">authentication-management Usage</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#service-adapters">服务适配器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#framework-integration">框架集成</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../whats-new/index.html">whats new</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../contents.html">feathers-plus docs</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../contents.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">v1</a> &raquo;</li>
+        
+      <li>feathers hooks common guide</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/v1/feathers-hooks-common/guide.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="feathers-hooks-common-guide">
+<h1>feathers hooks common guide<a class="headerlink" href="#feathers-hooks-common-guide" title="永久链接至标题">¶</a></h1>
+<div class="section" id="making-hook-params-dynamic">
+<h2>Making Hook Params Dynamic<a class="headerlink" href="#making-hook-params-dynamic" title="永久链接至标题">¶</a></h2>
+<p>You will usually use static parameters for your hooks,
+e.g. <code class="docutils literal notranslate"><span class="pre">disallow('rest')</span></code>. However you will periodically need the
+parameters to vary depending on then current circumstances.</p>
+<p>This code will <strong>not work</strong> as hoped, as <code class="docutils literal notranslate"><span class="pre">disallowWhat</span></code> is evaluated
+when the module is required, not at each service call.</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="kd">function</span> <span class="nx">disallowWhat</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="nx">someVariableCircumstance</span><span class="p">()</span> <span class="o">?</span> <span class="s1">&#39;rest&#39;</span> <span class="o">:</span> <span class="s1">&#39;external&#39;</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="c1">// ...</span>
+<span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">before</span><span class="o">:</span> <span class="p">{</span>
+  <span class="nx">all</span><span class="o">:</span> <span class="nx">disallow</span><span class="p">(</span><span class="nx">disallowWhat</span><span class="p">())</span>
+<span class="p">}</span> <span class="p">};</span>
+</pre></div>
+</div>
+<p>This code will also <strong>not do</strong>, as most parameters do not permit
+functions, and <code class="docutils literal notranslate"><span class="pre">disallowWhat</span></code> will not be called for each service
+call.</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="kd">function</span> <span class="nx">disallowWhat</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="nx">someVariableCircumstance</span><span class="p">()</span> <span class="o">?</span> <span class="s1">&#39;rest&#39;</span> <span class="o">:</span> <span class="s1">&#39;external&#39;</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="c1">// ...</span>
+<span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">before</span><span class="o">:</span> <span class="p">{</span>
+  <span class="nx">all</span><span class="o">:</span> <span class="nx">disallow</span><span class="p">(</span><span class="nx">disallowWhat</span><span class="p">)</span>
+<span class="p">}</span> <span class="p">};</span>
+</pre></div>
+</div>
+<p>You are able to call <code class="docutils literal notranslate"><span class="pre">disallowWhat</span></code> for each service call as follows.</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="kd">function</span> <span class="nx">disallowWhat</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="nx">someVariableCircumstance</span><span class="p">()</span> <span class="o">?</span> <span class="s1">&#39;rest&#39;</span> <span class="o">:</span> <span class="s1">&#39;external&#39;</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="c1">// ...</span>
+<span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">before</span><span class="o">:</span> <span class="p">{</span>
+  <span class="nx">all</span><span class="o">:</span> <span class="nx">context</span> <span class="p">=&gt;</span> <span class="nx">disallow</span><span class="p">(</span><span class="nx">disallowWhat</span><span class="p">())(</span><span class="nx">context</span><span class="p">)</span>
+<span class="p">}</span> <span class="p">};</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">disallowWhat</span></code> is called each time the hook is run.
+<code class="docutils literal notranslate"><span class="pre">disallow(disallowWhat())</span></code> creates a new hook with the value returned
+by <code class="docutils literal notranslate"><span class="pre">disallowWhat()</span></code>, and then that hook is invoked with <code class="docutils literal notranslate"><span class="pre">(context)</span></code>.</p>
+<p>Let’s look at another example. The <code class="docutils literal notranslate"><span class="pre">user</span></code> record identifies
+information the user permits to be public, in its <code class="docutils literal notranslate"><span class="pre">public</span></code> field. We
+can write a hook retaining only the fields allowed to be exposed.</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">after</span><span class="o">:</span> <span class="p">{</span>
+  <span class="nx">get</span><span class="o">:</span> <span class="nx">context</span> <span class="p">=&gt;</span> <span class="nx">keep</span><span class="p">(...</span><span class="nx">context</span><span class="p">.</span><span class="nx">params</span><span class="p">.</span><span class="nx">user</span><span class="p">.</span><span class="kr">public</span><span class="p">)(</span><span class="nx">context</span><span class="p">)</span>
+<span class="p">}</span> <span class="p">};</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="fastjoin">
+<h2>fastJoin<a class="headerlink" href="#fastjoin" title="永久链接至标题">¶</a></h2>
+<p>We often want to combine rows from two or more tables based on a
+relationship between them. The <code class="docutils literal notranslate"><span class="pre">fastJoin</span></code> hook will select records
+that have matching values in both tables. It can batch service calls and
+cache records, thereby needing roughly an order of magnitude fewer
+database calls than the <code class="docutils literal notranslate"><span class="pre">populate</span></code> hook, i.e. <em>2</em> calls instead of
+<em>20</em>. It uses a <a class="reference external" href="http://graphql.org/">GraphQL</a>-like imperative API.</p>
+<p><code class="docutils literal notranslate"><span class="pre">fastJoin</span></code> is not restricted to using data from Feathers services.
+Resources for which there are no Feathers adapters can <a class="reference external" href="/v1/batch-loader/common-patterns.html#Using-non-Feathers-services">also be
+used</a>.</p>
+<div class="section" id="usage">
+<h3>Usage<a class="headerlink" href="#usage" title="永久链接至标题">¶</a></h3>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="kr">const</span> <span class="nx">postResolvers</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="nx">joins</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">author</span><span class="o">:</span> <span class="p">...,</span>
+    <span class="nx">starers</span><span class="o">:</span> <span class="nx">fieldNames</span> <span class="p">=&gt;</span> <span class="nx">record</span> <span class="p">=&gt;</span> <span class="cm">/* modify record */</span><span class="p">,</span>
+    <span class="nx">comments</span><span class="o">:</span> <span class="p">{</span>
+      <span class="nx">resolver</span><span class="o">:</span> <span class="p">...,</span>
+      <span class="nx">joins</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">author</span><span class="o">:</span> <span class="p">...,</span>
+      <span class="p">}</span>
+    <span class="p">},</span>
+  <span class="p">}</span>
+<span class="p">};</span>
+
+<span class="kr">const</span> <span class="nx">query</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="nx">author</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span> <span class="c1">// or falsy</span>
+  <span class="nx">starers</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">],</span> <span class="c1">// [param1, param2, ...]</span>
+  <span class="nx">comments</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">args</span><span class="o">:</span> <span class="p">[...],</span> <span class="c1">// [param1, param2, ...]</span>
+    <span class="nx">author</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+<span class="p">};</span>
+
+<span class="c1">// Options for hook API</span>
+<span class="nx">fastJoin</span><span class="p">(</span><span class="nx">postResolvers</span><span class="p">)</span>
+<span class="nx">fastJoin</span><span class="p">(</span><span class="nx">postResolvers</span><span class="p">,</span> <span class="nx">query</span><span class="p">)</span>
+<span class="nx">fastJoin</span><span class="p">(</span><span class="nx">context</span> <span class="p">=&gt;</span> <span class="nx">postResolvers</span><span class="p">)</span>
+<span class="nx">fastJoin</span><span class="p">(</span><span class="nx">postResolvers</span><span class="p">,</span> <span class="nx">context</span> <span class="p">=&gt;</span> <span class="nx">query</span><span class="p">)</span> <span class="c1">// supports queries from client</span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">fastJoin(resolvers,</span> <span class="pre">query)</span></code> API, like GraphQL, uses resolvers to
+provide a mapping between a portion of a operation and actual backend
+code responsible for handling it.</p>
+<p>It also takes an optional query with which you can customise the current
+operation. For example, the returned information may have to differ
+depending on the needs of the client making the service call.</p>
+<p class="tip"><p>The services in all these examples are assumed, for simplicity, to have
+pagination disabled. You will have to decode when to use
+<code class="docutils literal notranslate"><span class="pre">paginate:</span> <span class="pre">false</span></code> in your code.</p>
+</p></div>
+<div class="section" id="resolvers">
+<h3>Resolvers<a class="headerlink" href="#resolvers" title="永久链接至标题">¶</a></h3>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="c1">// project/src/services/posts/posts.hooks.js</span>
+<span class="kr">const</span> <span class="p">{</span> <span class="nx">fastJoin</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;feathers-hooks-common&#39;</span><span class="p">);</span>
+
+<span class="kr">const</span> <span class="nx">postResolvers</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="nx">joins</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">author</span><span class="o">:</span> <span class="p">(...</span><span class="nx">args</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">async</span> <span class="nx">post</span> <span class="p">=&gt;</span> <span class="p">{</span> <span class="nx">post</span><span class="p">.</span><span class="nx">author</span> <span class="o">=</span> <span class="p">(</span><span class="nx">await</span> <span class="nx">users</span><span class="p">.</span><span class="nx">find</span><span class="p">({</span> <span class="nx">query</span><span class="o">:</span> <span class="p">{</span>
+      <span class="nx">id</span><span class="o">:</span> <span class="nx">post</span><span class="p">.</span><span class="nx">userId</span>
+    <span class="p">}</span> <span class="p">}))[</span><span class="mi">0</span><span class="p">]</span> <span class="p">},</span>
+
+    <span class="nx">starers</span><span class="o">:</span> <span class="nx">$select</span> <span class="p">=&gt;</span> <span class="nx">async</span> <span class="nx">post</span> <span class="p">=&gt;</span> <span class="p">{</span> <span class="nx">post</span><span class="p">.</span><span class="nx">starers</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">users</span><span class="p">.</span><span class="nx">find</span><span class="p">({</span> <span class="nx">query</span><span class="o">:</span> <span class="p">{</span>
+      <span class="nx">id</span><span class="o">:</span> <span class="p">{</span> <span class="nx">$in</span><span class="o">:</span> <span class="nx">post</span><span class="p">.</span><span class="nx">starIds</span> <span class="p">},</span> <span class="nx">$select</span><span class="o">:</span> <span class="nx">$select</span> <span class="o">||</span> <span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">]</span>
+    <span class="p">}</span> <span class="p">})</span> <span class="p">},</span>
+  <span class="p">}</span>
+<span class="p">};</span>
+
+<span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">after</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">all</span><span class="o">:</span> <span class="p">[</span> <span class="nx">fastJoin</span><span class="p">(</span><span class="nx">postResolvers</span><span class="p">)</span> <span class="p">],</span>
+<span class="p">}</span> <span class="p">};</span>
+</pre></div>
+</div>
+<p>The above example has two resolvers. Let’s focus on <code class="docutils literal notranslate"><span class="pre">author</span></code>.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Code fragment</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">joins:</span> <span class="pre">{}</span></code></p></td>
+<td><p>Describes what operations to
+perform on each record stored in
+the hook.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">author:</span></code></p></td>
+<td><p>Every operation has a property
+name. You use these names in the
+optional query to control which
+resolvers are run.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">(...args)</span> <span class="pre">=&gt;</span></code></p></td>
+<td><p>You can pass parameters in the
+query to the resolvers.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">async</span> <span class="pre">post</span> <span class="pre">=&gt;</span> <span class="pre">{...}</span></code></p></td>
+<td><p>The record to be operated on is
+passed to the resolver func. The
+resolver function modifies it.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">=&gt;</span> <span class="pre">post.author</span> <span class="pre">=</span></code>
+<code class="docutils literal notranslate"><span class="pre">await</span> <span class="pre">users.find(</span></code>
+<code class="docutils literal notranslate"><span class="pre">id:</span> <span class="pre">post.userId)</span></code></p></td>
+<td><p>A field is added containing the
+associated <code class="docutils literal notranslate"><span class="pre">users</span></code> record.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">[0]</span></code></p></td>
+<td><p>Extract the single user record
+from the array returned by
+<code class="docutils literal notranslate"><span class="pre">users.find()</span></code>.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">fastJoin(postResolvers)</span></code></p></td>
+<td><p>When no query is provided, all
+resolvers are run with undefined
+params.</p></td>
+</tr>
+</tbody>
+</table>
+<p>The result would look like:</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="c1">// Original record</span>
+<span class="p">[</span> <span class="p">{</span> <span class="nx">id</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span> <span class="nx">body</span><span class="o">:</span> <span class="s1">&#39;John post&#39;</span><span class="p">,</span> <span class="nx">userId</span><span class="o">:</span> <span class="mi">101</span><span class="p">,</span> <span class="nx">starIds</span><span class="o">:</span> <span class="p">[</span><span class="mi">102</span><span class="p">,</span> <span class="mi">103</span><span class="p">,</span> <span class="mi">104</span><span class="p">]</span> <span class="p">}</span> <span class="p">]</span>
+
+<span class="c1">// Result</span>
+<span class="p">[</span> <span class="p">{</span> <span class="nx">id</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="nx">body</span><span class="o">:</span> <span class="s1">&#39;John post&#39;</span><span class="p">,</span>
+    <span class="nx">userId</span><span class="o">:</span> <span class="mi">101</span><span class="p">,</span>
+    <span class="nx">starIds</span><span class="o">:</span> <span class="p">[</span> <span class="mi">102</span><span class="p">,</span> <span class="mi">103</span><span class="p">,</span> <span class="mi">104</span> <span class="p">],</span>
+    <span class="nx">author</span><span class="o">:</span> <span class="p">{</span> <span class="nx">id</span><span class="o">:</span> <span class="mi">101</span><span class="p">,</span> <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;John&#39;</span> <span class="p">},</span>
+    <span class="nx">starers</span><span class="o">:</span> <span class="p">[</span> <span class="p">{</span> <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;Marshall&#39;</span> <span class="p">},</span> <span class="p">{</span> <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;Barbara&#39;</span> <span class="p">},</span> <span class="p">{</span> <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;Aubree&#39;</span> <span class="p">}</span> <span class="p">]</span>
+<span class="p">}]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="shaping-the-result">
+<h3>Shaping the Result<a class="headerlink" href="#shaping-the-result" title="永久链接至标题">¶</a></h3>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="kr">const</span> <span class="nx">query</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="nx">author</span><span class="o">:</span> <span class="kc">true</span>
+<span class="p">};</span>
+
+<span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">after</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">all</span><span class="o">:</span> <span class="p">[</span> <span class="nx">fastJoin</span><span class="p">(</span><span class="nx">postResolvers</span><span class="p">,</span> <span class="nx">query</span><span class="p">)</span> <span class="p">],</span>
+<span class="p">}</span> <span class="p">};</span>
+</pre></div>
+</div>
+<p>The above query requests the author resolver be run, but not the starers
+resolver. This is a GraphQL concept which <em>shapes</em> the result. The
+result will not contain the <code class="docutils literal notranslate"><span class="pre">starers</span></code> field which the starers resolver
+would have otherwise added.</p>
+<blockquote>
+<div><p>All resolvers are run if query is not provided.</p>
+</div></blockquote>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="c1">// Result</span>
+<span class="p">[</span> <span class="p">{</span> <span class="nx">id</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="nx">body</span><span class="o">:</span> <span class="s1">&#39;John post&#39;</span><span class="p">,</span>
+    <span class="nx">userId</span><span class="o">:</span> <span class="mi">101</span><span class="p">,</span>
+    <span class="nx">starIds</span><span class="o">:</span> <span class="p">[</span> <span class="mi">102</span><span class="p">,</span> <span class="mi">103</span><span class="p">,</span> <span class="mi">104</span> <span class="p">],</span>
+    <span class="nx">author</span><span class="o">:</span> <span class="p">{</span> <span class="nx">id</span><span class="o">:</span> <span class="mi">101</span><span class="p">,</span> <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;John&#39;</span> <span class="p">}</span>
+<span class="p">}]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="customize-resolver-operation">
+<h3>Customize Resolver Operation<a class="headerlink" href="#customize-resolver-operation" title="永久链接至标题">¶</a></h3>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="kr">const</span> <span class="nx">query</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="nx">author</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="nx">starers</span><span class="o">:</span> <span class="p">[[</span><span class="s1">&#39;id&#39;</span><span class="p">,</span> <span class="s1">&#39;name&#39;</span><span class="p">]]</span>
+<span class="p">};</span>
+
+<span class="kr">const</span> <span class="nx">postResolvers</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="nx">joins</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">author</span><span class="o">:</span> <span class="p">...,</span>
+
+    <span class="nx">starers</span><span class="o">:</span> <span class="nx">$select</span> <span class="p">=&gt;</span> <span class="nx">async</span> <span class="nx">post</span> <span class="p">=&gt;</span> <span class="p">{</span> <span class="nx">post</span><span class="p">.</span><span class="nx">starers</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">users</span><span class="p">.</span><span class="nx">find</span><span class="p">({</span>
+      <span class="nx">query</span><span class="o">:</span> <span class="p">{</span> <span class="nx">id</span><span class="o">:</span> <span class="p">{</span> <span class="nx">$in</span><span class="o">:</span> <span class="nx">post</span><span class="p">.</span><span class="nx">starIds</span> <span class="p">},</span> <span class="nx">$select</span><span class="o">:</span> <span class="nx">$select</span> <span class="o">||</span> <span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">]</span> <span class="p">},</span>
+      <span class="nx">paginate</span><span class="o">:</span> <span class="kc">false</span>
+    <span class="p">})</span> <span class="p">},</span>
+  <span class="p">}</span>
+<span class="p">};</span>
+
+<span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">after</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">all</span><span class="o">:</span> <span class="p">[</span> <span class="nx">fastJoin</span><span class="p">(</span><span class="nx">postResolvers</span><span class="p">,</span> <span class="nx">context</span> <span class="p">=&gt;</span> <span class="nx">query</span><span class="p">)</span> <span class="p">],</span>
+<span class="p">}</span> <span class="p">};</span>
+</pre></div>
+</div>
+<p>Parameters may be passed to the resolver functions. The <code class="docutils literal notranslate"><span class="pre">starers</span></code>
+field will contain both the <code class="docutils literal notranslate"><span class="pre">id</span></code> and <code class="docutils literal notranslate"><span class="pre">name</span></code> from the user record,
+rather than the default of only <code class="docutils literal notranslate"><span class="pre">name</span></code>.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">context</span> <span class="pre">=&gt;</span> <span class="pre">query</span></code> syntax shows the query can be dynamically
+modified based on information provided by the client.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">paginate:false</span></code> suppress pagination for this call, ensuring all
+the matching records are returned.</p>
+<blockquote>
+<div><p>Being able to create dynamic queries is an important concept to
+remember.</p>
+</div></blockquote>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="c1">// Result</span>
+<span class="p">[</span> <span class="p">{</span> <span class="nx">id</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="nx">body</span><span class="o">:</span> <span class="s1">&#39;John post&#39;</span><span class="p">,</span>
+    <span class="nx">userId</span><span class="o">:</span> <span class="mi">101</span><span class="p">,</span>
+    <span class="nx">starIds</span><span class="o">:</span> <span class="p">[</span> <span class="mi">102</span><span class="p">,</span> <span class="mi">103</span><span class="p">,</span> <span class="mi">104</span> <span class="p">],</span>
+    <span class="nx">author</span><span class="o">:</span> <span class="p">{</span> <span class="nx">id</span><span class="o">:</span> <span class="mi">101</span><span class="p">,</span> <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;John&#39;</span> <span class="p">},</span>
+    <span class="nx">starers</span><span class="o">:</span> <span class="p">[</span>
+      <span class="p">{</span> <span class="nx">id</span><span class="o">:</span> <span class="mi">102</span><span class="p">,</span> <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;Marshall&#39;</span> <span class="p">},</span>
+      <span class="p">{</span> <span class="nx">id</span><span class="o">:</span> <span class="mi">103</span><span class="p">,</span> <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;Barbara&#39;</span> <span class="p">},</span>
+      <span class="p">{</span> <span class="nx">id</span><span class="o">:</span> <span class="mi">104</span><span class="p">,</span> <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;Aubree&#39;</span> <span class="p">}]</span>
+<span class="p">}]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="calculated-fields">
+<h3>Calculated Fields<a class="headerlink" href="#calculated-fields" title="永久链接至标题">¶</a></h3>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="kr">const</span> <span class="nx">postResolvers</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="nx">joins</span><span class="o">:</span> <span class="p">{</span>
+    <span class="p">...,</span>
+    <span class="nx">starerCount</span><span class="o">:</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="nx">post</span> <span class="p">=&gt;</span> <span class="p">{</span> <span class="nx">post</span><span class="p">.</span><span class="nx">starerCount</span> <span class="o">=</span> <span class="nx">post</span><span class="p">.</span><span class="nx">starIds</span><span class="p">.</span><span class="nx">length</span> <span class="p">},</span>
+  <span class="p">}</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+<p>A resolver function can make any sort of modification to the passed
+record; it is not limited to making service calls. Resolvers can use
+resources for which there is <a class="reference external" href="/v1/batch-loader/common-patterns.html#Using-non-Feathers-services">no Feathers
+adapter</a>.</p>
+<p>Here, the starerCount resolver adds the field <code class="docutils literal notranslate"><span class="pre">starerCount</span></code> containing
+a count of the <code class="docutils literal notranslate"><span class="pre">starIds</span></code>.</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="c1">// Result</span>
+<span class="p">[</span> <span class="p">{</span> <span class="nx">id</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="nx">body</span><span class="o">:</span> <span class="s1">&#39;John post&#39;</span><span class="p">,</span>
+    <span class="nx">userId</span><span class="o">:</span> <span class="mi">101</span><span class="p">,</span>
+    <span class="nx">starIds</span><span class="o">:</span> <span class="p">[</span> <span class="mi">102</span><span class="p">,</span> <span class="mi">103</span><span class="p">,</span> <span class="mi">104</span> <span class="p">],</span>
+    <span class="nx">starerCount</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
+    <span class="nx">author</span><span class="o">:</span> <span class="p">{</span> <span class="nx">id</span><span class="o">:</span> <span class="mi">101</span><span class="p">,</span> <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;John&#39;</span> <span class="p">},</span>
+    <span class="nx">starers</span><span class="o">:</span> <span class="p">[</span> <span class="p">{</span> <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;Marshall&#39;</span> <span class="p">},</span> <span class="p">{</span> <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;Barbara&#39;</span> <span class="p">},</span> <span class="p">{</span> <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;Aubree&#39;</span> <span class="p">}</span> <span class="p">]</span>
+<span class="p">}</span> <span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="recursive-operations">
+<h3>Recursive Operations<a class="headerlink" href="#recursive-operations" title="永久链接至标题">¶</a></h3>
+<p>We have been operating on the passed record by adding data to it. We can
+also recursively operate of that added data. We have been using a
+convenience syntax for resolvers so far:
+<code class="docutils literal notranslate"><span class="pre">js</span>&#160;&#160; <span class="pre">//</span> <span class="pre">Convenience</span> <span class="pre">syntax</span>&#160;&#160; <span class="pre">starers:</span> <span class="pre">()</span> <span class="pre">=&gt;</span> <span class="pre">record</span> <span class="pre">=&gt;</span> <span class="pre">...</span>&#160;&#160; <span class="pre">//</span> <span class="pre">Equivalent</span> <span class="pre">to</span>&#160;&#160; <span class="pre">starers:</span> <span class="pre">{</span>&#160;&#160;&#160;&#160; <span class="pre">resolver:</span> <span class="pre">()</span> <span class="pre">=&gt;</span> <span class="pre">record</span> <span class="pre">==&gt;</span> <span class="pre">...</span>&#160;&#160; <span class="pre">}</span></code></p>
+<p>The syntax for recursive operations uses the syntax below, where the
+<code class="docutils literal notranslate"><span class="pre">joins</span></code> will operate on the data returned by the comments resolver in
+the same fashion the top-level <code class="docutils literal notranslate"><span class="pre">joins</span></code> operated on the original
+record.
+<code class="docutils literal notranslate"><span class="pre">js</span>&#160;&#160; <span class="pre">comments:</span> <span class="pre">{</span>&#160;&#160;&#160;&#160; <span class="pre">resolver:</span> <span class="pre">()</span> <span class="pre">=&gt;</span> <span class="pre">records</span> <span class="pre">=&gt;</span> <span class="pre">...,</span>&#160;&#160;&#160;&#160; <span class="pre">joins:</span> <span class="pre">{</span> <span class="pre">...</span> <span class="pre">}</span>&#160;&#160; <span class="pre">}</span></code></p>
+<p>The comments resolver below adds related comment records to the passed
+record. The resolver function returns those comments, and that is the
+data which we will recursively operate on.</p>
+<blockquote>
+<div><p>The resolver function must return the data that is to be recursively
+operated on. Forgetting to do this is a common mistake.</p>
+</div></blockquote>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="kr">const</span> <span class="nx">postResolvers</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="nx">joins</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">comments</span><span class="o">:</span> <span class="p">{</span>
+      <span class="nx">resolver</span><span class="o">:</span> <span class="p">(</span><span class="nx">$select</span><span class="p">,</span> <span class="nx">$limit</span><span class="p">,</span> <span class="nx">$sort</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">async</span> <span class="nx">post</span> <span class="p">=&gt;</span> <span class="p">{</span>
+        <span class="nx">post</span><span class="p">.</span><span class="nx">comments</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">comments</span><span class="p">.</span><span class="nx">find</span><span class="p">({</span>
+          <span class="nx">query</span><span class="o">:</span> <span class="p">{</span> <span class="nx">postId</span><span class="o">:</span> <span class="nx">post</span><span class="p">.</span><span class="nx">id</span><span class="p">,</span> <span class="nx">$select</span><span class="o">:</span> <span class="nx">$select</span><span class="p">,</span> <span class="nx">$limit</span><span class="o">:</span> <span class="nx">$limit</span> <span class="o">||</span> <span class="mi">5</span><span class="p">,</span> <span class="p">[</span><span class="nx">$sort</span><span class="p">]</span><span class="o">:</span> <span class="p">{</span> <span class="nx">createdAt</span><span class="o">:</span> <span class="o">-</span><span class="mi">1</span> <span class="p">}</span> <span class="p">},</span>
+          <span class="nx">paginate</span><span class="o">:</span> <span class="kc">false</span>
+        <span class="p">});</span>
+        <span class="k">return</span> <span class="nx">post</span><span class="p">.</span><span class="nx">comments</span><span class="p">;</span>
+      <span class="p">},</span>
+
+      <span class="nx">joins</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">author</span><span class="o">:</span> <span class="nx">$select</span> <span class="p">=&gt;</span> <span class="nx">async</span> <span class="nx">comment</span> <span class="p">=&gt;</span> <span class="p">{</span> <span class="nx">comment</span><span class="p">.</span><span class="nx">author</span> <span class="o">=</span> <span class="p">(</span><span class="nx">await</span> <span class="nx">users</span><span class="p">.</span><span class="nx">find</span><span class="p">({</span>
+          <span class="nx">query</span><span class="o">:</span> <span class="p">{</span> <span class="nx">id</span><span class="o">:</span> <span class="nx">comment</span><span class="p">.</span><span class="nx">userId</span><span class="p">,</span> <span class="nx">$select</span><span class="o">:</span> <span class="nx">$select</span> <span class="p">},</span>
+          <span class="nx">paginate</span><span class="o">:</span> <span class="kc">false</span>
+        <span class="p">}))[</span><span class="mi">0</span><span class="p">]</span> <span class="p">},</span>
+      <span class="p">},</span>
+    <span class="p">},</span>
+  <span class="p">}</span>
+<span class="p">};</span>
+
+<span class="kr">const</span> <span class="nx">query</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="nx">comments</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">args</span><span class="o">:</span> <span class="p">[...],</span>
+    <span class="nx">author</span><span class="o">:</span> <span class="p">[[</span><span class="s1">&#39;id&#39;</span><span class="p">,</span> <span class="s1">&#39;name&#39;</span><span class="p">]]</span>
+  <span class="p">},</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="c1">// Original record</span>
+<span class="p">[</span> <span class="p">{</span> <span class="nx">id</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span> <span class="nx">body</span><span class="o">:</span> <span class="s1">&#39;John post&#39;</span><span class="p">,</span> <span class="nx">userId</span><span class="o">:</span> <span class="mi">101</span><span class="p">,</span> <span class="nx">starIds</span><span class="o">:</span> <span class="p">[</span><span class="mi">102</span><span class="p">,</span> <span class="mi">103</span><span class="p">,</span> <span class="mi">104</span><span class="p">]</span> <span class="p">}</span> <span class="p">]</span>
+
+<span class="c1">// Result</span>
+<span class="p">[</span> <span class="p">{</span> <span class="nx">id</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="nx">body</span><span class="o">:</span> <span class="s1">&#39;John post&#39;</span><span class="p">,</span>
+    <span class="nx">userId</span><span class="o">:</span> <span class="mi">101</span><span class="p">,</span>
+    <span class="nx">starIds</span><span class="o">:</span> <span class="p">[</span> <span class="mi">102</span><span class="p">,</span> <span class="mi">103</span><span class="p">,</span> <span class="mi">104</span> <span class="p">],</span>
+    <span class="nx">comments</span><span class="o">:</span>
+     <span class="p">[</span> <span class="p">{</span> <span class="nx">id</span><span class="o">:</span> <span class="mi">11</span><span class="p">,</span>
+         <span class="nx">text</span><span class="o">:</span> <span class="s1">&#39;John post Marshall comment 11&#39;</span><span class="p">,</span>
+         <span class="nx">postId</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+         <span class="nx">userId</span><span class="o">:</span> <span class="mi">102</span><span class="p">,</span>
+         <span class="nx">author</span><span class="o">:</span> <span class="p">{</span> <span class="nx">id</span><span class="o">:</span> <span class="mi">102</span><span class="p">,</span> <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;Marshall&#39;</span> <span class="p">}</span> <span class="p">},</span>
+       <span class="p">{</span> <span class="nx">id</span><span class="o">:</span> <span class="mi">12</span><span class="p">,</span>
+         <span class="nx">text</span><span class="o">:</span> <span class="s1">&#39;John post Marshall comment 12&#39;</span><span class="p">,</span>
+         <span class="nx">postId</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+         <span class="nx">userId</span><span class="o">:</span> <span class="mi">102</span><span class="p">,</span>
+         <span class="nx">author</span><span class="o">:</span> <span class="p">{</span> <span class="nx">id</span><span class="o">:</span> <span class="mi">102</span><span class="p">,</span> <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;Marshall&#39;</span> <span class="p">}</span> <span class="p">},</span>
+       <span class="p">{</span> <span class="nx">id</span><span class="o">:</span> <span class="mi">13</span><span class="p">,</span>
+         <span class="nx">text</span><span class="o">:</span> <span class="s1">&#39;John post Marshall comment 13&#39;</span><span class="p">,</span>
+         <span class="nx">postId</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+         <span class="nx">userId</span><span class="o">:</span> <span class="mi">102</span><span class="p">,</span>
+         <span class="nx">author</span><span class="o">:</span> <span class="p">{</span> <span class="nx">id</span><span class="o">:</span> <span class="mi">102</span><span class="p">,</span> <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;Marshall&#39;</span> <span class="p">}</span> <span class="p">}</span> <span class="p">]</span>
+<span class="p">}</span> <span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="keeping-resolvers-dry">
+<h3>Keeping Resolvers DRY<a class="headerlink" href="#keeping-resolvers-dry" title="永久链接至标题">¶</a></h3>
+<p>The comments records contain a <code class="docutils literal notranslate"><span class="pre">userId</span></code> field which we use to
+associate the user record. Comment records themselves may be associated
+with posts records, with other comment records, etc.</p>
+<p>We don’t want to have to include the resolver for the user record every
+time we include the comment record someplace. We can keep our resolvers
+<a class="reference external" href="https://en.wikipedia.org/wiki/Don%27t_repeat_yourself">DRY</a> by
+defining resolvers for each base table separately and then referring to
+those resolvers when we need them.</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="kr">const</span> <span class="nx">commentResolvers</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="nx">joins</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">author</span><span class="o">:</span> <span class="nx">$select</span> <span class="p">=&gt;</span> <span class="nx">async</span> <span class="nx">comment</span> <span class="p">=&gt;</span> <span class="p">{</span> <span class="nx">comment</span><span class="p">.</span><span class="nx">author</span> <span class="o">=</span> <span class="p">(</span><span class="nx">await</span> <span class="nx">users</span><span class="p">.</span><span class="nx">find</span><span class="p">({</span>
+      <span class="nx">query</span><span class="o">:</span> <span class="p">{</span> <span class="nx">id</span><span class="o">:</span> <span class="nx">comment</span><span class="p">.</span><span class="nx">userId</span><span class="p">,</span> <span class="nx">$select</span><span class="o">:</span> <span class="nx">$select</span> <span class="o">||</span> <span class="p">[</span> <span class="s1">&#39;name&#39;</span> <span class="p">]</span> <span class="p">},</span>
+      <span class="nx">paginate</span><span class="o">:</span> <span class="kc">false</span>
+    <span class="p">}))[</span><span class="mi">0</span><span class="p">]</span> <span class="p">},</span>
+  <span class="p">},</span>
+<span class="p">};</span>
+
+<span class="kr">const</span> <span class="nx">postResolvers</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="nx">joins</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">comments</span><span class="o">:</span> <span class="p">{</span>
+      <span class="nx">resolver</span><span class="o">:</span> <span class="p">(</span><span class="nx">$select</span><span class="p">,</span> <span class="nx">$limit</span><span class="p">,</span> <span class="nx">$sort</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">async</span> <span class="nx">post</span> <span class="p">=&gt;</span> <span class="p">{</span>
+        <span class="nx">post</span><span class="p">.</span><span class="nx">comments</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">comments</span><span class="p">.</span><span class="nx">find</span><span class="p">({</span>
+          <span class="nx">query</span><span class="o">:</span> <span class="p">{</span> <span class="nx">postId</span><span class="o">:</span> <span class="nx">post</span><span class="p">.</span><span class="nx">id</span><span class="p">,</span> <span class="nx">$select</span><span class="o">:</span> <span class="nx">$select</span><span class="p">,</span> <span class="nx">$limit</span><span class="o">:</span> <span class="nx">$limit</span> <span class="o">||</span> <span class="mi">5</span><span class="p">,</span> <span class="p">[</span><span class="nx">$sort</span><span class="p">]</span><span class="o">:</span> <span class="p">{</span> <span class="nx">createdAt</span><span class="o">:</span> <span class="o">-</span><span class="mi">1</span> <span class="p">}</span> <span class="p">},</span>
+          <span class="nx">paginate</span><span class="o">:</span> <span class="kc">false</span>
+        <span class="p">});</span>
+        <span class="k">return</span> <span class="nx">post</span><span class="p">.</span><span class="nx">comments</span><span class="p">;</span>
+      <span class="p">},</span>
+
+      <span class="nx">joins</span><span class="o">:</span> <span class="nx">commentResolvers</span><span class="p">,</span>
+    <span class="p">},</span>
+  <span class="p">}</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+<p>The comments resolver no longer has its own resolvers defined inline
+within its <code class="docutils literal notranslate"><span class="pre">joins:</span></code>. A reference is made to the comments resolver
+definition.</p>
+</div>
+<div class="section" id="batch-loaders">
+<h3>Batch-loaders<a class="headerlink" href="#batch-loaders" title="永久链接至标题">¶</a></h3>
+<p>We have been looking till now into the structure and flexibility of
+<code class="docutils literal notranslate"><span class="pre">fastJoin</span></code>. What we have done at so far makes as many database calls
+as the <code class="docutils literal notranslate"><span class="pre">populate</span></code> hook.</p>
+<p>We will use batch-loaders to dramatically reduce the number of database
+calls needed. Its not uncommon for operations that would have required
+<em>20</em> database calls to make only <em>2</em> using batch-loaders.</p>
+<p>You need to understand batch-loaders before we proceed, so <a class="reference external" href="../batch-loader/guide.html">read about
+them now.</a></p>
+</div>
+<div class="section" id="using-a-simple-batch-loader">
+<h3>Using a Simple Batch-Loader<a class="headerlink" href="#using-a-simple-batch-loader" title="永久链接至标题">¶</a></h3>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="kr">const</span> <span class="p">{</span> <span class="nx">fastJoin</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;feathers-hooks-common&#39;</span><span class="p">);</span>
+<span class="kr">const</span> <span class="nx">BatchLoader</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;@feathers-plus/batch-loader&#39;</span><span class="p">);</span>
+<span class="kr">const</span> <span class="p">{</span> <span class="nx">loaderFactory</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">BatchLoader</span><span class="p">;</span>
+
+<span class="kr">const</span> <span class="nx">postResolvers</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="nx">before</span><span class="o">:</span> <span class="nx">context</span> <span class="p">=&gt;</span> <span class="p">{</span>
+    <span class="nx">context</span><span class="p">.</span><span class="nx">_loaders</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">user</span><span class="o">:</span> <span class="p">{}</span> <span class="p">};</span>
+    <span class="nx">context</span><span class="p">.</span><span class="nx">_loaders</span><span class="p">.</span><span class="nx">user</span><span class="p">.</span><span class="nx">id</span> <span class="o">=</span> <span class="nx">loaderFactory</span><span class="p">(</span><span class="nx">users</span><span class="p">,</span> <span class="s1">&#39;id&#39;</span><span class="p">,</span> <span class="kc">false</span><span class="p">,</span> <span class="p">{</span> <span class="nx">paginate</span><span class="o">:</span> <span class="kc">false</span> <span class="p">})(</span><span class="nx">context</span><span class="p">);</span>
+  <span class="p">},</span>
+
+  <span class="nx">joins</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">author</span><span class="o">:</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="nx">async</span> <span class="p">(</span><span class="nx">post</span><span class="p">,</span> <span class="nx">context</span><span class="p">)</span> <span class="p">=&gt;</span>
+      <span class="nx">post</span><span class="p">.</span><span class="nx">author</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">context</span><span class="p">.</span><span class="nx">_loaders</span><span class="p">.</span><span class="nx">user</span><span class="p">.</span><span class="nx">id</span><span class="p">.</span><span class="nx">load</span><span class="p">(</span><span class="nx">post</span><span class="p">.</span><span class="nx">userId</span><span class="p">),</span>
+
+    <span class="nx">starers</span><span class="o">:</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="nx">async</span> <span class="p">(</span><span class="nx">post</span><span class="p">,</span> <span class="nx">context</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="o">!</span><span class="nx">post</span><span class="p">.</span><span class="nx">starIds</span> <span class="o">?</span> <span class="kc">null</span> <span class="o">:</span>
+      <span class="nx">post</span><span class="p">.</span><span class="nx">starers</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">context</span><span class="p">.</span><span class="nx">_loaders</span><span class="p">.</span><span class="nx">user</span><span class="p">.</span><span class="nx">id</span><span class="p">.</span><span class="nx">loadMany</span><span class="p">(</span><span class="nx">post</span><span class="p">.</span><span class="nx">starIds</span><span class="p">),</span>
+  <span class="p">}</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+<p>Let’s look at the code in this example:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Code fragment</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">before:</span></code></p></td>
+<td><p>This function is executed before
+the operations start. Only the
+top-most <code class="docutils literal notranslate"><span class="pre">before</span></code> is run; any
+in recursive <code class="docutils literal notranslate"><span class="pre">joins</span></code> are
+ignored.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">context._loaders</span></code></p></td>
+<td><p>An empty object is initialized by
+<code class="docutils literal notranslate"><span class="pre">fastJoin</span></code>. This is implemented
+as a stack, any value existing
+before <code class="docutils literal notranslate"><span class="pre">fastJoin</span></code> starts is
+stashed, and later restored as
+the hook terminates.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">context._loaders.user.id</span></code></p></td>
+<td><p>You can avoid confusion by
+organizing batch-loaders
+unambiguously. In this example
+<code class="docutils literal notranslate"><span class="pre">user</span></code> indicates the
+batch-loader returns single
+<code class="docutils literal notranslate"><span class="pre">user</span></code> records; the <code class="docutils literal notranslate"><span class="pre">id</span></code>
+indicates its keys will match
+<code class="docutils literal notranslate"><span class="pre">user.id</span></code>.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">loaderFactory(users,</span></code>
+<code class="docutils literal notranslate"><span class="pre">'id',</span> <span class="pre">false,</span> <span class="pre">{</span> <span class="pre">paginate:</span> <span class="pre">false</span>
+<span class="pre">})</span></code></p></td>
+<td><p>A convenience method for building
+straight forward batch-loaders.
+The batch loader reads record
+from the <code class="docutils literal notranslate"><span class="pre">users</span></code> service. The
+keys passed to it are <code class="docutils literal notranslate"><span class="pre">id</span></code>
+fields which it will match to
+<code class="docutils literal notranslate"><span class="pre">user.id</span></code>. The <code class="docutils literal notranslate"><span class="pre">false</span></code>
+indicates the batch loader
+returns single records for each
+key rather than an array of
+records.
+<code class="docutils literal notranslate"><span class="pre">params.pagination</span></code>is set to
+<code class="docutils literal notranslate"><span class="pre">false</span></code> to disable pagination.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">context._loaders</span></code>
+<code class="docutils literal notranslate"><span class="pre">.user.id.load()</span></code></p></td>
+<td><p>Obtains data from the
+batch-loader for one key.
+Externally it acts like
+<code class="docutils literal notranslate"><span class="pre">await</span> <span class="pre">users.find(...)</span></code>.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">context._loaders</span></code>
+<code class="docutils literal notranslate"><span class="pre">.user.id.loadMany()</span></code></p></td>
+<td><p>This is how you obtain records
+for multiple keys from the
+data-loader.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">!post.starIds</span> <span class="pre">?</span> <span class="pre">null</span> <span class="pre">:</span> <span class="pre">...</span></code></p></td>
+<td><p>Handle <code class="docutils literal notranslate"><span class="pre">posts.starIds</span></code> which
+may not exist.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="c1">// Original record</span>
+<span class="p">[</span> <span class="p">{</span> <span class="nx">id</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span> <span class="nx">body</span><span class="o">:</span> <span class="s1">&#39;John post&#39;</span><span class="p">,</span> <span class="nx">userId</span><span class="o">:</span> <span class="mi">101</span><span class="p">,</span> <span class="nx">starIds</span><span class="o">:</span> <span class="p">[</span><span class="mi">102</span><span class="p">,</span> <span class="mi">103</span><span class="p">,</span> <span class="mi">104</span><span class="p">]</span> <span class="p">}</span> <span class="p">]</span>
+
+<span class="c1">// Result</span>
+<span class="p">[</span> <span class="p">{</span> <span class="nx">id</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="nx">body</span><span class="o">:</span> <span class="s1">&#39;John post&#39;</span><span class="p">,</span>
+    <span class="nx">userId</span><span class="o">:</span> <span class="mi">101</span><span class="p">,</span>
+    <span class="nx">starIds</span><span class="o">:</span> <span class="p">[</span> <span class="mi">102</span><span class="p">,</span> <span class="mi">103</span><span class="p">,</span> <span class="mi">104</span> <span class="p">],</span>
+    <span class="nx">author</span><span class="o">:</span> <span class="p">{</span> <span class="nx">id</span><span class="o">:</span> <span class="mi">101</span><span class="p">,</span> <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;John&#39;</span> <span class="p">},</span>
+    <span class="nx">starers</span><span class="o">:</span>
+     <span class="p">[</span> <span class="p">{</span> <span class="nx">id</span><span class="o">:</span> <span class="mi">102</span><span class="p">,</span> <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;Marshall&#39;</span> <span class="p">},</span>
+       <span class="p">{</span> <span class="nx">id</span><span class="o">:</span> <span class="mi">103</span><span class="p">,</span> <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;Barbara&#39;</span> <span class="p">},</span>
+       <span class="p">{</span> <span class="nx">id</span><span class="o">:</span> <span class="mi">104</span><span class="p">,</span> <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;Aubree&#39;</span> <span class="p">}</span> <span class="p">]</span>
+<span class="p">}</span> <span class="p">]</span>
+</pre></div>
+</div>
+<blockquote>
+<div><p>The batch-loader made just <em>2</em> database calls. <code class="docutils literal notranslate"><span class="pre">populate</span></code> would
+have made <em>8</em>.</p>
+</div></blockquote>
+</div>
+<div class="section" id="using-batch-loaders">
+<h3>Using Batch-Loaders<a class="headerlink" href="#using-batch-loaders" title="永久链接至标题">¶</a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">loaderFactory(users,</span> <span class="pre">'id',</span> <span class="pre">false)</span></code> above is just a convenience
+wrapper for building a BatchLoader. We can create our batch loaders
+directly should we need them to do more.</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="kr">const</span> <span class="p">{</span> <span class="nx">fastJoin</span><span class="p">,</span> <span class="nx">makeCallingParams</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;feathers-hooks-common&#39;</span><span class="p">);</span>
+<span class="kr">const</span> <span class="nx">BatchLoader</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;@feathers-plus/batch-loader&#39;</span><span class="p">);</span>
+<span class="kr">const</span> <span class="p">{</span> <span class="nx">getResultsByKey</span><span class="p">,</span> <span class="nx">getUniqueKeys</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">BatchLoader</span><span class="p">;</span>
+
+<span class="kr">const</span> <span class="nx">postResolvers</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="nx">before</span><span class="o">:</span> <span class="nx">context</span> <span class="p">=&gt;</span> <span class="p">{</span>
+    <span class="nx">context</span><span class="p">.</span><span class="nx">_loaders</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">user</span><span class="o">:</span> <span class="p">{}</span> <span class="p">};</span>
+
+    <span class="nx">context</span><span class="p">.</span><span class="nx">_loaders</span><span class="p">.</span><span class="nx">user</span><span class="p">.</span><span class="nx">id</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">BatchLoader</span><span class="p">(</span><span class="nx">async</span> <span class="p">(</span><span class="nx">keys</span><span class="p">,</span> <span class="nx">context</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+        <span class="kr">const</span> <span class="nx">result</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">users</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="nx">makeCallingParams</span><span class="p">(</span>
+          <span class="nx">context</span><span class="p">,</span> <span class="p">{</span> <span class="nx">id</span><span class="o">:</span> <span class="p">{</span> <span class="nx">$in</span><span class="o">:</span> <span class="nx">getUniqueKeys</span><span class="p">(</span><span class="nx">keys</span><span class="p">)</span> <span class="p">}</span> <span class="p">},</span> <span class="kc">undefined</span><span class="p">,</span> <span class="p">{</span> <span class="nx">paginate</span><span class="o">:</span> <span class="kc">false</span> <span class="p">}</span>
+        <span class="p">));</span>
+        <span class="k">return</span> <span class="nx">getResultsByKey</span><span class="p">(</span><span class="nx">keys</span><span class="p">,</span> <span class="nx">result</span><span class="p">,</span> <span class="nx">user</span> <span class="p">=&gt;</span> <span class="nx">user</span><span class="p">.</span><span class="nx">id</span><span class="p">,</span> <span class="s1">&#39;!&#39;</span><span class="p">);</span>
+      <span class="p">},</span>
+      <span class="p">{</span> <span class="nx">context</span> <span class="p">}</span>
+    <span class="p">);</span>
+  <span class="p">},</span>
+
+  <span class="nx">joins</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">author</span><span class="o">:</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="nx">async</span> <span class="p">(</span><span class="nx">post</span><span class="p">,</span> <span class="nx">context</span><span class="p">)</span> <span class="p">=&gt;</span>
+      <span class="nx">post</span><span class="p">.</span><span class="nx">author</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">context</span><span class="p">.</span><span class="nx">_loaders</span><span class="p">.</span><span class="nx">user</span><span class="p">.</span><span class="nx">id</span><span class="p">.</span><span class="nx">load</span><span class="p">(</span><span class="nx">post</span><span class="p">.</span><span class="nx">userId</span><span class="p">),</span>
+
+    <span class="nx">starers</span><span class="o">:</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="nx">async</span> <span class="p">(</span><span class="nx">post</span><span class="p">,</span> <span class="nx">context</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="o">!</span><span class="nx">post</span><span class="p">.</span><span class="nx">starIds</span> <span class="o">?</span> <span class="kc">null</span> <span class="o">:</span>
+      <span class="nx">post</span><span class="p">.</span><span class="nx">starers</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">context</span><span class="p">.</span><span class="nx">_loaders</span><span class="p">.</span><span class="nx">user</span><span class="p">.</span><span class="nx">id</span><span class="p">.</span><span class="nx">loadMany</span><span class="p">(</span><span class="nx">post</span><span class="p">.</span><span class="nx">starIds</span><span class="p">),</span>
+  <span class="p">}</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+<blockquote>
+<div><p>The <a class="reference external" href="../batch-loader">batch-loader guide</a> explains how to create
+batch-loaders.</p>
+</div></blockquote>
+</div>
+<div class="section" id="putting-it-all-together">
+<h3>Putting It All Together<a class="headerlink" href="#putting-it-all-together" title="永久链接至标题">¶</a></h3>
+<p>Let’s finish by putting together all we’ve seen in a comprehensive
+example.</p>
+<p>Let’s also add a <code class="docutils literal notranslate"><span class="pre">reputation</span></code> array of objects to <code class="docutils literal notranslate"><span class="pre">posts</span></code>. This will
+show the increased flexibility of <code class="docutils literal notranslate"><span class="pre">fastJoin</span></code>, as <code class="docutils literal notranslate"><span class="pre">populate</span></code> cannot
+handle such a structure directly.</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="c1">// project/src/services/posts/posts.hooks.js</span>
+<span class="kr">const</span> <span class="p">{</span> <span class="nx">fastJoin</span><span class="p">,</span> <span class="nx">makeCallingParams</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;feathers-hooks-common&#39;</span><span class="p">);</span>
+<span class="kr">const</span> <span class="nx">BatchLoader</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;@feathers-plus/batch-loader&#39;</span><span class="p">);</span>
+<span class="kr">const</span> <span class="p">{</span> <span class="nx">getResultsByKey</span><span class="p">,</span> <span class="nx">getUniqueKeys</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">BatchLoader</span><span class="p">;</span>
+
+<span class="kr">const</span> <span class="nx">commentResolvers</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="nx">joins</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">author</span><span class="o">:</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="nx">async</span> <span class="p">(</span><span class="nx">comment</span><span class="p">,</span> <span class="nx">context</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="o">!</span><span class="nx">comment</span><span class="p">.</span><span class="nx">userId</span> <span class="o">?</span> <span class="kc">null</span> <span class="o">:</span>
+      <span class="nx">comment</span><span class="p">.</span><span class="nx">userRecord</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">context</span><span class="p">.</span><span class="nx">_loaders</span><span class="p">.</span><span class="nx">user</span><span class="p">.</span><span class="nx">id</span><span class="p">.</span><span class="nx">load</span><span class="p">(</span><span class="nx">comment</span><span class="p">.</span><span class="nx">userId</span><span class="p">)</span>
+  <span class="p">},</span>
+<span class="p">};</span>
+
+<span class="kr">const</span> <span class="nx">postResolvers</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="nx">before</span><span class="o">:</span> <span class="nx">context</span> <span class="p">=&gt;</span> <span class="p">{</span>
+    <span class="nx">context</span><span class="p">.</span><span class="nx">_loaders</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">user</span><span class="o">:</span> <span class="p">{},</span> <span class="nx">comments</span><span class="o">:</span> <span class="p">{}</span> <span class="p">};</span>
+
+    <span class="nx">context</span><span class="p">.</span><span class="nx">_loaders</span><span class="p">.</span><span class="nx">user</span><span class="p">.</span><span class="nx">id</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">BatchLoader</span><span class="p">(</span><span class="nx">async</span> <span class="p">(</span><span class="nx">keys</span><span class="p">,</span> <span class="nx">context</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+        <span class="kr">const</span> <span class="nx">result</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">users</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="nx">makeCallingParams</span><span class="p">(</span>
+          <span class="nx">context</span><span class="p">,</span> <span class="p">{</span> <span class="nx">id</span><span class="o">:</span> <span class="p">{</span> <span class="nx">$in</span><span class="o">:</span> <span class="nx">getUniqueKeys</span><span class="p">(</span><span class="nx">keys</span><span class="p">)</span> <span class="p">}</span> <span class="p">},</span> <span class="kc">undefined</span><span class="p">,</span> <span class="p">{</span> <span class="nx">paginate</span><span class="o">:</span> <span class="kc">false</span> <span class="p">}</span>
+        <span class="p">));</span>
+        <span class="k">return</span> <span class="nx">getResultsByKey</span><span class="p">(</span><span class="nx">keys</span><span class="p">,</span> <span class="nx">result</span><span class="p">,</span> <span class="nx">user</span> <span class="p">=&gt;</span> <span class="nx">user</span><span class="p">.</span><span class="nx">id</span><span class="p">,</span> <span class="s1">&#39;!&#39;</span><span class="p">);</span>
+      <span class="p">},</span>
+      <span class="p">{</span> <span class="nx">context</span> <span class="p">}</span>
+    <span class="p">);</span>
+
+    <span class="nx">context</span><span class="p">.</span><span class="nx">_loaders</span><span class="p">.</span><span class="nx">comments</span><span class="p">.</span><span class="nx">postId</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">BatchLoader</span><span class="p">(</span><span class="nx">async</span> <span class="p">(</span><span class="nx">keys</span><span class="p">,</span> <span class="nx">context</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+        <span class="kr">const</span> <span class="nx">result</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">comments</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="nx">makeCallingParams</span><span class="p">(</span>
+          <span class="nx">context</span><span class="p">,</span> <span class="p">{</span> <span class="nx">postId</span><span class="o">:</span> <span class="p">{</span> <span class="nx">$in</span><span class="o">:</span> <span class="nx">getUniqueKeys</span><span class="p">(</span><span class="nx">keys</span><span class="p">)</span> <span class="p">}</span> <span class="p">},</span> <span class="kc">undefined</span><span class="p">,</span> <span class="p">{</span> <span class="nx">paginate</span><span class="o">:</span> <span class="kc">false</span> <span class="p">}</span>
+        <span class="p">));</span>
+        <span class="k">return</span> <span class="nx">getResultsByKey</span><span class="p">(</span><span class="nx">keys</span><span class="p">,</span> <span class="nx">result</span><span class="p">,</span> <span class="nx">comment</span> <span class="p">=&gt;</span> <span class="nx">comment</span><span class="p">.</span><span class="nx">postId</span><span class="p">,</span> <span class="s1">&#39;[!]&#39;</span><span class="p">);</span>
+      <span class="p">},</span>
+      <span class="p">{</span> <span class="nx">context</span> <span class="p">}</span>
+    <span class="p">);</span>
+  <span class="p">},</span>
+
+  <span class="nx">joins</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">author</span><span class="o">:</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="nx">async</span> <span class="p">(</span><span class="nx">post</span><span class="p">,</span> <span class="nx">context</span><span class="p">)</span> <span class="p">=&gt;</span>
+      <span class="nx">post</span><span class="p">.</span><span class="nx">userRecord</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">context</span><span class="p">.</span><span class="nx">_loaders</span><span class="p">.</span><span class="nx">user</span><span class="p">.</span><span class="nx">id</span><span class="p">.</span><span class="nx">load</span><span class="p">(</span><span class="nx">post</span><span class="p">.</span><span class="nx">userId</span><span class="p">),</span>
+
+    <span class="nx">starers</span><span class="o">:</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="nx">async</span> <span class="p">(</span><span class="nx">post</span><span class="p">,</span> <span class="nx">context</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="o">!</span><span class="nx">post</span><span class="p">.</span><span class="nx">starIds</span> <span class="o">?</span> <span class="kc">null</span> <span class="o">:</span>
+      <span class="nx">post</span><span class="p">.</span><span class="nx">starIdsRecords</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">context</span><span class="p">.</span><span class="nx">_loaders</span><span class="p">.</span><span class="nx">user</span><span class="p">.</span><span class="nx">id</span><span class="p">.</span><span class="nx">loadMany</span><span class="p">(</span><span class="nx">post</span><span class="p">.</span><span class="nx">starIds</span><span class="p">),</span>
+
+    <span class="nx">reputation_author</span><span class="o">:</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="nx">async</span> <span class="p">(</span><span class="nx">post</span><span class="p">,</span> <span class="nx">context</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+      <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">post</span><span class="p">.</span><span class="nx">reputation</span><span class="p">)</span> <span class="k">return</span> <span class="kc">null</span><span class="p">;</span>
+      <span class="kr">const</span> <span class="nx">authors</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">context</span><span class="p">.</span><span class="nx">_loaders</span><span class="p">.</span><span class="nx">user</span><span class="p">.</span><span class="nx">id</span><span class="p">.</span><span class="nx">loadMany</span><span class="p">(</span><span class="nx">post</span><span class="p">.</span><span class="nx">reputation</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">rep</span> <span class="p">=&gt;</span> <span class="nx">rep</span><span class="p">.</span><span class="nx">userId</span><span class="p">));</span>
+      <span class="nx">post</span><span class="p">.</span><span class="nx">reputation</span><span class="p">.</span><span class="nx">forEach</span><span class="p">((</span><span class="nx">rep</span><span class="p">,</span> <span class="nx">i</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span> <span class="nx">rep</span><span class="p">.</span><span class="nx">author</span> <span class="o">=</span> <span class="nx">authors</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">name</span><span class="p">;</span> <span class="p">});</span>
+    <span class="p">},</span>
+
+    <span class="nx">comments</span><span class="o">:</span> <span class="p">{</span>
+      <span class="nx">resolver</span><span class="o">:</span> <span class="p">(...</span><span class="nx">args</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">async</span> <span class="p">(</span><span class="nx">post</span><span class="p">,</span> <span class="nx">context</span><span class="p">)</span> <span class="p">=&gt;</span>
+        <span class="nx">post</span><span class="p">.</span><span class="nx">commentRecords</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">context</span><span class="p">.</span><span class="nx">_loaders</span><span class="p">.</span><span class="nx">comments</span><span class="p">.</span><span class="nx">postId</span><span class="p">.</span><span class="nx">load</span><span class="p">(</span><span class="nx">post</span><span class="p">.</span><span class="nx">id</span><span class="p">),</span>
+      <span class="nx">joins</span><span class="o">:</span> <span class="nx">commentResolvers</span><span class="p">,</span>
+    <span class="p">},</span>
+  <span class="p">}</span>
+<span class="p">};</span>
+
+<span class="kr">const</span> <span class="nx">query</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="nx">author</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="nx">starers</span><span class="o">:</span> <span class="p">[[</span><span class="s1">&#39;id&#39;</span><span class="p">,</span> <span class="s1">&#39;name&#39;</span><span class="p">]],</span>
+  <span class="nx">comments</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">args</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nx">author</span><span class="o">:</span> <span class="p">[[</span><span class="s1">&#39;id&#39;</span><span class="p">,</span> <span class="s1">&#39;name&#39;</span><span class="p">]]</span>
+  <span class="p">},</span>
+<span class="p">};</span>
+
+<span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">after</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">all</span><span class="o">:</span> <span class="p">[</span> <span class="nx">fastJoin</span><span class="p">(</span><span class="nx">postResolvers</span><span class="p">,</span> <span class="nx">context</span> <span class="p">=&gt;</span> <span class="nx">query</span><span class="p">)</span> <span class="p">],</span>
+<span class="p">}</span> <span class="p">};</span>
+</pre></div>
+</div>
+<p>We are using 2 batch-loaders, one for single user records, the other for
+arrays of comment records.</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="c1">// Original records</span>
+<span class="p">[</span> <span class="p">{</span> <span class="nx">id</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="nx">body</span><span class="o">:</span> <span class="s1">&#39;John post&#39;</span><span class="p">,</span>
+    <span class="nx">userId</span><span class="o">:</span> <span class="mi">101</span><span class="p">,</span>
+    <span class="nx">starIds</span><span class="o">:</span> <span class="p">[</span><span class="mi">102</span><span class="p">,</span> <span class="mi">103</span><span class="p">,</span> <span class="mi">104</span><span class="p">],</span>
+    <span class="nx">reputation</span><span class="o">:</span> <span class="p">[</span> <span class="c1">// The `populate` hook cannot handle this structure.</span>
+      <span class="p">{</span> <span class="nx">userId</span><span class="o">:</span> <span class="mi">102</span><span class="p">,</span> <span class="nx">points</span><span class="o">:</span> <span class="mi">1</span> <span class="p">},</span>
+      <span class="p">{</span> <span class="nx">userId</span><span class="o">:</span> <span class="mi">103</span><span class="p">,</span> <span class="nx">points</span><span class="o">:</span> <span class="mi">1</span> <span class="p">},</span>
+      <span class="p">{</span> <span class="nx">userId</span><span class="o">:</span> <span class="mi">104</span><span class="p">,</span> <span class="nx">points</span><span class="o">:</span> <span class="mi">1</span> <span class="p">}</span>
+    <span class="p">]},</span>
+  <span class="p">{</span> <span class="nx">id</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span> <span class="nx">body</span><span class="o">:</span> <span class="s1">&#39;Marshall post&#39;</span><span class="p">,</span> <span class="nx">userId</span><span class="o">:</span> <span class="mi">102</span><span class="p">,</span> <span class="nx">starIds</span><span class="o">:</span> <span class="p">[</span><span class="mi">101</span><span class="p">,</span> <span class="mi">103</span><span class="p">,</span> <span class="mi">104</span><span class="p">]</span> <span class="p">},</span>
+  <span class="p">{</span> <span class="nx">id</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span> <span class="nx">body</span><span class="o">:</span> <span class="s1">&#39;Barbara post&#39;</span><span class="p">,</span> <span class="nx">userId</span><span class="o">:</span> <span class="mi">103</span> <span class="p">},</span>
+  <span class="p">{</span> <span class="nx">id</span><span class="o">:</span> <span class="mi">4</span><span class="p">,</span> <span class="nx">body</span><span class="o">:</span> <span class="s1">&#39;Aubree post&#39;</span><span class="p">,</span> <span class="nx">userId</span><span class="o">:</span> <span class="mi">104</span> <span class="p">}</span>
+<span class="p">]</span>
+
+<span class="c1">// Results</span>
+<span class="p">[</span> <span class="p">{</span> <span class="nx">id</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="nx">body</span><span class="o">:</span> <span class="s1">&#39;John post&#39;</span><span class="p">,</span>
+    <span class="nx">userId</span><span class="o">:</span> <span class="mi">101</span><span class="p">,</span>
+    <span class="nx">starIds</span><span class="o">:</span> <span class="p">[</span> <span class="mi">102</span><span class="p">,</span> <span class="mi">103</span><span class="p">,</span> <span class="mi">104</span> <span class="p">],</span>
+    <span class="nx">reputation</span><span class="o">:</span>
+     <span class="p">[</span> <span class="p">{</span> <span class="nx">userId</span><span class="o">:</span> <span class="mi">102</span><span class="p">,</span> <span class="nx">points</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span> <span class="nx">author</span><span class="o">:</span> <span class="s1">&#39;Marshall&#39;</span> <span class="p">},</span>
+       <span class="p">{</span> <span class="nx">userId</span><span class="o">:</span> <span class="mi">103</span><span class="p">,</span> <span class="nx">points</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span> <span class="nx">author</span><span class="o">:</span> <span class="s1">&#39;Barbara&#39;</span> <span class="p">},</span>
+       <span class="p">{</span> <span class="nx">userId</span><span class="o">:</span> <span class="mi">104</span><span class="p">,</span> <span class="nx">points</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span> <span class="nx">author</span><span class="o">:</span> <span class="s1">&#39;Aubree&#39;</span> <span class="p">}</span> <span class="p">],</span>
+    <span class="nx">author</span><span class="o">:</span> <span class="p">{</span> <span class="nx">id</span><span class="o">:</span> <span class="mi">101</span><span class="p">,</span> <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;John&#39;</span> <span class="p">},</span>
+    <span class="nx">comments</span><span class="o">:</span>
+     <span class="p">[</span> <span class="p">{</span> <span class="nx">id</span><span class="o">:</span> <span class="mi">11</span><span class="p">,</span>
+         <span class="nx">text</span><span class="o">:</span> <span class="s1">&#39;John post Marshall comment 11&#39;</span><span class="p">,</span>
+         <span class="nx">postId</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+         <span class="nx">userId</span><span class="o">:</span> <span class="mi">102</span><span class="p">,</span>
+         <span class="nx">author</span><span class="o">:</span> <span class="p">{</span> <span class="nx">id</span><span class="o">:</span> <span class="mi">102</span><span class="p">,</span> <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;Marshall&#39;</span> <span class="p">}</span> <span class="p">},</span>
+       <span class="p">{</span> <span class="nx">id</span><span class="o">:</span> <span class="mi">12</span><span class="p">,</span>
+         <span class="nx">text</span><span class="o">:</span> <span class="s1">&#39;John post Marshall comment 12&#39;</span><span class="p">,</span>
+         <span class="nx">postId</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+         <span class="nx">userId</span><span class="o">:</span> <span class="mi">102</span><span class="p">,</span>
+         <span class="nx">author</span><span class="o">:</span> <span class="p">{</span> <span class="nx">id</span><span class="o">:</span> <span class="mi">102</span><span class="p">,</span> <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;Marshall&#39;</span> <span class="p">}</span> <span class="p">},</span>
+       <span class="p">{</span> <span class="nx">id</span><span class="o">:</span> <span class="mi">13</span><span class="p">,</span>
+         <span class="nx">text</span><span class="o">:</span> <span class="s1">&#39;John post Marshall comment 13&#39;</span><span class="p">,</span>
+         <span class="nx">postId</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+         <span class="nx">userId</span><span class="o">:</span> <span class="mi">102</span><span class="p">,</span>
+         <span class="nx">author</span><span class="o">:</span> <span class="p">{</span> <span class="nx">id</span><span class="o">:</span> <span class="mi">102</span><span class="p">,</span> <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;Marshall&#39;</span> <span class="p">}</span> <span class="p">}</span> <span class="p">],</span>
+    <span class="nx">starers</span><span class="o">:</span>
+     <span class="p">[</span> <span class="p">{</span> <span class="nx">id</span><span class="o">:</span> <span class="mi">102</span><span class="p">,</span> <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;Marshall&#39;</span> <span class="p">},</span>
+       <span class="p">{</span> <span class="nx">id</span><span class="o">:</span> <span class="mi">103</span><span class="p">,</span> <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;Barbara&#39;</span> <span class="p">},</span>
+       <span class="p">{</span> <span class="nx">id</span><span class="o">:</span> <span class="mi">104</span><span class="p">,</span> <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;Aubree&#39;</span> <span class="p">}</span> <span class="p">]</span> <span class="p">},</span>
+  <span class="p">{</span> <span class="nx">id</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
+    <span class="nx">body</span><span class="o">:</span> <span class="s1">&#39;Marshall post&#39;</span><span class="p">,</span>
+    <span class="nx">userId</span><span class="o">:</span> <span class="mi">102</span><span class="p">,</span>
+    <span class="nx">starIds</span><span class="o">:</span> <span class="p">[</span> <span class="mi">101</span><span class="p">,</span> <span class="mi">103</span><span class="p">,</span> <span class="mi">104</span> <span class="p">],</span>
+    <span class="nx">author</span><span class="o">:</span> <span class="p">{</span> <span class="nx">id</span><span class="o">:</span> <span class="mi">102</span><span class="p">,</span> <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;Marshall&#39;</span> <span class="p">},</span>
+    <span class="nx">comments</span><span class="o">:</span>
+     <span class="p">[</span> <span class="p">{</span> <span class="nx">id</span><span class="o">:</span> <span class="mi">14</span><span class="p">,</span>
+         <span class="nx">text</span><span class="o">:</span> <span class="s1">&#39;Marshall post John comment 14&#39;</span><span class="p">,</span>
+         <span class="nx">postId</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
+         <span class="nx">userId</span><span class="o">:</span> <span class="mi">101</span><span class="p">,</span>
+         <span class="nx">author</span><span class="o">:</span> <span class="p">{</span> <span class="nx">id</span><span class="o">:</span> <span class="mi">101</span><span class="p">,</span> <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;John&#39;</span> <span class="p">}</span> <span class="p">},</span>
+       <span class="p">{</span> <span class="nx">id</span><span class="o">:</span> <span class="mi">15</span><span class="p">,</span>
+         <span class="nx">text</span><span class="o">:</span> <span class="s1">&#39;Marshall post John comment 15&#39;</span><span class="p">,</span>
+         <span class="nx">postId</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
+         <span class="nx">userId</span><span class="o">:</span> <span class="mi">101</span><span class="p">,</span>
+         <span class="nx">author</span><span class="o">:</span> <span class="p">{</span> <span class="nx">id</span><span class="o">:</span> <span class="mi">101</span><span class="p">,</span> <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;John&#39;</span> <span class="p">}</span> <span class="p">}</span> <span class="p">],</span>
+    <span class="nx">starers</span><span class="o">:</span>
+     <span class="p">[</span> <span class="p">{</span> <span class="nx">id</span><span class="o">:</span> <span class="mi">101</span><span class="p">,</span> <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;John&#39;</span> <span class="p">},</span>
+       <span class="p">{</span> <span class="nx">id</span><span class="o">:</span> <span class="mi">103</span><span class="p">,</span> <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;Barbara&#39;</span> <span class="p">},</span>
+       <span class="p">{</span> <span class="nx">id</span><span class="o">:</span> <span class="mi">104</span><span class="p">,</span> <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;Aubree&#39;</span> <span class="p">}</span> <span class="p">]</span> <span class="p">},</span>
+  <span class="p">{</span> <span class="nx">id</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
+    <span class="nx">body</span><span class="o">:</span> <span class="s1">&#39;Barbara post&#39;</span><span class="p">,</span>
+    <span class="nx">userId</span><span class="o">:</span> <span class="mi">103</span><span class="p">,</span>
+    <span class="nx">author</span><span class="o">:</span> <span class="p">{</span> <span class="nx">id</span><span class="o">:</span> <span class="mi">103</span><span class="p">,</span> <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;Barbara&#39;</span> <span class="p">},</span>
+    <span class="nx">comments</span><span class="o">:</span>
+     <span class="p">[</span> <span class="p">{</span> <span class="nx">id</span><span class="o">:</span> <span class="mi">16</span><span class="p">,</span>
+         <span class="nx">text</span><span class="o">:</span> <span class="s1">&#39;Barbara post John comment 16&#39;</span><span class="p">,</span>
+         <span class="nx">postId</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
+         <span class="nx">userId</span><span class="o">:</span> <span class="mi">101</span><span class="p">,</span>
+         <span class="nx">author</span><span class="o">:</span> <span class="p">{</span> <span class="nx">id</span><span class="o">:</span> <span class="mi">101</span><span class="p">,</span> <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;John&#39;</span> <span class="p">}</span> <span class="p">}</span> <span class="p">]</span> <span class="p">},</span>
+  <span class="p">{</span> <span class="nx">id</span><span class="o">:</span> <span class="mi">4</span><span class="p">,</span>
+    <span class="nx">body</span><span class="o">:</span> <span class="s1">&#39;Aubree post&#39;</span><span class="p">,</span>
+    <span class="nx">userId</span><span class="o">:</span> <span class="mi">104</span><span class="p">,</span>
+    <span class="nx">author</span><span class="o">:</span> <span class="p">{</span> <span class="nx">id</span><span class="o">:</span> <span class="mi">104</span><span class="p">,</span> <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;Aubree&#39;</span> <span class="p">},</span>
+    <span class="nx">comments</span><span class="o">:</span>
+     <span class="p">[</span> <span class="p">{</span> <span class="nx">id</span><span class="o">:</span> <span class="mi">17</span><span class="p">,</span>
+         <span class="nx">text</span><span class="o">:</span> <span class="s1">&#39;Aubree post Marshall comment 17&#39;</span><span class="p">,</span>
+         <span class="nx">postId</span><span class="o">:</span> <span class="mi">4</span><span class="p">,</span>
+         <span class="nx">userId</span><span class="o">:</span> <span class="mi">102</span><span class="p">,</span>
+         <span class="nx">author</span><span class="o">:</span> <span class="p">{</span> <span class="nx">id</span><span class="o">:</span> <span class="mi">102</span><span class="p">,</span> <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;Marshall&#39;</span> <span class="p">}</span> <span class="p">}</span> <span class="p">]</span> <span class="p">},</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+<p>Each batch-loader made just one database call: -
+<code class="docutils literal notranslate"><span class="pre">users.find({</span> <span class="pre">query:</span> <span class="pre">{</span> <span class="pre">id:</span> <span class="pre">{</span> <span class="pre">$in:</span> <span class="pre">[</span> <span class="pre">101,</span> <span class="pre">102,</span> <span class="pre">103,</span> <span class="pre">104]</span> <span class="pre">}</span> <span class="pre">}</span> <span class="pre">})</span></code> -
+<code class="docutils literal notranslate"><span class="pre">comments.find({</span> <span class="pre">query:</span> <span class="pre">{</span> <span class="pre">postId:</span> <span class="pre">{</span> <span class="pre">$in:</span> <span class="pre">[</span> <span class="pre">1,</span> <span class="pre">2,</span> <span class="pre">3,</span> <span class="pre">4</span> <span class="pre">]</span> <span class="pre">}</span> <span class="pre">}</span> <span class="pre">})</span></code></p>
+<blockquote>
+<div><p>Only <em>2</em> database calls were needed to construct the result above.
+<code class="docutils literal notranslate"><span class="pre">populate</span></code> requires <em>22</em> calls.</p>
+</div></blockquote>
+</div>
+<div class="section" id="using-a-persistent-cache">
+<h3>Using a Persistent Cache<a class="headerlink" href="#using-a-persistent-cache" title="永久链接至标题">¶</a></h3>
+<p>Our BatchLoaders have been batching service calls together and keeping
+those results in a cache. This way those records don’t have to be read
+again.</p>
+<p>However each BatchLoader has been starting each request with an empty
+cache. So if 2 sequential <code class="docutils literal notranslate"><span class="pre">fastJoin</span></code> hook calls each need user id 101,
+they both need to <strong>prime</strong> their cache by each reading that record.</p>
+<p>We can improve the situation by using persistent caches with the
+BatchLoaders. A persistent cache stores records so future requests for
+those records can be served faster; the records stored in the cache are
+duplicates of records stored in the database.</p>
+<p>Let’s see how we can use the <a class="reference external" href="./index.html#cache">cache hook</a> as it
+maintains a persistent cache for the service its registered on.</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="kr">const</span> <span class="p">{</span> <span class="nx">cache</span><span class="p">,</span> <span class="nx">fastJoin</span><span class="p">,</span> <span class="nx">makeCallingParams</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;feathers-hooks-common&#39;</span><span class="p">);</span>
+<span class="kr">const</span> <span class="nx">BatchLoader</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;@feathers-plus/batch-loader&#39;</span><span class="p">);</span>
+<span class="kr">const</span> <span class="nx">CacheMap</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;@feathers-plus/cache&#39;</span><span class="p">);</span>
+<span class="kr">const</span> <span class="p">{</span> <span class="nx">getResultsByKey</span><span class="p">,</span> <span class="nx">getUniqueKeys</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">BatchLoader</span><span class="p">;</span>
+
+<span class="c1">// Create a cache for a maximum of 100 users</span>
+<span class="kr">const</span> <span class="nx">cacheMapUsers</span> <span class="o">=</span> <span class="nx">CacheMap</span><span class="p">({</span> <span class="nx">max</span><span class="o">:</span> <span class="mi">100</span> <span class="p">});</span>
+
+<span class="c1">// Create a batchLoader using the persistent cache</span>
+<span class="kr">const</span> <span class="nx">userBatchLoader</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">BatchLoader</span><span class="p">(</span><span class="nx">async</span> <span class="nx">keys</span> <span class="p">=&gt;</span> <span class="p">{</span>
+  <span class="kr">const</span> <span class="nx">result</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">users</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="nx">makeCallingParams</span><span class="p">(</span>
+    <span class="p">{},</span> <span class="p">{</span> <span class="nx">id</span><span class="o">:</span> <span class="p">{</span> <span class="nx">$in</span><span class="o">:</span> <span class="nx">getUniqueKeys</span><span class="p">(</span><span class="nx">keys</span><span class="p">)</span> <span class="p">}</span> <span class="p">},</span> <span class="kc">undefined</span><span class="p">,</span> <span class="p">{</span> <span class="nx">paginate</span><span class="o">:</span> <span class="kc">false</span> <span class="p">}</span>
+  <span class="p">));</span>
+  <span class="k">return</span> <span class="nx">getResultsByKey</span><span class="p">(</span><span class="nx">keys</span><span class="p">,</span> <span class="nx">result</span><span class="p">,</span> <span class="nx">user</span> <span class="p">=&gt;</span> <span class="nx">user</span><span class="p">.</span><span class="nx">id</span><span class="p">,</span> <span class="s1">&#39;!&#39;</span><span class="p">);</span>
+<span class="p">},</span>
+  <span class="p">{</span> <span class="nx">cacheMap</span><span class="o">:</span> <span class="nx">cacheMapUsers</span> <span class="p">}</span>
+<span class="p">);</span>
+
+<span class="kr">const</span> <span class="nx">postResolvers</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="nx">before</span><span class="o">:</span> <span class="nx">context</span> <span class="p">=&gt;</span> <span class="p">{</span>
+    <span class="nx">context</span><span class="p">.</span><span class="nx">_loaders</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">user</span><span class="o">:</span> <span class="p">{}</span> <span class="p">};</span>
+    <span class="nx">context</span><span class="p">.</span><span class="nx">_loaders</span><span class="p">.</span><span class="nx">user</span><span class="p">.</span><span class="nx">id</span> <span class="o">=</span> <span class="nx">userBatchLoader</span><span class="p">;</span>
+  <span class="p">},</span>
+
+  <span class="nx">joins</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">author</span><span class="o">:</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="nx">async</span> <span class="p">(</span><span class="nx">post</span><span class="p">,</span> <span class="nx">context</span><span class="p">)</span> <span class="p">=&gt;</span>
+      <span class="nx">post</span><span class="p">.</span><span class="nx">author</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">context</span><span class="p">.</span><span class="nx">_loaders</span><span class="p">.</span><span class="nx">user</span><span class="p">.</span><span class="nx">id</span><span class="p">.</span><span class="nx">load</span><span class="p">(</span><span class="nx">post</span><span class="p">.</span><span class="nx">userId</span><span class="p">),</span>
+
+    <span class="nx">starers</span><span class="o">:</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="nx">async</span> <span class="p">(</span><span class="nx">post</span><span class="p">,</span> <span class="nx">context</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="o">!</span><span class="nx">post</span><span class="p">.</span><span class="nx">starIds</span> <span class="o">?</span> <span class="kc">null</span> <span class="o">:</span>
+      <span class="nx">post</span><span class="p">.</span><span class="nx">starers</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">context</span><span class="p">.</span><span class="nx">_loaders</span><span class="p">.</span><span class="nx">user</span><span class="p">.</span><span class="nx">id</span><span class="p">.</span><span class="nx">loadMany</span><span class="p">(</span><span class="nx">post</span><span class="p">.</span><span class="nx">starIds</span><span class="p">),</span>
+  <span class="p">}</span>
+<span class="p">};</span>
+
+<span class="kr">const</span> <span class="nx">query</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="nx">author</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="nx">starers</span><span class="o">:</span> <span class="p">[[</span><span class="s1">&#39;id&#39;</span><span class="p">,</span> <span class="s1">&#39;name&#39;</span><span class="p">]],</span>
+  <span class="nx">comments</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">args</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nx">author</span><span class="o">:</span> <span class="p">[[</span><span class="s1">&#39;id&#39;</span><span class="p">,</span> <span class="s1">&#39;name&#39;</span><span class="p">]]</span>
+  <span class="p">},</span>
+<span class="p">};</span>
+
+<span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="nx">before</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">all</span><span class="o">:</span> <span class="nx">cache</span><span class="p">(</span><span class="nx">cacheMapUsers</span><span class="p">)</span>
+  <span class="p">},</span>
+  <span class="nx">after</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">all</span><span class="o">:</span> <span class="p">[</span>
+      <span class="nx">cache</span><span class="p">(</span><span class="nx">cacheMapUsers</span><span class="p">),</span>
+      <span class="nx">fastJoin</span><span class="p">(</span><span class="nx">postResolvers</span><span class="p">,</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="nx">query</span><span class="p">)</span>
+    <span class="p">],</span>
+  <span class="p">}</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+<blockquote>
+<div><p>The <code class="docutils literal notranslate"><span class="pre">cache</span></code> hook <strong>must</strong> be registered in both <code class="docutils literal notranslate"><span class="pre">before</span></code> and
+<code class="docutils literal notranslate"><span class="pre">after</span></code>.</p>
+</div></blockquote>
+<p>The number of service calls needed to run the <code class="docutils literal notranslate"><span class="pre">query</span></code> above <strong>the
+second time</strong>:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 53%" />
+<col style="width: 47%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Using</p></th>
+<th class="head"><p>number of service calls</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">populate</span></code></p></td>
+<td><p><strong>22</strong></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">fastJoin</span></code> alone</p></td>
+<td><p><strong>2</strong></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">fastJoin</span></code> and <code class="docutils literal notranslate"><span class="pre">cache</span></code></p></td>
+<td><p><strong>0</strong></p></td>
+</tr>
+</tbody>
+</table>
+<p>The <code class="docutils literal notranslate"><span class="pre">cache</span></code> hook also makes <code class="docutils literal notranslate"><span class="pre">get</span></code> service calls more efficient.</p>
+</div>
+<div class="section" id="the-graphql-feathers-adapter">
+<h3>The GraphQL Feathers Adapter<a class="headerlink" href="#the-graphql-feathers-adapter" title="永久链接至标题">¶</a></h3>
+<p>By now you have an understanding of the foundations of Facebook’s
+<a class="reference external" href="http://graphql.org/">GraphQL</a>. GraphQL however is more powerful and
+flexible.</p>
+<p>You may want to read about the Feathers service adapter
+[&#64;feathers-plus/graphql](../graphql). <strong>It supports SQL and non-SQL
+databases,</strong> and automatically generates the resolver functions.</p>
+<!--=============================================================================================--><!--=============================================================================================--><!--=============================================================================================--></div>
+</div>
+<div class="section" id="populate">
+<h2>Populate<a class="headerlink" href="#populate" title="永久链接至标题">¶</a></h2>
+<div class="section" id="populate-options-object-hookfunc-source">
+<h3><code class="docutils literal notranslate"><span class="pre">populate(options:</span> <span class="pre">Object):</span> <span class="pre">HookFunc</span></code> <a class="reference external" href="https://github.com/feathersjs/feathers-hooks-common/blob/master/src/services/populate.js">source</a><a class="headerlink" href="#populate-options-object-hookfunc-source" title="永久链接至标题">¶</a></h3>
+<p>Populates items <em>recursively</em> to any depth. Supports 1:1, 1:n and n:1
+relationships.</p>
+<ul class="simple">
+<li><p>Used as a <strong>before</strong> or <strong>after</strong> hook on any service method.</p></li>
+<li><p>Supports multiple result items, including paginated <code class="docutils literal notranslate"><span class="pre">find</span></code>.</p></li>
+<li><p>Permissions control what a user may see.</p></li>
+<li><p>Provides performance profile information.</p></li>
+<li><p>Backward compatible with the old FeathersJS <code class="docutils literal notranslate"><span class="pre">populate</span></code> hook.</p></li>
+</ul>
+</div>
+<div class="section" id="examples">
+<h3>Examples<a class="headerlink" href="#examples" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li><p>1:1 relationship</p></li>
+</ul>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// users like { _id: &#39;111&#39;, name: &#39;John&#39;, roleId: &#39;555&#39; }</span>
+<span class="c1">// roles like { _id: &#39;555&#39;, permissions: [&#39;foo&#39;, bar&#39;] }</span>
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">populate</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;feathers-hooks-common&#39;</span><span class="p">;</span>
+
+<span class="kr">const</span> <span class="nx">userRoleSchema</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="nx">include</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">service</span><span class="o">:</span> <span class="s1">&#39;roles&#39;</span><span class="p">,</span>
+    <span class="nx">nameAs</span><span class="o">:</span> <span class="s1">&#39;role&#39;</span><span class="p">,</span>
+    <span class="nx">parentField</span><span class="o">:</span> <span class="s1">&#39;roleId&#39;</span><span class="p">,</span>
+    <span class="nx">childField</span><span class="o">:</span> <span class="s1">&#39;_id&#39;</span>
+  <span class="p">}</span>
+<span class="p">};</span>
+
+<span class="nx">app</span><span class="p">.</span><span class="nx">service</span><span class="p">(</span><span class="s1">&#39;users&#39;</span><span class="p">).</span><span class="nx">hooks</span><span class="p">({</span>
+  <span class="nx">after</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">all</span><span class="o">:</span> <span class="nx">populate</span><span class="p">({</span> <span class="nx">schema</span><span class="o">:</span> <span class="nx">userRoleSchema</span> <span class="p">})</span>
+  <span class="p">}</span>
+<span class="p">});</span>
+
+<span class="c1">// result like</span>
+<span class="c1">// { _id: &#39;111&#39;, name: &#39;John&#39;, roleId: &#39;555&#39;,</span>
+<span class="c1">//   role: { _id: &#39;555&#39;, permissions: [&#39;foo&#39;, bar&#39;] } }</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>1:n relationship</p></li>
+</ul>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// users like { _id: &#39;111&#39;, name: &#39;John&#39;, roleIds: [&#39;555&#39;, &#39;666&#39;] }</span>
+<span class="c1">// roles like { _id: &#39;555&#39;, permissions: [&#39;foo&#39;, &#39;bar&#39;] }</span>
+<span class="kr">const</span> <span class="nx">userRolesSchema</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="nx">include</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">service</span><span class="o">:</span> <span class="s1">&#39;roles&#39;</span><span class="p">,</span>
+    <span class="nx">nameAs</span><span class="o">:</span> <span class="s1">&#39;roles&#39;</span><span class="p">,</span>
+    <span class="nx">parentField</span><span class="o">:</span> <span class="s1">&#39;roleIds&#39;</span><span class="p">,</span>
+    <span class="nx">childField</span><span class="o">:</span> <span class="s1">&#39;_id&#39;</span>
+  <span class="p">}</span>
+<span class="p">};</span>
+
+<span class="nx">usersService</span><span class="p">.</span><span class="nx">hooks</span><span class="p">({</span>
+  <span class="nx">after</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">all</span><span class="o">:</span> <span class="nx">populate</span><span class="p">({</span> <span class="nx">schema</span><span class="o">:</span> <span class="nx">userRolesSchema</span> <span class="p">})</span>
+  <span class="p">}</span>
+<span class="p">});</span>
+
+<span class="c1">// result like</span>
+<span class="c1">// { _id: &#39;111&#39;, name: &#39;John&#39;, roleIds: [&#39;555&#39;, &#39;666&#39;], roles: [</span>
+<span class="c1">//   { _id: &#39;555&#39;, permissions: [&#39;foo&#39;, &#39;bar&#39;] }</span>
+<span class="c1">//   { _id: &#39;666&#39;, permissions: [&#39;fiz&#39;, &#39;buz&#39;] }</span>
+<span class="c1">// ]}</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>n:1 relationship</p></li>
+</ul>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// posts like { _id: &#39;111&#39;, body: &#39;...&#39; }</span>
+<span class="c1">// comments like { _id: &#39;555&#39;, text: &#39;...&#39;, postId: &#39;111&#39; }</span>
+<span class="kr">const</span> <span class="nx">postCommentsSchema</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="nx">include</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">service</span><span class="o">:</span> <span class="s1">&#39;comments&#39;</span><span class="p">,</span>
+    <span class="nx">nameAs</span><span class="o">:</span> <span class="s1">&#39;comments&#39;</span><span class="p">,</span>
+    <span class="nx">parentField</span><span class="o">:</span> <span class="s1">&#39;_id&#39;</span><span class="p">,</span>
+    <span class="nx">childField</span><span class="o">:</span> <span class="s1">&#39;postId&#39;</span>
+  <span class="p">}</span>
+<span class="p">};</span>
+
+<span class="nx">postService</span><span class="p">.</span><span class="nx">hooks</span><span class="p">({</span>
+  <span class="nx">after</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">all</span><span class="o">:</span> <span class="nx">populate</span><span class="p">({</span> <span class="nx">schema</span><span class="o">:</span> <span class="nx">postCommentsSchema</span> <span class="p">})</span>
+  <span class="p">}</span>
+<span class="p">});</span>
+
+<span class="c1">// result like</span>
+<span class="c1">// { _id: &#39;111&#39;, body: &#39;...&#39; }, comments: [</span>
+<span class="c1">//   { _id: &#39;555&#39;, text: &#39;...&#39;, postId: &#39;111&#39; }</span>
+<span class="c1">//   { _id: &#39;666&#39;, text: &#39;...&#39;, postId: &#39;111&#39; }</span>
+<span class="c1">// ]}</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Multiple and recursive includes</p></li>
+</ul>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kr">const</span> <span class="nx">schema</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="nx">service</span><span class="o">:</span> <span class="s1">&#39;...&#39;</span><span class="p">,</span>
+  <span class="nx">permissions</span><span class="o">:</span> <span class="s1">&#39;...&#39;</span><span class="p">,</span>
+  <span class="nx">include</span><span class="o">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="nx">service</span><span class="o">:</span> <span class="s1">&#39;users&#39;</span><span class="p">,</span>
+      <span class="nx">nameAs</span><span class="o">:</span> <span class="s1">&#39;authorItem&#39;</span><span class="p">,</span>
+      <span class="nx">parentField</span><span class="o">:</span> <span class="s1">&#39;author&#39;</span><span class="p">,</span>
+      <span class="nx">childField</span><span class="o">:</span> <span class="s1">&#39;id&#39;</span><span class="p">,</span>
+      <span class="nx">include</span><span class="o">:</span> <span class="p">[</span> <span class="p">...</span> <span class="p">],</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="nx">service</span><span class="o">:</span> <span class="s1">&#39;comments&#39;</span><span class="p">,</span>
+      <span class="nx">parentField</span><span class="o">:</span> <span class="s1">&#39;id&#39;</span><span class="p">,</span>
+      <span class="nx">childField</span><span class="o">:</span> <span class="s1">&#39;postId&#39;</span><span class="p">,</span>
+      <span class="nx">query</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">$limit</span><span class="o">:</span> <span class="mi">5</span><span class="p">,</span>
+        <span class="nx">$select</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;title&#39;</span><span class="p">,</span> <span class="s1">&#39;content&#39;</span><span class="p">,</span> <span class="s1">&#39;postId&#39;</span><span class="p">],</span>
+        <span class="nx">$sort</span><span class="o">:</span> <span class="p">{</span><span class="nx">createdAt</span><span class="o">:</span> <span class="o">-</span><span class="mi">1</span><span class="p">}</span>
+      <span class="p">},</span>
+      <span class="nx">select</span><span class="o">:</span> <span class="p">(</span><span class="nx">hook</span><span class="p">,</span> <span class="nx">parent</span><span class="p">,</span> <span class="nx">depth</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">({</span> <span class="nx">$limit</span><span class="o">:</span> <span class="mi">6</span> <span class="p">}),</span>
+      <span class="nx">asArray</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+      <span class="nx">provider</span><span class="o">:</span> <span class="kc">undefined</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="nx">service</span><span class="o">:</span> <span class="s1">&#39;users&#39;</span><span class="p">,</span>
+      <span class="nx">permissions</span><span class="o">:</span> <span class="s1">&#39;...&#39;</span><span class="p">,</span>
+      <span class="nx">nameAs</span><span class="o">:</span> <span class="s1">&#39;readers&#39;</span><span class="p">,</span>
+      <span class="nx">parentField</span><span class="o">:</span> <span class="s1">&#39;readers&#39;</span><span class="p">,</span>
+      <span class="nx">childField</span><span class="o">:</span> <span class="s1">&#39;id&#39;</span>
+    <span class="p">}</span>
+  <span class="p">],</span>
+<span class="p">};</span>
+
+<span class="nx">module</span><span class="p">.</span><span class="nx">exports</span><span class="p">.</span><span class="nx">after</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="nx">all</span><span class="o">:</span> <span class="nx">populate</span><span class="p">({</span> <span class="nx">schema</span><span class="p">,</span> <span class="nx">checkPermissions</span><span class="p">,</span> <span class="nx">profile</span><span class="o">:</span> <span class="kc">true</span> <span class="p">})</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Flexible relationship, similar to the n:1 relationship example above</p></li>
+</ul>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// posts like { _id: &#39;111&#39;, body: &#39;...&#39; }</span>
+<span class="c1">// comments like { _id: &#39;555&#39;, text: &#39;...&#39;, postId: &#39;111&#39; }</span>
+<span class="kr">const</span> <span class="nx">postCommentsSchema</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="nx">include</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">service</span><span class="o">:</span> <span class="s1">&#39;comments&#39;</span><span class="p">,</span>
+    <span class="nx">nameAs</span><span class="o">:</span> <span class="s1">&#39;comments&#39;</span><span class="p">,</span>
+    <span class="nx">select</span><span class="o">:</span> <span class="p">(</span><span class="nx">hook</span><span class="p">,</span> <span class="nx">parentItem</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">({</span> <span class="nx">postId</span><span class="o">:</span> <span class="nx">parentItem</span><span class="p">.</span><span class="nx">_id</span> <span class="p">}),</span>
+  <span class="p">}</span>
+<span class="p">};</span>
+
+<span class="nx">postService</span><span class="p">.</span><span class="nx">hooks</span><span class="p">({</span>
+  <span class="nx">after</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">all</span><span class="o">:</span> <span class="nx">populate</span><span class="p">({</span> <span class="nx">schema</span><span class="o">:</span> <span class="nx">postCommentsSchema</span> <span class="p">})</span>
+  <span class="p">}</span>
+<span class="p">});</span>
+
+<span class="c1">// result like</span>
+<span class="c1">// { _id: &#39;111&#39;, body: &#39;...&#39; }, comments: [</span>
+<span class="c1">//   { _id: &#39;555&#39;, text: &#39;...&#39;, postId: &#39;111&#39; }</span>
+<span class="c1">//   { _id: &#39;666&#39;, text: &#39;...&#39;, postId: &#39;111&#39; }</span>
+<span class="c1">// ]}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="options">
+<h3>Options<a class="headerlink" href="#options" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">schema</span></code> (<em>required</em>, object or function) How to populate the
+items. <a class="reference external" href="#schema">Details are below.</a></p>
+<ul>
+<li><p>Function signature <code class="docutils literal notranslate"><span class="pre">(hook:</span> <span class="pre">Hook,</span> <span class="pre">options:</span> <span class="pre">Object):</span> <span class="pre">Object</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">hook</span></code> The hook.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">options</span></code> The <code class="docutils literal notranslate"><span class="pre">options</span></code> passed to the populate hook.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">checkPermissions</span></code> [optional, default () =&gt; true] Function to check
+if the user is allowed to perform this populate, or include this type
+of item. Called whenever a <code class="docutils literal notranslate"><span class="pre">permissions</span></code> property is found.</p>
+<ul>
+<li><p>Function signature
+<code class="docutils literal notranslate"><span class="pre">(hook:</span> <span class="pre">Hook,</span> <span class="pre">service:</span> <span class="pre">string,</span> <span class="pre">permissions:</span> <span class="pre">any,</span> <span class="pre">depth:</span> <span class="pre">number):</span> <span class="pre">boolean</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">hook</span></code> The hook.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">service</span></code> The name of the service being included, e.g. users,
+messages.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">permissions</span></code> The value of the permissions property.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">depth</span></code> How deep the include is in the schema. Top of schema is
+0.</p></li>
+<li><p>Return truesy to allow the include.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">profile</span></code> [optional, default false] If <code class="docutils literal notranslate"><span class="pre">true</span></code>, the populated
+result is to contain a performance profile. Must be <code class="docutils literal notranslate"><span class="pre">true</span></code>, truesy
+is insufficient.</p></li>
+</ul>
+</div>
+<div class="section" id="schema">
+<h3>Schema<a class="headerlink" href="#schema" title="永久链接至标题">¶</a></h3>
+<p>The data currently in the hook will be populated according to the
+schema. The schema starts with:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kr">const</span> <span class="nx">schema</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="nx">service</span><span class="o">:</span> <span class="s1">&#39;...&#39;</span><span class="p">,</span>
+  <span class="nx">permissions</span><span class="o">:</span> <span class="s1">&#39;...&#39;</span><span class="p">,</span>
+  <span class="nx">include</span><span class="o">:</span> <span class="p">[</span> <span class="p">...</span> <span class="p">]</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">service</span></code> (<em>optional</em>) The name of the service this schema is to be
+used with. This can be used to prevent a schema designed to populate
+‘blog’ items from being incorrectly used with <code class="docutils literal notranslate"><span class="pre">comment</span></code> items.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">permissions</span></code> (<em>optional</em>, any type of value) Who is allowed to
+perform this populate. See <code class="docutils literal notranslate"><span class="pre">checkPermissions</span></code> above.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">include</span></code> (<em>optional</em>) Which services to join to the data.</p></li>
+</ul>
+<div class="section" id="include">
+<h4>Include<a class="headerlink" href="#include" title="永久链接至标题">¶</a></h4>
+<p>The <code class="docutils literal notranslate"><span class="pre">include</span></code> array has an element for each service to join. They each
+may have:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span> <span class="nx">service</span><span class="o">:</span> <span class="s1">&#39;comments&#39;</span><span class="p">,</span>
+  <span class="nx">nameAs</span><span class="o">:</span> <span class="s1">&#39;commentItems&#39;</span><span class="p">,</span>
+  <span class="nx">permissions</span><span class="o">:</span> <span class="s1">&#39;...&#39;</span><span class="p">,</span>
+  <span class="nx">parentField</span><span class="o">:</span> <span class="s1">&#39;id&#39;</span><span class="p">,</span>
+  <span class="nx">childField</span><span class="o">:</span> <span class="s1">&#39;postId&#39;</span><span class="p">,</span>
+  <span class="nx">query</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">$limit</span><span class="o">:</span> <span class="mi">5</span><span class="p">,</span>
+    <span class="nx">$select</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;title&#39;</span><span class="p">,</span> <span class="s1">&#39;content&#39;</span><span class="p">,</span> <span class="s1">&#39;postId&#39;</span><span class="p">],</span>
+    <span class="nx">$sort</span><span class="o">:</span> <span class="p">{</span><span class="nx">createdAt</span><span class="o">:</span> <span class="o">-</span><span class="mi">1</span><span class="p">}</span>
+  <span class="p">},</span>
+  <span class="nx">select</span><span class="o">:</span> <span class="p">(</span><span class="nx">hook</span><span class="p">,</span> <span class="nx">parent</span><span class="p">,</span> <span class="nx">depth</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">({</span> <span class="nx">$limit</span><span class="o">:</span> <span class="mi">6</span> <span class="p">}),</span>
+  <span class="nx">asArray</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="nx">paginate</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+  <span class="nx">provider</span><span class="o">:</span> <span class="kc">undefined</span><span class="p">,</span>
+  <span class="nx">useInnerPopulate</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+  <span class="nx">include</span><span class="o">:</span> <span class="p">[</span> <span class="p">...</span> <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<blockquote>
+<div><p><strong>ProTip</strong> Instead of setting <code class="docutils literal notranslate"><span class="pre">include</span></code> to a 1-element array, you
+can set it to the include object itself,
+e.g. <code class="docutils literal notranslate"><span class="pre">include:</span> <span class="pre">{</span> <span class="pre">service:</span> <span class="pre">...,</span> <span class="pre">nameAs:</span> <span class="pre">...,</span> <span class="pre">...</span> <span class="pre">}</span></code>.</p>
+</div></blockquote>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">service</span></code> [required, string] The name of the service providing the
+items.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">nameAs</span></code> [optional, string, default is service] Where to place the
+items from the join. Dot notation is allowed.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">permissions</span></code> [optional, any type of value] Who is allowed to
+perform this join. See <code class="docutils literal notranslate"><span class="pre">checkPermissions</span></code> above.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">parentField</span></code> [required if neither query nor select, string] The
+name of the field in the parent item for the
+<a class="reference external" href="#relation">relation</a>. Dot notation is allowed.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">childField</span></code> [required if neither query nor select, string] The
+name of the field in the child item for the <a class="reference external" href="#relation">relation</a>.
+Dot notation is allowed and will result in a query like
+<code class="docutils literal notranslate"><span class="pre">{</span> <span class="pre">'name.first':</span> <span class="pre">'John'</span> <span class="pre">}</span></code> which is not suitable for all DBs. You
+may use <code class="docutils literal notranslate"><span class="pre">query</span></code> or <code class="docutils literal notranslate"><span class="pre">select</span></code> to create a query suitable for your
+DB.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">query</span></code> [optional, object] An object to inject into the query in
+<code class="docutils literal notranslate"><span class="pre">service.find({</span> <span class="pre">query:</span> <span class="pre">{</span> <span class="pre">...</span> <span class="pre">}</span> <span class="pre">})</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">select</span></code> [optional, function] A function whose result is injected
+into the query.</p>
+<ul>
+<li><p>Function signature
+<code class="docutils literal notranslate"><span class="pre">(hook:</span> <span class="pre">Hook,</span> <span class="pre">parentItem:</span> <span class="pre">Object,</span> <span class="pre">depth:</span> <span class="pre">number):</span> <span class="pre">Object</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">hook</span></code> The hook.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">parentItem</span></code> The parent item to which we are joining.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">depth</span></code> How deep the include is in the schema. Top of schema is
+0.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">asArray</span></code> [optional, boolean, default false] Force a single joined
+item to be stored as an array.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">paginate</span></code> {optional, boolean or number, default false] Controls
+pagination for this service.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">false</span></code> No pagination. The default.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">true</span></code> Use the configuration provided when the service was
+configured/</p></li>
+<li><p>A number. The maximum number of items to include.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">provider</span></code> [optional] <code class="docutils literal notranslate"><span class="pre">find</span></code> calls are made to obtain the items
+to be joined. These, by default, are initialized to look like they
+were made by the same provider as that getting the base record. So
+when populating the result of a call made via <code class="docutils literal notranslate"><span class="pre">socketio</span></code>, all the
+join calls will look like they were made via <code class="docutils literal notranslate"><span class="pre">socketio</span></code>.
+Alternative you can set <code class="docutils literal notranslate"><span class="pre">provider:</span> <span class="pre">undefined</span></code> and the calls for
+that join will look like they were made by the server. The hooks on
+the service may behave differently in different situations.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">useInnerPopulate</span></code> [optional] Populate, when including records from
+a child service, ignores any populate hooks defined for that child
+service. The useInnerPopulate option will run those populate hooks.
+This allows the populate for a base record to include child records
+containing their own immediate child records, without the populate
+for the base record knowing what those grandchildren populates are.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">include</span></code> [optional] The new items may themselves include other
+items. The includes are recursive.</p></li>
+</ul>
+<p>Populate forms the query <code class="docutils literal notranslate"><span class="pre">[childField]:</span> <span class="pre">parentItem[parentField]</span></code> when
+the parent value is not an array. This will include all child items
+having that value.</p>
+<p>Populate forms the query
+<code class="docutils literal notranslate"><span class="pre">[childField]:</span> <span class="pre">{</span> <span class="pre">$in:</span> <span class="pre">parentItem[parentField]</span> <span class="pre">}</span></code> when the parent value
+is an array. This will include all child items having any of those
+values.</p>
+<p>A populate hook for, say, <code class="docutils literal notranslate"><span class="pre">posts</span></code> may include items from <code class="docutils literal notranslate"><span class="pre">users</span></code>.
+Should the <code class="docutils literal notranslate"><span class="pre">users</span></code> hooks also include a populate, that <code class="docutils literal notranslate"><span class="pre">users</span></code>
+populate hook will not be run for includes arising from <code class="docutils literal notranslate"><span class="pre">posts</span></code>.</p>
+<blockquote>
+<div><p><strong>ProTip</strong> The populate interface only allows you to directly
+manipulate <code class="docutils literal notranslate"><span class="pre">hook.params.query</span></code>. You can manipulate the rest of
+<code class="docutils literal notranslate"><span class="pre">hook.params</span></code> by using the
+<code class="docutils literal notranslate"><span class="pre">`client</span></code> &lt;<a class="reference external" href="https://docs.feathersjs.com/v/auk/hooks/common/utils.html#client">https://docs.feathersjs.com/v/auk/hooks/common/utils.html#client</a>&gt;`__
+hook, along with something like
+<code class="docutils literal notranslate"><span class="pre">query:</span> <span class="pre">{</span> <span class="pre">...,</span> <span class="pre">$client:</span> <span class="pre">{</span> <span class="pre">paramsProp1:</span> <span class="pre">...,</span> <span class="pre">paramsProp2:</span> <span class="pre">...</span> <span class="pre">}</span> <span class="pre">}</span></code>.</p>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="added-properties">
+<h3>Added properties<a class="headerlink" href="#added-properties" title="永久链接至标题">¶</a></h3>
+<p>Some additional properties are added to populated items. The result may
+look like:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span> <span class="p">...</span>
+  <span class="nx">_include</span><span class="o">:</span> <span class="p">[</span> <span class="s1">&#39;post&#39;</span> <span class="p">],</span>
+  <span class="nx">_elapsed</span><span class="o">:</span> <span class="p">{</span> <span class="nx">post</span><span class="o">:</span> <span class="mi">487947</span><span class="p">,</span> <span class="nx">total</span><span class="o">:</span> <span class="mi">527118</span> <span class="p">},</span>
+  <span class="nx">post</span><span class="o">:</span>
+    <span class="p">{</span> <span class="p">...</span>
+      <span class="nx">_include</span><span class="o">:</span> <span class="p">[</span> <span class="s1">&#39;authorItem&#39;</span><span class="p">,</span> <span class="s1">&#39;commentsInfo&#39;</span><span class="p">,</span> <span class="s1">&#39;readersInfo&#39;</span> <span class="p">],</span>
+      <span class="nx">_elapsed</span><span class="o">:</span> <span class="p">{</span> <span class="nx">authorItem</span><span class="o">:</span> <span class="mi">321973</span><span class="p">,</span> <span class="nx">commentsInfo</span><span class="o">:</span> <span class="mi">469375</span><span class="p">,</span> <span class="nx">readersInfo</span><span class="o">:</span> <span class="mi">479874</span><span class="p">,</span> <span class="nx">total</span><span class="o">:</span> <span class="mi">487947</span> <span class="p">},</span>
+      <span class="nx">_computed</span><span class="o">:</span> <span class="p">[</span> <span class="s1">&#39;averageStars&#39;</span><span class="p">,</span> <span class="s1">&#39;views&#39;</span> <span class="p">],</span>
+      <span class="nx">authorItem</span><span class="o">:</span> <span class="p">{</span> <span class="p">...</span> <span class="p">},</span>
+      <span class="nx">commentsInfo</span><span class="o">:</span> <span class="p">[</span> <span class="p">{</span> <span class="p">...</span> <span class="p">},</span> <span class="p">{</span> <span class="p">...</span> <span class="p">}</span> <span class="p">],</span>
+      <span class="nx">readersInfo</span><span class="o">:</span> <span class="p">[</span> <span class="p">{</span> <span class="p">...</span> <span class="p">},</span> <span class="p">{</span> <span class="p">...</span> <span class="p">}</span> <span class="p">]</span>
+<span class="p">}</span> <span class="p">}</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">_include</span></code> The property names containing joined items.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">_elapsed</span></code> The elapsed time in nano-seconds (where 1,000,000 ns ===
+1 ms) taken to perform each include, as well as the total taken for
+them all. This delay is mostly attributed to your DB.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">_computed</span></code> The property names containing values computed by the
+<code class="docutils literal notranslate"><span class="pre">serialize</span></code> hook.</p></li>
+</ul>
+<p>The <a class="reference external" href="#depopulate">depopulate</a> hook uses these fields to remove all
+joined and computed values. This allows you to then <code class="docutils literal notranslate"><span class="pre">service.patch()</span></code>
+the item in the hook.</p>
+</div>
+<div class="section" id="joining-without-using-related-fields">
+<h3>Joining without using related fields<a class="headerlink" href="#joining-without-using-related-fields" title="永久链接至标题">¶</a></h3>
+<p>Populate can join child records to a parent record using the related
+columns <code class="docutils literal notranslate"><span class="pre">parentField</span></code> and <code class="docutils literal notranslate"><span class="pre">childField</span></code>. However populate’s <code class="docutils literal notranslate"><span class="pre">query</span></code>
+and <code class="docutils literal notranslate"><span class="pre">select</span></code> options may be used to related the records without
+needing to use the related columns. This is a more flexible,
+non-SQL-like way of relating records. It easily supports dynamic,
+run-time schemas since the <code class="docutils literal notranslate"><span class="pre">select</span></code> option may be a function.</p>
+</div>
+<div class="section" id="populate-examples">
+<h3>Populate examples<a class="headerlink" href="#populate-examples" title="永久链接至标题">¶</a></h3>
+<div class="section" id="selecting-schema-based-on-ui-needs">
+<h4>Selecting schema based on UI needs<a class="headerlink" href="#selecting-schema-based-on-ui-needs" title="永久链接至标题">¶</a></h4>
+<p>Consider a Purchase Order item. An Accounting oriented UI will likely
+want to populate the PO with Invoice items. A Receiving oriented UI will
+likely want to populate with Receiving Slips.</p>
+<p>Using a function for <code class="docutils literal notranslate"><span class="pre">schema</span></code> allows you to select an appropriate
+schema based on the need. The following example shows how the client can
+ask for the type of schema it needs.</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// on client</span>
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">paramsForServer</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;feathers-hooks-common&#39;</span><span class="p">;</span>
+<span class="nx">purchaseOrders</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="nx">id</span><span class="p">,</span> <span class="nx">paramsForServer</span><span class="p">({</span> <span class="nx">schema</span><span class="o">:</span> <span class="s1">&#39;po-acct&#39;</span> <span class="p">}));</span> <span class="c1">// pass schema name to server</span>
+<span class="c1">// or</span>
+<span class="nx">purchaseOrders</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="nx">id</span><span class="p">,</span> <span class="nx">paramsForServer</span><span class="p">({</span> <span class="nx">schema</span><span class="o">:</span> <span class="s1">&#39;po-rec&#39;</span> <span class="p">}));</span>
+</pre></div>
+</div>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// on server</span>
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">paramsFromClient</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;feathers-hooks-common&#39;</span><span class="p">;</span>
+<span class="kr">const</span> <span class="nx">poSchemas</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="s1">&#39;po-acct&#39;</span><span class="o">:</span> <span class="cm">/* populate schema for Accounting oriented PO e.g. { include: ... } */</span><span class="p">,</span>
+  <span class="s1">&#39;po-rec&#39;</span><span class="o">:</span> <span class="cm">/* populate schema for Receiving oriented PO */</span>
+<span class="p">};</span>
+
+<span class="nx">purchaseOrders</span><span class="p">.</span><span class="nx">before</span><span class="p">({</span>
+  <span class="nx">all</span><span class="o">:</span> <span class="nx">paramsfromClient</span><span class="p">(</span><span class="s1">&#39;schema&#39;</span><span class="p">)</span>
+<span class="p">});</span>
+
+<span class="nx">purchaseOrders</span><span class="p">.</span><span class="nx">after</span><span class="p">({</span>
+  <span class="nx">all</span><span class="o">:</span> <span class="nx">populate</span><span class="p">({</span> <span class="nx">schema</span><span class="o">:</span> <span class="nx">hook</span> <span class="p">=&gt;</span> <span class="nx">poSchemas</span><span class="p">[</span><span class="nx">hook</span><span class="p">.</span><span class="nx">params</span><span class="p">.</span><span class="nx">schema</span><span class="p">]</span> <span class="p">}),</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="using-permissions">
+<h4>Using permissions<a class="headerlink" href="#using-permissions" title="永久链接至标题">¶</a></h4>
+<p>For a simplistic example, assume <code class="docutils literal notranslate"><span class="pre">hook.params.users.permissions</span></code> is an
+array of the service names the user may use,
+e.g. <code class="docutils literal notranslate"><span class="pre">['invoices',</span> <span class="pre">'billings']</span></code>. These can be used to control which
+types of items the user can see.</p>
+<p>The following populate will only be performed for users whose
+<code class="docutils literal notranslate"><span class="pre">user.permissions</span></code> contains <code class="docutils literal notranslate"><span class="pre">'invoices'</span></code>.</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kr">const</span> <span class="nx">schema</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="nx">include</span><span class="o">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="nx">service</span><span class="o">:</span> <span class="s1">&#39;invoices&#39;</span><span class="p">,</span>
+      <span class="nx">permissions</span><span class="o">:</span> <span class="s1">&#39;invoices&#39;</span><span class="p">,</span>
+      <span class="p">...</span>
+    <span class="p">}</span>
+  <span class="p">]</span>
+<span class="p">};</span>
+
+<span class="nx">purchaseOrders</span><span class="p">.</span><span class="nx">after</span><span class="p">({</span>
+  <span class="nx">all</span><span class="o">:</span> <span class="nx">populate</span><span class="p">(</span><span class="nx">schema</span><span class="p">,</span> <span class="p">(</span><span class="nx">hook</span><span class="p">,</span> <span class="nx">service</span><span class="p">,</span> <span class="nx">permissions</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">hook</span><span class="p">.</span><span class="nx">params</span><span class="p">.</span><span class="nx">user</span><span class="p">.</span><span class="nx">permissions</span><span class="p">.</span><span class="nx">includes</span><span class="p">(</span><span class="nx">service</span><span class="p">))</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="validate">
+<h2>Validate<a class="headerlink" href="#validate" title="永久链接至标题">¶</a></h2>
+<div class="section" id="example">
+<h3>Example<a class="headerlink" href="#example" title="永久链接至标题">¶</a></h3>
+<p>Comprehensive validation may include the following:</p>
+<ul class="simple">
+<li><p>Object schema validation. Checking the item object contains the
+expected properties with values in the expected format. The values
+might get sanitized. Knowing the item is well formed makes further
+validation simpler.</p></li>
+<li><p>Re-running any validation supposedly already done on the front-end.
+It would be an asset if the server can re-run the same code the
+front-end used.</p></li>
+<li><p>Performing any validation and sanitization unique to the server.</p></li>
+</ul>
+<p>A full featured example of such a process appears below. It validates
+and sanitizes a new user before adding the user to the database.</p>
+<ul class="simple">
+<li><p>The form expects to be notified of errors in the format
+<code class="docutils literal notranslate"><span class="pre">{</span> <span class="pre">email:</span> <span class="pre">'Invalid</span> <span class="pre">email.',</span> <span class="pre">password:</span> <span class="pre">'Password</span> <span class="pre">must</span> <span class="pre">be</span> <span class="pre">at</span> <span class="pre">least</span> <span class="pre">8</span> <span class="pre">characters.'</span> <span class="pre">}</span></code>.</p></li>
+<li><p>The form calls the server for async checking of selected fields when
+control leaves those fields. This for example could check that an
+email address is not already used by another user.</p></li>
+<li><p>The form does local sync validation when the form is submitted.</p></li>
+<li><p>The code performing the validations on the front-end is also used by
+the server.</p></li>
+<li><p>The server performs schema validation using Walmart’s
+<a class="reference external" href="https://github.com/hapijs/joi">Joi</a>.</p></li>
+<li><p>The server does further validation and sanitization.</p></li>
+</ul>
+</div>
+<div class="section" id="validation-using-validate">
+<h3>Validation using Validate<a class="headerlink" href="#validation-using-validate" title="永久链接至标题">¶</a></h3>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// file /server/services/users/users.hooks.js</span>
+<span class="kr">const</span> <span class="nx">auth</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;feathers-authentication&#39;</span><span class="p">).</span><span class="nx">hooks</span><span class="p">;</span>
+<span class="kr">const</span> <span class="p">{</span> <span class="nx">callbackToPromise</span><span class="p">,</span> <span class="nx">remove</span><span class="p">,</span> <span class="nx">validate</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;feathers-hooks-common&#39;</span><span class="p">);</span>
+<span class="kr">const</span> <span class="nx">validateSchema</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;feathers-hooks-validate-joi&#39;</span><span class="p">);</span>
+
+<span class="kr">const</span> <span class="nx">clientValidations</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;/common/usersClientValidations&#39;</span><span class="p">);</span>
+<span class="kr">const</span> <span class="nx">serverValidations</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;/server/validations/usersServerValidations&#39;</span><span class="p">);</span>
+<span class="kr">const</span> <span class="nx">schemas</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;/server/validations/schemas&#39;</span><span class="p">);</span>
+
+<span class="kr">const</span> <span class="nx">serverValidationsSignup</span> <span class="o">=</span> <span class="nx">callbackToPromise</span><span class="p">(</span><span class="nx">serverValidations</span><span class="p">.</span><span class="nx">signup</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+
+<span class="nx">exports</span><span class="p">.</span><span class="nx">before</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="nx">create</span><span class="o">:</span> <span class="p">[</span>
+    <span class="nx">validateSchema</span><span class="p">.</span><span class="nx">form</span><span class="p">(</span><span class="nx">schemas</span><span class="p">.</span><span class="nx">signup</span><span class="p">,</span> <span class="nx">schemas</span><span class="p">.</span><span class="nx">options</span><span class="p">),</span> <span class="c1">// schema validation</span>
+    <span class="nx">validate</span><span class="p">(</span><span class="nx">clientValidations</span><span class="p">.</span><span class="nx">signup</span><span class="p">),</span> <span class="c1">// re-run form sync validation</span>
+    <span class="nx">validate</span><span class="p">(</span><span class="nx">values</span> <span class="p">=&gt;</span> <span class="nx">clientValidations</span><span class="p">.</span><span class="nx">signupAsync</span><span class="p">(</span><span class="nx">values</span><span class="p">,</span> <span class="s1">&#39;someMoreParams&#39;</span><span class="p">)),</span> <span class="c1">// re-run form async</span>
+    <span class="nx">validate</span><span class="p">(</span><span class="nx">serverValidationsSignup</span><span class="p">),</span> <span class="c1">// run server validation</span>
+    <span class="nx">remove</span><span class="p">(</span><span class="s1">&#39;confirmPassword&#39;</span><span class="p">),</span>
+    <span class="nx">auth</span><span class="p">.</span><span class="nx">hashPassword</span><span class="p">()</span>
+  <span class="p">]</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="validation-routines-for-front-and-back-end">
+<h3>Validation routines for front and back-end.<a class="headerlink" href="#validation-routines-for-front-and-back-end" title="永久链接至标题">¶</a></h3>
+<p>Validations used on front-end. They are re-run by the server.</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// file /common/usersClientValidations</span>
+<span class="c1">// Validations for front-end. Also re-run on server.</span>
+<span class="kr">const</span> <span class="nx">clientValidations</span> <span class="o">=</span> <span class="p">{};</span>
+
+<span class="c1">// sync validation of signup form on form submit</span>
+<span class="nx">clientValidations</span><span class="p">.</span><span class="nx">signup</span> <span class="o">=</span> <span class="nx">values</span> <span class="p">=&gt;</span> <span class="p">{</span>
+  <span class="kr">const</span> <span class="nx">errors</span> <span class="o">=</span> <span class="p">{};</span>
+
+  <span class="nx">checkName</span><span class="p">(</span><span class="nx">values</span><span class="p">.</span><span class="nx">name</span><span class="p">,</span> <span class="nx">errors</span><span class="p">);</span>
+  <span class="nx">checkUsername</span><span class="p">(</span><span class="nx">values</span><span class="p">.</span><span class="nx">username</span><span class="p">,</span> <span class="nx">errors</span><span class="p">);</span>
+  <span class="nx">checkEmail</span><span class="p">(</span><span class="nx">values</span><span class="p">.</span><span class="nx">email</span><span class="p">,</span> <span class="nx">errors</span><span class="p">);</span>
+  <span class="nx">checkPassword</span><span class="p">(</span><span class="nx">values</span><span class="p">.</span><span class="nx">password</span><span class="p">,</span> <span class="nx">errors</span><span class="p">);</span>
+  <span class="nx">checkConfirmPassword</span><span class="p">(</span><span class="nx">values</span><span class="p">.</span><span class="nx">password</span><span class="p">,</span> <span class="nx">values</span><span class="p">.</span><span class="nx">confirmPassword</span><span class="p">,</span> <span class="nx">errors</span><span class="p">);</span>
+
+  <span class="k">return</span> <span class="nx">errors</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="c1">// async validation on exit from some fields on form</span>
+<span class="nx">clientValidations</span><span class="p">.</span><span class="nx">signupAsync</span> <span class="o">=</span> <span class="nx">values</span> <span class="p">=&gt;</span>
+  <span class="k">new</span> <span class="nb">Promise</span><span class="p">((</span><span class="nx">resolve</span><span class="p">,</span> <span class="nx">reject</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+    <span class="kr">const</span> <span class="nx">errs</span> <span class="o">=</span> <span class="p">{};</span>
+
+    <span class="c1">// set a dummy error</span>
+    <span class="nx">errs</span><span class="p">.</span><span class="nx">email</span> <span class="o">=</span> <span class="s1">&#39;Already taken.&#39;</span><span class="p">;</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nb">Object</span><span class="p">.</span><span class="nx">keys</span><span class="p">(</span><span class="nx">errs</span><span class="p">).</span><span class="nx">length</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">resolve</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span> <span class="c1">// &#39;null&#39; as we did not sanitize &#39;values&#39;</span>
+    <span class="p">}</span>
+    <span class="nx">reject</span><span class="p">(</span><span class="k">new</span> <span class="nx">errors</span><span class="p">.</span><span class="nx">BadRequest</span><span class="p">(</span><span class="s1">&#39;Values already taken.&#39;</span><span class="p">,</span> <span class="p">{</span> <span class="nx">errors</span><span class="o">:</span> <span class="nx">errs</span> <span class="p">}));</span>
+  <span class="p">});</span>
+
+<span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="nx">clientValidations</span><span class="p">;</span>
+
+<span class="kd">function</span> <span class="nx">checkName</span><span class="p">(</span><span class="nx">name</span><span class="p">,</span> <span class="nx">errors</span><span class="p">,</span> <span class="nx">fieldName</span> <span class="o">=</span> <span class="s1">&#39;name&#39;</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="sr">/^[\\sa-zA-Z]{8,30}$/</span><span class="p">.</span><span class="nx">test</span><span class="p">((</span><span class="nx">name</span> <span class="o">||</span> <span class="s1">&#39;&#39;</span><span class="p">).</span><span class="nx">trim</span><span class="p">()))</span> <span class="p">{</span>
+    <span class="nx">errors</span><span class="p">[</span><span class="nx">fieldName</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;Name must be 8 or more letters or spaces.&#39;</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Schema definitions used by the server.</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// file /server/validations/schemas</span>
+<span class="kr">const</span> <span class="nx">Joi</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;joi&#39;</span><span class="p">);</span>
+
+<span class="kr">const</span> <span class="nx">username</span> <span class="o">=</span> <span class="nx">Joi</span><span class="p">.</span><span class="nx">string</span><span class="p">().</span><span class="nx">trim</span><span class="p">().</span><span class="nx">alphanum</span><span class="p">().</span><span class="nx">min</span><span class="p">(</span><span class="mi">5</span><span class="p">).</span><span class="nx">max</span><span class="p">(</span><span class="mi">30</span><span class="p">).</span><span class="nx">required</span><span class="p">();</span>
+<span class="kr">const</span> <span class="nx">password</span> <span class="o">=</span> <span class="nx">Joi</span><span class="p">.</span><span class="nx">string</span><span class="p">().</span><span class="nx">trim</span><span class="p">().</span><span class="nx">regex</span><span class="p">(</span><span class="sr">/^[\sa-zA-Z0-9]+$/</span><span class="p">,</span> <span class="s1">&#39;letters, numbers, spaces&#39;</span><span class="p">)</span>
+  <span class="p">.</span><span class="nx">min</span><span class="p">(</span><span class="mi">8</span><span class="p">).</span><span class="nx">max</span><span class="p">(</span><span class="mi">30</span><span class="p">).</span><span class="nx">required</span><span class="p">();</span>
+<span class="kr">const</span> <span class="nx">email</span> <span class="o">=</span> <span class="nx">Joi</span><span class="p">.</span><span class="nx">string</span><span class="p">().</span><span class="nx">trim</span><span class="p">().</span><span class="nx">email</span><span class="p">().</span><span class="nx">required</span><span class="p">();</span>
+
+<span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="nx">options</span><span class="o">:</span> <span class="p">{</span> <span class="nx">abortEarly</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span> <span class="nx">convert</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span> <span class="nx">allowUnknown</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span> <span class="nx">stripUnknown</span><span class="o">:</span> <span class="kc">true</span> <span class="p">},</span>
+  <span class="nx">signup</span><span class="o">:</span> <span class="nx">Joi</span><span class="p">.</span><span class="nx">object</span><span class="p">().</span><span class="nx">keys</span><span class="p">({</span>
+    <span class="nx">name</span><span class="o">:</span> <span class="nx">Joi</span><span class="p">.</span><span class="nx">string</span><span class="p">().</span><span class="nx">trim</span><span class="p">().</span><span class="nx">min</span><span class="p">(</span><span class="mi">8</span><span class="p">).</span><span class="nx">max</span><span class="p">(</span><span class="mi">30</span><span class="p">).</span><span class="nx">required</span><span class="p">(),</span>
+    <span class="nx">username</span><span class="p">,</span>
+    <span class="nx">password</span><span class="p">,</span>
+    <span class="nx">confirmPassword</span><span class="o">:</span> <span class="nx">password</span><span class="p">.</span><span class="nx">label</span><span class="p">(</span><span class="s1">&#39;Confirm password&#39;</span><span class="p">),</span>
+    <span class="nx">email</span>
+  <span class="p">})</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+<p>Validations run by the server.</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// file /server/validations/usersServerValidations</span>
+<span class="c1">// Validations on server. A callback function is used to show how the hook handles it.</span>
+<span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="nx">signup</span><span class="o">:</span> <span class="p">(</span><span class="nx">data</span><span class="p">,</span> <span class="nx">cb</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+    <span class="kr">const</span> <span class="nx">formErrors</span> <span class="o">=</span> <span class="p">{};</span>
+    <span class="kr">const</span> <span class="nx">sanitized</span> <span class="o">=</span> <span class="p">{};</span>
+
+    <span class="nb">Object</span><span class="p">.</span><span class="nx">keys</span><span class="p">(</span><span class="nx">data</span><span class="p">).</span><span class="nx">forEach</span><span class="p">(</span><span class="nx">key</span> <span class="p">=&gt;</span> <span class="p">{</span>
+      <span class="nx">sanitized</span><span class="p">[</span><span class="nx">key</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="nx">data</span><span class="p">[</span><span class="nx">key</span><span class="p">]</span> <span class="o">||</span> <span class="s1">&#39;&#39;</span><span class="p">).</span><span class="nx">trim</span><span class="p">();</span>
+    <span class="p">});</span>
+
+    <span class="nx">cb</span><span class="p">(</span><span class="nb">Object</span><span class="p">.</span><span class="nx">keys</span><span class="p">(</span><span class="nx">formErrors</span><span class="p">).</span><span class="nx">length</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="o">?</span> <span class="nx">formErrors</span> <span class="o">:</span> <span class="kc">null</span><span class="p">,</span> <span class="nx">sanitized</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+<p>.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../batch-loader/index.html" class="btn btn-neutral float-right" title="batch-loader Usage" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral float-left" title="feathers-hooks-common Usage" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, BandCap
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

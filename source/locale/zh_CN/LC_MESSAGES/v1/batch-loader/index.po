@@ -1,0 +1,714 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, BandCap
+# This file is distributed under the same license as the feathers-plus docs
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: feathers-plus docs \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-06-26 14:06+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../source/v1/batch-loader/index.rst:2
+msgid "batch-loader Usage"
+msgstr "batch-loader Usage"
+
+#: ../../source/v1/batch-loader/index.rst:23
+msgid "May be used on the client."
+msgstr "May be used on the client."
+
+#: ../../source/v1/batch-loader/index.rst:33
+msgid "class BatchLoader( batchLoadFunc [, options] )"
+msgstr "class BatchLoader( batchLoadFunc [, options] )"
+
+#: ../../source/v1/batch-loader/index.rst:39
+msgid "Create a new batch-loader given a batch loading function and options."
+msgstr "Create a new batch-loader given a batch loading function and options."
+
+#: ../../source/v1/batch-loader/index.rst:41
+#: ../../source/v1/batch-loader/index.rst:196
+#: ../../source/v1/batch-loader/index.rst:253
+#: ../../source/v1/batch-loader/index.rst:387
+#: ../../source/v1/batch-loader/index.rst:484
+#: ../../source/v1/batch-loader/index.rst:540
+msgid "**Arguments:**"
+msgstr "**Arguments:**"
+
+#: ../../source/v1/batch-loader/index.rst:43
+msgid "``{Function} batchLoadFunc``"
+msgstr "``{Function} batchLoadFunc``"
+
+#: ../../source/v1/batch-loader/index.rst:44
+#: ../../source/v1/batch-loader/index.rst:259
+msgid "``{Object} [ options ]``"
+msgstr "``{Object} [ options ]``"
+
+#: ../../source/v1/batch-loader/index.rst:46
+msgid "``{Boolean} batch``"
+msgstr "``{Boolean} batch``"
+
+#: ../../source/v1/batch-loader/index.rst:47
+msgid "``{Boolean} cache``"
+msgstr "``{Boolean} cache``"
+
+#: ../../source/v1/batch-loader/index.rst:48
+msgid "``{Function} cacheKeyFn``"
+msgstr "``{Function} cacheKeyFn``"
+
+#: ../../source/v1/batch-loader/index.rst:49
+msgid "``{Object} cacheMap``"
+msgstr "``{Object} cacheMap``"
+
+#: ../../source/v1/batch-loader/index.rst:50
+msgid "``{Object} context``"
+msgstr "``{Object} context``"
+
+#: ../../source/v1/batch-loader/index.rst:51
+msgid "``{Number} maxBatchSize``"
+msgstr "``{Number} maxBatchSize``"
+
+#: ../../source/v1/batch-loader/index.rst:54
+#: ../../source/v1/batch-loader/index.rst:61
+#: ../../source/v1/batch-loader/index.rst:201
+#: ../../source/v1/batch-loader/index.rst:265
+#: ../../source/v1/batch-loader/index.rst:309
+#: ../../source/v1/batch-loader/index.rst:392
+#: ../../source/v1/batch-loader/index.rst:434
+#: ../../source/v1/batch-loader/index.rst:489
+#: ../../source/v1/batch-loader/index.rst:546
+msgid "Argument"
+msgstr "Argument"
+
+#: ../../source/v1/batch-loader/index.rst:54
+#: ../../source/v1/batch-loader/index.rst:61
+#: ../../source/v1/batch-loader/index.rst:201
+#: ../../source/v1/batch-loader/index.rst:265
+#: ../../source/v1/batch-loader/index.rst:309
+#: ../../source/v1/batch-loader/index.rst:392
+#: ../../source/v1/batch-loader/index.rst:434
+#: ../../source/v1/batch-loader/index.rst:489
+#: ../../source/v1/batch-loader/index.rst:546
+msgid "Type"
+msgstr "Type"
+
+#: ../../source/v1/batch-loader/index.rst:54
+#: ../../source/v1/batch-loader/index.rst:61
+#: ../../source/v1/batch-loader/index.rst:201
+#: ../../source/v1/batch-loader/index.rst:265
+#: ../../source/v1/batch-loader/index.rst:309
+#: ../../source/v1/batch-loader/index.rst:392
+#: ../../source/v1/batch-loader/index.rst:434
+#: ../../source/v1/batch-loader/index.rst:489
+#: ../../source/v1/batch-loader/index.rst:546
+msgid "Default"
+msgstr "Default"
+
+#: ../../source/v1/batch-loader/index.rst:54
+#: ../../source/v1/batch-loader/index.rst:61
+#: ../../source/v1/batch-loader/index.rst:201
+#: ../../source/v1/batch-loader/index.rst:265
+#: ../../source/v1/batch-loader/index.rst:301
+#: ../../source/v1/batch-loader/index.rst:392
+#: ../../source/v1/batch-loader/index.rst:434
+#: ../../source/v1/batch-loader/index.rst:489
+#: ../../source/v1/batch-loader/index.rst:546
+msgid "Description"
+msgstr "Description"
+
+#: ../../source/v1/batch-loader/index.rst:56
+msgid "``batchLoadFunc``"
+msgstr "``batchLoadFunc``"
+
+#: ../../source/v1/batch-loader/index.rst:56
+#: ../../source/v1/batch-loader/index.rst:287
+msgid "``Function``"
+msgstr "``Function``"
+
+#: ../../source/v1/batch-loader/index.rst:56
+msgid "See `Batch Function <guide.html#batch-function>`__."
+msgstr "See `Batch Function <guide.html#batch-function>`__."
+
+#: ../../source/v1/batch-loader/index.rst:57
+#: ../../source/v1/batch-loader/index.rst:61
+#: ../../source/v1/batch-loader/index.rst:297
+msgid "``options``"
+msgstr "``options``"
+
+#: ../../source/v1/batch-loader/index.rst:57
+#: ../../source/v1/batch-loader/index.rst:297
+#: ../../source/v1/batch-loader/index.rst:549
+msgid "``Object``"
+msgstr "``Object``"
+
+#: ../../source/v1/batch-loader/index.rst:57
+#: ../../source/v1/batch-loader/index.rst:297
+msgid "Options."
+msgstr "Options."
+
+#: ../../source/v1/batch-loader/index.rst:63
+msgid "``batch``"
+msgstr "``batch``"
+
+#: ../../source/v1/batch-loader/index.rst:63
+#: ../../source/v1/batch-loader/index.rst:74
+msgid "Boolean"
+msgstr "Boolean"
+
+#: ../../source/v1/batch-loader/index.rst:63
+#: ../../source/v1/batch-loader/index.rst:74
+#, fuzzy
+msgid "``true``"
+msgstr "``type``"
+
+#: ../../source/v1/batch-loader/index.rst:63
+msgid ""
+"Set to false to disable batching, invoking ``batchLoad Func`` with a "
+"single load key."
+msgstr ""
+
+#: ../../source/v1/batch-loader/index.rst:74
+msgid "``cache``"
+msgstr "``cache``"
+
+#: ../../source/v1/batch-loader/index.rst:74
+msgid ""
+"Set to false to disable memoization caching, creating a new Promise and "
+"new key in the ``batchLoad Func`` for every load of the same key."
+msgstr ""
+
+#: ../../source/v1/batch-loader/index.rst:89
+msgid "``cacheKeyF n``"
+msgstr "``cacheKeyF n``"
+
+#: ../../source/v1/batch-loader/index.rst:89
+msgid "Function"
+msgstr "Function"
+
+#: ../../source/v1/batch-loader/index.rst:89
+msgid "``key => ke y``"
+msgstr "``key => ke y``"
+
+#: ../../source/v1/batch-loader/index.rst:89
+msgid ""
+"Produces cache key for a given load key. Useful when keys are objects and"
+" two objects should be considered equivalent."
+msgstr ""
+
+#: ../../source/v1/batch-loader/index.rst:101
+msgid "``cacheMap` `"
+msgstr "``cacheMap` `"
+
+#: ../../source/v1/batch-loader/index.rst:101
+#: ../../source/v1/batch-loader/index.rst:110
+msgid "Object"
+msgstr "Object"
+
+#: ../../source/v1/batch-loader/index.rst:101
+msgid "``new Map() ``"
+msgstr "``new Map() ``"
+
+#: ../../source/v1/batch-loader/index.rst:101
+msgid ""
+"Instance of Map (or an object with a similar API) to be used as cache. "
+"See below."
+msgstr ""
+
+#: ../../source/v1/batch-loader/index.rst:110
+msgid "``context``"
+msgstr "``context``"
+
+#: ../../source/v1/batch-loader/index.rst:110
+#: ../../source/v1/batch-loader/index.rst:312
+msgid "``null``"
+msgstr "``null``"
+
+#: ../../source/v1/batch-loader/index.rst:110
+msgid "A context object to pass into ``batchLoad Func`` as its second argument."
+msgstr "A context object to pass into ``batchLoad Func`` as its second argument."
+
+#: ../../source/v1/batch-loader/index.rst:119
+msgid "``maxBatchS ize``"
+msgstr "``maxBatchS ize``"
+
+#: ../../source/v1/batch-loader/index.rst:119
+msgid "Number"
+msgstr "Number"
+
+#: ../../source/v1/batch-loader/index.rst:119
+msgid "``Infinity` `"
+msgstr "``Infinity` `"
+
+#: ../../source/v1/batch-loader/index.rst:119
+msgid "Limits the number of keys when calling ``batchLoad Func``."
+msgstr "Limits the number of keys when calling ``batchLoad Func``."
+
+#: ../../source/v1/batch-loader/index.rst:127
+msgid ""
+"{% apiReturns class-batchloader “BatchLoader instance.” batchLoader "
+"Object %}"
+msgstr ""
+
+#: ../../source/v1/batch-loader/index.rst:130
+#: ../../source/v1/batch-loader/index.rst:338
+#: ../../source/v1/batch-loader/index.rst:446
+msgid "**Example**"
+msgstr "**Example**"
+
+#: ../../source/v1/batch-loader/index.rst:144
+msgid "**Pagination**"
+msgstr "**Pagination**"
+
+#: ../../source/v1/batch-loader/index.rst:146
+msgid ""
+"The number of results returned by a query using ``$in`` is controlled by "
+"the pagination ``max`` set for that Feathers service. You need to specify"
+" a ``paginate: false`` option to ensure that records for all the keys are"
+" returned."
+msgstr ""
+
+#: ../../source/v1/batch-loader/index.rst:151
+msgid ""
+"The maximum number of keys the ``batchLoadFunc`` is called with can be "
+"controlled by the BatchLoader itself with the ``maxBatchSize`` option."
+msgstr ""
+
+#: ../../source/v1/batch-loader/index.rst:155
+msgid "**option.cacheMap**"
+msgstr "**option.cacheMap**"
+
+#: ../../source/v1/batch-loader/index.rst:157
+msgid ""
+"The default cache will grow without limit, which is reasonable for short "
+"lived batch-loaders which are rebuilt on every request. The number of "
+"records cached can be limited with a *least-recently-used* cache:"
+msgstr ""
+
+#: ../../source/v1/batch-loader/index.rst:174
+msgid "You can consider wrapping npm’s ``lru`` on the browser."
+msgstr "You can consider wrapping npm’s ``lru`` on the browser."
+
+#: ../../source/v1/batch-loader/index.rst:176
+msgid "**See also:** `Guide <./guide.html>`__"
+msgstr "**See also:** `Guide <./guide.html>`__"
+
+#: ../../source/v1/batch-loader/index.rst:178
+msgid "{% apiFootnote classBatchLoader BatchLoader %}"
+msgstr "{% apiFootnote classBatchLoader BatchLoader %}"
+
+#: ../../source/v1/batch-loader/index.rst:188
+msgid "static BatchLoader.getUniqueKeys( keys )"
+msgstr "static BatchLoader.getUniqueKeys( keys )"
+
+#: ../../source/v1/batch-loader/index.rst:194
+msgid "Returns the unique elements in an array."
+msgstr "Returns the unique elements in an array."
+
+#: ../../source/v1/batch-loader/index.rst:198
+#: ../../source/v1/batch-loader/index.rst:255
+msgid "``{Array<String | Number>} keys``"
+msgstr "``{Array<String | Number>} keys``"
+
+#: ../../source/v1/batch-loader/index.rst:203
+#: ../../source/v1/batch-loader/index.rst:267
+#: ../../source/v1/batch-loader/index.rst:436
+msgid "``keys``"
+msgstr "``keys``"
+
+#: ../../source/v1/batch-loader/index.rst:203
+msgid "``Array<`` ``String /`` ``Number >``"
+msgstr "``Array<`` ``String /`` ``Number >``"
+
+#: ../../source/v1/batch-loader/index.rst:203
+msgid "The keys. May contain duplicates."
+msgstr "The keys. May contain duplicates."
+
+#: ../../source/v1/batch-loader/index.rst:206
+msgid ""
+"{% apiReturns get-unique-keys “The keys with no duplicates.” keys “Array<"
+" String / Number >” %}"
+msgstr ""
+
+#: ../../source/v1/batch-loader/index.rst:209
+#: ../../source/v1/batch-loader/index.rst:404
+msgid "**Example:**"
+msgstr "**Example:**"
+
+#: ../../source/v1/batch-loader/index.rst:218
+#: ../../source/v1/batch-loader/index.rst:347
+#: ../../source/v1/batch-loader/index.rst:453
+#: ../../source/v1/batch-loader/index.rst:494
+#: ../../source/v1/batch-loader/index.rst:517
+#: ../../source/v1/batch-loader/index.rst:552
+msgid "**Details**"
+msgstr "**Details**"
+
+#: ../../source/v1/batch-loader/index.rst:220
+msgid ""
+"The array of keys may contain duplicates when the batch-loader’s "
+"memoization cache is disabled."
+msgstr ""
+
+#: ../../source/v1/batch-loader/index.rst:227
+#: ../../source/v1/batch-loader/index.rst:353
+msgid "Function does not handle keys of type Object nor Array."
+msgstr "Function does not handle keys of type Object nor Array."
+
+#: ../../source/v1/batch-loader/index.rst:233
+msgid "{% apiFootnote getUniqueKeys BatchLoader %}"
+msgstr "{% apiFootnote getUniqueKeys BatchLoader %}"
+
+#: ../../source/v1/batch-loader/index.rst:243
+msgid ""
+"static BatchLoader.getResultsByKey( keys, records, getRecordKeyFunc, type"
+" [, options] )"
+msgstr ""
+
+#: ../../source/v1/batch-loader/index.rst:250
+msgid ""
+"Reorganizes the records from the service call into the result expected "
+"from the batch function."
+msgstr ""
+
+#: ../../source/v1/batch-loader/index.rst:256
+msgid "``{Array<Object>} records``"
+msgstr "``{Array<Object>} records``"
+
+#: ../../source/v1/batch-loader/index.rst:257
+msgid "``{Function} getRecordKeyFunc``"
+msgstr "``{Function} getRecordKeyFunc``"
+
+#: ../../source/v1/batch-loader/index.rst:258
+msgid "``{String} type``"
+msgstr "``{String} type``"
+
+#: ../../source/v1/batch-loader/index.rst:261
+msgid "``{null | []} defaultElem``"
+msgstr "``{null | []} defaultElem``"
+
+#: ../../source/v1/batch-loader/index.rst:262
+msgid "``{Function} onError``"
+msgstr "``{Function} onError``"
+
+#: ../../source/v1/batch-loader/index.rst:267
+msgid "``Array<`` ``String /`` ``Number>``"
+msgstr "``Array<`` ``String /`` ``Number>``"
+
+#: ../../source/v1/batch-loader/index.rst:267
+msgid ""
+"An array of ``key`` elements, which the value the batch loader function "
+"will use to find the records requested."
+msgstr ""
+
+#: ../../source/v1/batch-loader/index.rst:279
+msgid "``records``"
+msgstr "``records``"
+
+#: ../../source/v1/batch-loader/index.rst:279
+msgid "``Array<`` ``Object >``"
+msgstr "``Array<`` ``Object >``"
+
+#: ../../source/v1/batch-loader/index.rst:279
+msgid "An array of records which, in total, resolve all the ``keys``."
+msgstr "An array of records which, in total, resolve all the ``keys``."
+
+#: ../../source/v1/batch-loader/index.rst:287
+msgid "``getRecordK eyFunc``"
+msgstr "``getRecordK eyFunc``"
+
+#: ../../source/v1/batch-loader/index.rst:287
+msgid "See below."
+msgstr "See below."
+
+#: ../../source/v1/batch-loader/index.rst:290
+#: ../../source/v1/batch-loader/index.rst:301
+msgid "``type``"
+msgstr "``type``"
+
+#: ../../source/v1/batch-loader/index.rst:290
+msgid "``String``"
+msgstr "``String``"
+
+#: ../../source/v1/batch-loader/index.rst:290
+msgid "The type of value the batch loader must return for each key."
+msgstr "The type of value the batch loader must return for each key."
+
+#: ../../source/v1/batch-loader/index.rst:301
+msgid "Value"
+msgstr "Value"
+
+#: ../../source/v1/batch-loader/index.rst:303
+msgid "``''``"
+msgstr "``''``"
+
+#: ../../source/v1/batch-loader/index.rst:303
+msgid "An optional single record."
+msgstr "An optional single record."
+
+#: ../../source/v1/batch-loader/index.rst:304
+msgid "``'!'``"
+msgstr "``'!'``"
+
+#: ../../source/v1/batch-loader/index.rst:304
+msgid "A required single record."
+msgstr "A required single record."
+
+#: ../../source/v1/batch-loader/index.rst:305
+msgid "``'[]'``"
+msgstr "``'[]'``"
+
+#: ../../source/v1/batch-loader/index.rst:305
+msgid "A required array including 0, 1 or more records."
+msgstr "A required array including 0, 1 or more records."
+
+#: ../../source/v1/batch-loader/index.rst:309
+msgid "``options ``"
+msgstr "``options ``"
+
+#: ../../source/v1/batch-loader/index.rst:309
+msgid "Descripti on"
+msgstr "Descripti on"
+
+#: ../../source/v1/batch-loader/index.rst:312
+msgid "``default Elem``"
+msgstr "``default Elem``"
+
+#: ../../source/v1/batch-loader/index.rst:317
+msgid "``{null /"
+msgstr "``{null /"
+
+#: ../../source/v1/batch-loader/index.rst:313
+msgid "[]}``"
+msgstr "[]}``"
+
+#: ../../source/v1/batch-loader/index.rst:312
+msgid "The value to return for a ``key`` having no record(s) ."
+msgstr "The value to return for a ``key`` having no record(s) ."
+
+#: ../../source/v1/batch-loader/index.rst:320
+msgid "``onError ``"
+msgstr "``onError ``"
+
+#: ../../source/v1/batch-loader/index.rst:320
+msgid "``Functio n``"
+msgstr "``Functio n``"
+
+#: ../../source/v1/batch-loader/index.rst:320
+msgid "``(i, msg) => {}``"
+msgstr "``(i, msg) => {}``"
+
+#: ../../source/v1/batch-loader/index.rst:320
+msgid "Handler for detected errors, e.g. \\ `` (i, msg) =>`` ``{ throw"
+msgstr "Handler for detected errors, e.g. \\ `` (i, msg) =>`` ``{ throw"
+
+#: ../../source/v1/batch-loader/index.rst:328
+msgid "new Erro"
+msgstr "new Erro"
+
+#: ../../source/v1/batch-loader/index.rst:329
+msgid "r(msg,`` ``'on ele ment', i) ; }``"
+msgstr "r(msg,`` ``'on ele ment', i) ; }``"
+
+#: ../../source/v1/batch-loader/index.rst:335
+msgid ""
+"{% apiReturns get-results-by-key “The result for each key. results[i] is "
+"the result for keys[i].” results “Array< Object >”%}"
+msgstr ""
+
+#: ../../source/v1/batch-loader/index.rst:359
+msgid "**getRecordKeyFunc**"
+msgstr "**getRecordKeyFunc**"
+
+#: ../../source/v1/batch-loader/index.rst:361
+msgid "A function which, given a record, returns the key it satisfies, e.g."
+msgstr "A function which, given a record, returns the key it satisfies, e.g."
+
+#: ../../source/v1/batch-loader/index.rst:367
+msgid "**See also:** `Batch-Function <./guide.html#Batch-Function>`__"
+msgstr "**See also:** `Batch-Function <./guide.html#Batch-Function>`__"
+
+#: ../../source/v1/batch-loader/index.rst:369
+msgid "{% apiFootnote getResultsByKey BatchLoader %}"
+msgstr "{% apiFootnote getResultsByKey BatchLoader %}"
+
+#: ../../source/v1/batch-loader/index.rst:379
+msgid "batchLoader.load( key )"
+msgstr "batchLoader.load( key )"
+
+#: ../../source/v1/batch-loader/index.rst:385
+msgid "Loads a key, returning a Promise for the value represented by that key."
+msgstr "Loads a key, returning a Promise for the value represented by that key."
+
+#: ../../source/v1/batch-loader/index.rst:389
+#: ../../source/v1/batch-loader/index.rst:486
+#: ../../source/v1/batch-loader/index.rst:542
+msgid "``{String | Number | Object | Array} key``"
+msgstr "``{String | Number | Object | Array} key``"
+
+#: ../../source/v1/batch-loader/index.rst:394
+#: ../../source/v1/batch-loader/index.rst:491
+#: ../../source/v1/batch-loader/index.rst:548
+msgid "``key``"
+msgstr "``key``"
+
+#: ../../source/v1/batch-loader/index.rst:394
+#: ../../source/v1/batch-loader/index.rst:491
+#: ../../source/v1/batch-loader/index.rst:548
+msgid "``String`` ``Number`` ``Object`` ``Array``"
+msgstr "``String`` ``Number`` ``Object`` ``Array``"
+
+#: ../../source/v1/batch-loader/index.rst:394
+msgid "The key the batch-loader uses to find the result(s)."
+msgstr "The key the batch-loader uses to find the result(s)."
+
+#: ../../source/v1/batch-loader/index.rst:401
+msgid ""
+"{% apiReturns load “Resolves to the result(s).” promise “Promise< Object "
+">”%}"
+msgstr ""
+
+#: ../../source/v1/batch-loader/index.rst:411
+msgid "{% apiFootnote load BatchLoader %}"
+msgstr "{% apiFootnote load BatchLoader %}"
+
+#: ../../source/v1/batch-loader/index.rst:421
+msgid "batchLoader.loadMany( keys )"
+msgstr "batchLoader.loadMany( keys )"
+
+#: ../../source/v1/batch-loader/index.rst:427
+msgid "Loads multiple keys, promising a arrays of values."
+msgstr "Loads multiple keys, promising a arrays of values."
+
+#: ../../source/v1/batch-loader/index.rst:429
+msgid "**Arguments**"
+msgstr "**Arguments**"
+
+#: ../../source/v1/batch-loader/index.rst:431
+msgid "``{Array<String | Number | Object | Array>} keys``"
+msgstr "``{Array<String | Number | Object | Array>} keys``"
+
+#: ../../source/v1/batch-loader/index.rst:436
+msgid "``Array<`` ``String /`` ``Number /`` ``Object /`` ``Array>``"
+msgstr "``Array<`` ``String /`` ``Number /`` ``Object /`` ``Array>``"
+
+#: ../../source/v1/batch-loader/index.rst:436
+msgid "The keys the batch-loader will return result(s) for."
+msgstr "The keys the batch-loader will return result(s) for."
+
+#: ../../source/v1/batch-loader/index.rst:443
+msgid ""
+"{% apiReturns load “Resolves to an array of result(s). promise[i] is the "
+"result for keys[i].” promise “Promise[ Array< Object > ]”%}"
+msgstr ""
+
+#: ../../source/v1/batch-loader/index.rst:455
+msgid ""
+"This is a convenience method. ``usersLoader.loadMany([ key1, key2 ])`` is"
+" equivalent to the more verbose:"
+msgstr ""
+
+#: ../../source/v1/batch-loader/index.rst:466
+msgid "{% apiFootnote loadMany BatchLoader %}"
+msgstr "{% apiFootnote loadMany BatchLoader %}"
+
+#: ../../source/v1/batch-loader/index.rst:476
+msgid "batchLoader.clear( key )"
+msgstr "batchLoader.clear( key )"
+
+#: ../../source/v1/batch-loader/index.rst:482
+msgid "Clears the value at key from the cache, if it exists."
+msgstr "Clears the value at key from the cache, if it exists."
+
+#: ../../source/v1/batch-loader/index.rst:491
+msgid "The key to remove from the cache."
+msgstr "The key to remove from the cache."
+
+#: ../../source/v1/batch-loader/index.rst:496
+msgid ""
+"The key is matches using strict equality. This is particularly important "
+"for ``Object`` and ``Array`` keys."
+msgstr ""
+
+#: ../../source/v1/batch-loader/index.rst:499
+msgid "{% apiFootnote clear BatchLoader %}"
+msgstr "{% apiFootnote clear BatchLoader %}"
+
+#: ../../source/v1/batch-loader/index.rst:509
+msgid "batchLoader.clearAll()"
+msgstr "batchLoader.clearAll()"
+
+#: ../../source/v1/batch-loader/index.rst:515
+msgid "Clears the entire cache."
+msgstr "Clears the entire cache."
+
+#: ../../source/v1/batch-loader/index.rst:519
+msgid ""
+"To be used when some event results in unknown invalidations across this "
+"particular batch-loader."
+msgstr ""
+
+#: ../../source/v1/batch-loader/index.rst:522
+msgid "{% apiFootnote clearAll BatchLoader %}"
+msgstr "{% apiFootnote clearAll BatchLoader %}"
+
+#: ../../source/v1/batch-loader/index.rst:532
+msgid "batchLoader.prime( key, value )"
+msgstr "batchLoader.prime( key, value )"
+
+#: ../../source/v1/batch-loader/index.rst:538
+msgid "Primes the cache with the provided key and value."
+msgstr "Primes the cache with the provided key and value."
+
+#: ../../source/v1/batch-loader/index.rst:543
+msgid "``{Object} record``"
+msgstr "``{Object} record``"
+
+#: ../../source/v1/batch-loader/index.rst:548
+msgid "The key in the cache for the record."
+msgstr "The key in the cache for the record."
+
+#: ../../source/v1/batch-loader/index.rst:549
+msgid "``record``"
+msgstr "``record``"
+
+#: ../../source/v1/batch-loader/index.rst:549
+msgid "The value for the ``key``."
+msgstr "The value for the ``key``."
+
+#: ../../source/v1/batch-loader/index.rst:554
+msgid ""
+"**If the key already exists, no change is made.** To forcefully prime the"
+" cache, clear the key first with ``batchloader.clear(key)``."
+msgstr ""
+
+#: ../../source/v1/batch-loader/index.rst:557
+msgid "{% apiFootnote prime BatchLoader %}"
+msgstr "{% apiFootnote prime BatchLoader %}"
+
+#: ../../source/v1/batch-loader/index.rst:567
+msgid "What’s New"
+msgstr "What’s New"
+
+#: ../../source/v1/batch-loader/index.rst:573
+msgid "The details are at Changelog."
+msgstr "The details are at Changelog."
+
+#: ../../source/v1/batch-loader/index.rst:576
+msgid "Feb. 2018"
+msgstr "Feb. 2018"
+
+#: ../../source/v1/batch-loader/index.rst:578
+msgid "Added information about pagination within the ``batchLoadFunc``."
+msgstr "Added information about pagination within the ``batchLoadFunc``."
+
+#~ msgid "$1"
+#~ msgstr "$1"
+

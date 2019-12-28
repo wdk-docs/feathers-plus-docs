@@ -1,0 +1,36 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, BandCap
+# This file is distributed under the same license as the feathers-plus docs
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: feathers-plus docs \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-06-26 14:06+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../source/v1/index.rst:2
+msgid "v1"
+msgstr "v1"
+
+#: ../../source/v1/index.rst:5
+msgid "Extend FeathersJS"
+msgstr "扩展FeathersJS"
+
+#: ../../source/v1/index.rst:17
+msgid "Service Adapters"
+msgstr "服务适配器"
+
+#: ../../source/v1/index.rst:27
+msgid "Framework Integration"
+msgstr "框架集成"
+

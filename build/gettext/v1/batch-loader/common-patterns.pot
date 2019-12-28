@@ -1,0 +1,94 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, BandCap
+# This file is distributed under the same license as the feathers-plus docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: feathers-plus docs \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-06-26 16:23+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/v1/batch-loader/common-patterns.rst:2
+msgid "batch-loader common patterns"
+msgstr ""
+
+#: ../../source/v1/batch-loader/common-patterns.rst:5
+msgid "Creating a new batch-loader per Request."
+msgstr ""
+
+#: ../../source/v1/batch-loader/common-patterns.rst:7
+msgid "In many applications, a server using batch-loader serves requests to many different users with different access permissions. It may be dangerous to use one cache across many users, and it is encouraged to create a new batch-loader per request:"
+msgstr ""
+
+#: ../../source/v1/batch-loader/common-patterns.rst:30
+msgid "Loading by alternative keys."
+msgstr ""
+
+#: ../../source/v1/batch-loader/common-patterns.rst:32
+msgid "Occasionally, some kind of value can be accessed in multiple ways. For example, perhaps a “User” type can be loaded not only by an “id” but also by a “username” value. If the same user is loaded by both keys, then it may be useful to fill both caches when a user is loaded from either source:"
+msgstr ""
+
+#: ../../source/v1/batch-loader/common-patterns.rst:55
+msgid "Persistent caches"
+msgstr ""
+
+#: ../../source/v1/batch-loader/common-patterns.rst:57
+msgid "By default, batch-loader uses the standard Map which simply grows until the batch-loader is released. A custom cache is provided as a convenience if you want to persist caches for longer periods of time. It implements a **least-recently-used** algorithm and allows you to limit the number of records cached."
+msgstr ""
+
+#: ../../source/v1/batch-loader/common-patterns.rst:77
+msgid "The default cache is appropriate when requests to your application are short-lived."
+msgstr ""
+
+#: ../../source/v1/batch-loader/common-patterns.rst:85
+msgid "Using non-Feathers services"
+msgstr ""
+
+#: ../../source/v1/batch-loader/common-patterns.rst:87
+msgid "batch-loader provides a simplified and consistent API over various data sources, when its used as part of your application’s data fetching layer. Custom Feathers services can use batch-loaders to natively accesses local and remote resources."
+msgstr ""
+
+#: ../../source/v1/batch-loader/common-patterns.rst:93
+msgid "Redis"
+msgstr ""
+
+#: ../../source/v1/batch-loader/common-patterns.rst:95
+msgid "Redis is a very simple key-value store which provides the batch load method MGET which makes it very well suited for use with batch-loader."
+msgstr ""
+
+#: ../../source/v1/batch-loader/common-patterns.rst:116
+msgid "SQLite"
+msgstr ""
+
+#: ../../source/v1/batch-loader/common-patterns.rst:118
+msgid "While not a key-value store, SQL offers a natural batch mechanism with SELECT \\* WHERE IN statements. While batch-loader is best suited for key-value stores, it is still suited for SQL when queries remain simple. This example requests the entire row at a given id, however your usage may differ."
+msgstr ""
+
+#: ../../source/v1/batch-loader/common-patterns.rst:124
+msgid "This example uses the sqlite3 client which offers a parallelize method to further batch queries together. Another non-caching batch-loader utilizes this method to provide a similar API. batch-loaders can access other batch-loaders."
+msgstr ""
+
+#: ../../source/v1/batch-loader/common-patterns.rst:173
+msgid "Knex.js"
+msgstr ""
+
+#: ../../source/v1/batch-loader/common-patterns.rst:175
+msgid "This example demonstrates how to use batch-loader with SQL databases via Knex.js, which is a SQL query builder and a client for popular databases such as PostgreSQL, MySQL, MariaDB etc."
+msgstr ""
+
+#: ../../source/v1/batch-loader/common-patterns.rst:208
+msgid "RethinkDB"
+msgstr ""
+
+#: ../../source/v1/batch-loader/common-patterns.rst:210
+msgid "Full implementation:"
+msgstr ""
+

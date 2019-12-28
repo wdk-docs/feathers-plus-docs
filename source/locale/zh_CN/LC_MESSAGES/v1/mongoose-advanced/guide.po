@@ -1,0 +1,77 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, BandCap
+# This file is distributed under the same license as the feathers-plus docs
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: feathers-plus docs \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-06-26 16:23+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../source/v1/mongoose-advanced/guide.rst:2
+msgid "mongoose-advanced guide"
+msgstr ""
+
+#: ../../source/v1/mongoose-advanced/guide.rst:4
+msgid ""
+"This mongoose adapter has the same interface as the feathers-ecosystem "
+"mongooose adapter. The main difference between the two is how bulk "
+"creates are handled."
+msgstr ""
+
+#: ../../source/v1/mongoose-advanced/guide.rst:9
+msgid "Bulk Creates"
+msgstr "Bulk Creates"
+
+#: ../../source/v1/mongoose-advanced/guide.rst:11
+msgid ""
+"When doing bulk creates this adapter will add any validation/write errors"
+" onto the params object and will not throw an error. This is to allow the"
+" errors and successful inserts to be handled within an after hook."
+msgstr ""
+
+#: ../../source/v1/mongoose-advanced/guide.rst:26
+msgid ""
+"This would result in the response from the create method to have the two "
+"data objects with the name property and the other two which would have "
+"failed on validation errors would be placed on the hook under the "
+"following path by default: ``hook.params.errors``."
+msgstr ""
+
+#: ../../source/v1/mongoose-advanced/guide.rst:31
+msgid ""
+"The create method checks for an array of items and will utilize this "
+"built in ``_insertMany`` method of mongoose, this is opposed to using the"
+" default ``create`` method which will call a ``.save`` on each array "
+"item."
+msgstr ""
+
+#: ../../source/v1/mongoose-advanced/guide.rst:37
+msgid "Errors"
+msgstr "Errors"
+
+#: ../../source/v1/mongoose-advanced/guide.rst:39
+msgid ""
+"When accessing the errors on the params object they should have an "
+"``error.type`` of either ``ValidionError`` or ``WriteError`` depending on"
+" which failed."
+msgstr ""
+
+#: ../../source/v1/mongoose-advanced/guide.rst:43
+msgid "Access the errors:"
+msgstr "Access the errors:"
+
+#: ../../source/v1/mongoose-advanced/guide.rst:62
+msgid "The data which failed should be available on the error object."
+msgstr "The data which failed should be available on the error object."
+

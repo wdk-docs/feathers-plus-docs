@@ -1,0 +1,237 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, BandCap
+# This file is distributed under the same license as the feathers-plus docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: feathers-plus docs \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-06-26 14:06+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/v1/authentication-management/index.rst:2
+msgid "authentication-management Usage"
+msgstr ""
+
+#: ../../source/v1/authentication-management/index.rst:4
+msgid "Initializing the module server side:"
+msgstr ""
+
+#: ../../source/v1/authentication-management/index.rst:29
+msgid "This will add the service ``authManagement`` to your app. To use the service client side, we provide a module which lets you access methods on the service directly."
+msgstr ""
+
+#: ../../source/v1/authentication-management/index.rst:33
+msgid "Initialize the module client side:"
+msgstr ""
+
+#: ../../source/v1/authentication-management/index.rst:41
+msgid "Now you can call methods like so:"
+msgstr ""
+
+#: ../../source/v1/authentication-management/index.rst:60
+msgid "server side module authManagement ( [options] )"
+msgstr ""
+
+#: ../../source/v1/authentication-management/index.rst:66
+msgid "**Arguments:**"
+msgstr ""
+
+#: ../../source/v1/authentication-management/index.rst:68
+msgid "``{Object} options``"
+msgstr ""
+
+#: ../../source/v1/authentication-management/index.rst:70
+msgid "**Usage:**"
+msgstr ""
+
+#: ../../source/v1/authentication-management/index.rst:72
+msgid "Adds authManagement service when initialized with ``app.configure(authManagement(options))``."
+msgstr ""
+
+#: ../../source/v1/authentication-management/index.rst:81
+msgid "**Details:**"
+msgstr ""
+
+#: ../../source/v1/authentication-management/index.rst:83
+msgid "``options`` An optional object of options:"
+msgstr ""
+
+#: ../../source/v1/authentication-management/index.rst:86
+msgid "Property"
+msgstr ""
+
+#: ../../source/v1/authentication-management/index.rst:86
+msgid "Type"
+msgstr ""
+
+#: ../../source/v1/authentication-management/index.rst:86
+msgid "Default"
+msgstr ""
+
+#: ../../source/v1/authentication-management/index.rst:86
+msgid "Description"
+msgstr ""
+
+#: ../../source/v1/authentication-management/index.rst:88
+msgid "service"
+msgstr ""
+
+#: ../../source/v1/authentication-management/index.rst:88
+#: ../../source/v1/authentication-management/index.rst:91
+msgid "String"
+msgstr ""
+
+#: ../../source/v1/authentication-management/index.rst:88
+msgid "‘/users’"
+msgstr ""
+
+#: ../../source/v1/authentication-management/index.rst:88
+msgid "Path to user service."
+msgstr ""
+
+#: ../../source/v1/authentication-management/index.rst:91
+msgid "path"
+msgstr ""
+
+#: ../../source/v1/authentication-management/index.rst:91
+msgid "‘authManagement ’"
+msgstr ""
+
+#: ../../source/v1/authentication-management/index.rst:91
+msgid "Path for auth management service, see multiple services below."
+msgstr ""
+
+#: ../../source/v1/authentication-management/index.rst:97
+msgid "notifier"
+msgstr ""
+
+#: ../../source/v1/authentication-management/index.rst:97
+#: ../../source/v1/authentication-management/index.rst:146
+msgid "Function"
+msgstr ""
+
+#: ../../source/v1/authentication-management/index.rst:97
+msgid "``() => Promise .resolve()``"
+msgstr ""
+
+#: ../../source/v1/authentication-management/index.rst:97
+msgid "Function which sends notifications to user through email, SMS, etc. Call signature is ``(type, user, notifierOptions ) => Promise``."
+msgstr ""
+
+#: ../../source/v1/authentication-management/index.rst:108
+msgid "longTokenLen"
+msgstr ""
+
+#: ../../source/v1/authentication-management/index.rst:108
+#: ../../source/v1/authentication-management/index.rst:112
+#: ../../source/v1/authentication-management/index.rst:119
+#: ../../source/v1/authentication-management/index.rst:124
+msgid "Integer"
+msgstr ""
+
+#: ../../source/v1/authentication-management/index.rst:108
+msgid "15"
+msgstr ""
+
+#: ../../source/v1/authentication-management/index.rst:108
+msgid "URL-token’s length will be twice this."
+msgstr ""
+
+#: ../../source/v1/authentication-management/index.rst:112
+msgid "shortTokenLen"
+msgstr ""
+
+#: ../../source/v1/authentication-management/index.rst:112
+msgid "6"
+msgstr ""
+
+#: ../../source/v1/authentication-management/index.rst:112
+msgid "Length of SMS tokens."
+msgstr ""
+
+#: ../../source/v1/authentication-management/index.rst:115
+msgid "shortTokenDigit s"
+msgstr ""
+
+#: ../../source/v1/authentication-management/index.rst:115
+#: ../../source/v1/authentication-management/index.rst:128
+msgid "Boolean"
+msgstr ""
+
+#: ../../source/v1/authentication-management/index.rst:115
+msgid "true"
+msgstr ""
+
+#: ../../source/v1/authentication-management/index.rst:115
+msgid "If SMS token should be digits only."
+msgstr ""
+
+#: ../../source/v1/authentication-management/index.rst:119
+msgid "resetDelay"
+msgstr ""
+
+#: ../../source/v1/authentication-management/index.rst:119
+msgid "1000 \\* 60 \\* 60 \\* 2"
+msgstr ""
+
+#: ../../source/v1/authentication-management/index.rst:119
+msgid "Expiration for sign up email verification token in ms."
+msgstr ""
+
+#: ../../source/v1/authentication-management/index.rst:124
+msgid "delay"
+msgstr ""
+
+#: ../../source/v1/authentication-management/index.rst:124
+msgid "1000 \\* 60 \\* 60 \\* 24 \\* 5"
+msgstr ""
+
+#: ../../source/v1/authentication-management/index.rst:124
+msgid "Expiration for password reset token in ms."
+msgstr ""
+
+#: ../../source/v1/authentication-management/index.rst:128
+msgid "skipIsVerifiedC heck"
+msgstr ""
+
+#: ../../source/v1/authentication-management/index.rst:128
+msgid "false"
+msgstr ""
+
+#: ../../source/v1/authentication-management/index.rst:128
+msgid "Allow sendResetPwd and resetPwd for unverified users."
+msgstr ""
+
+#: ../../source/v1/authentication-management/index.rst:134
+msgid "identifyUserPro ps"
+msgstr ""
+
+#: ../../source/v1/authentication-management/index.rst:134
+msgid "Array"
+msgstr ""
+
+#: ../../source/v1/authentication-management/index.rst:134
+msgid "[‘email’]"
+msgstr ""
+
+#: ../../source/v1/authentication-management/index.rst:134
+msgid "Property in user-item which uniquely identifies the user, at least one of these props must be provided whenever a short token is used."
+msgstr ""
+
+#: ../../source/v1/authentication-management/index.rst:146
+#: ../../source/v1/authentication-management/index.rst:146
+msgid "sanitizeUserFor Client"
+msgstr ""
+
+#: ../../source/v1/authentication-management/index.rst:146
+msgid "TODO"
+msgstr ""
+

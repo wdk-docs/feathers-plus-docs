@@ -1,0 +1,373 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, BandCap
+# This file is distributed under the same license as the feathers-plus docs
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: feathers-plus docs \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-06-26 16:23+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../source/v1/batch-loader/guide.rst:2
+msgid "batch-loader guide"
+msgstr ""
+
+#: ../../source/v1/batch-loader/guide.rst:4
+msgid ""
+"Loading data from database is one of the major tasks for most web "
+"applications. The goal of batch-loader is to improve the performance of "
+"database queries with two techniques: batching and caching."
+msgstr ""
+
+#: ../../source/v1/batch-loader/guide.rst:9
+msgid "Batching"
+msgstr "Batching"
+
+#: ../../source/v1/batch-loader/guide.rst:11
+msgid ""
+"Batching is batch-loader’s primary feature. The reason for batching is to"
+" merge multiple similar database queries into one single query when "
+"possible. For example:"
+msgstr ""
+
+#: ../../source/v1/batch-loader/guide.rst:24
+msgid "is slower than"
+msgstr "is slower than"
+
+#: ../../source/v1/batch-loader/guide.rst:30
+msgid ""
+"The latter sends only one query to database and retrieves the same 5 "
+"records as the former does, and therefore is much more efficient."
+msgstr ""
+
+#: ../../source/v1/batch-loader/guide.rst:33
+msgid ""
+"Batch-loader is a tool to help you batch database calls in such a way. "
+"First, create a batch-loader by providing a batch loading function which "
+"accepts an array of keys and an optional context. It returns a Promise "
+"which resolves to an array of values."
+msgstr ""
+
+#: ../../source/v1/batch-loader/guide.rst:51
+msgid ""
+"You can then call the batch-loader with individual keys. It will coalesce"
+" all requests made within the current event loop into a single call to "
+"the batch-loader function, and return the results to each call."
+msgstr ""
+
+#: ../../source/v1/batch-loader/guide.rst:61
+msgid ""
+"The above will result in one database service call, i.e. \\ "
+"``users.find({ query: { id: { $in: [1, 2, 3, 4] } } })``, instead of 6."
+msgstr ""
+
+#: ../../source/v1/batch-loader/guide.rst:69
+msgid ""
+"*“[W]ill coalesce all requests made within the current event loop into a "
+"single call”* sounds ominous. Just don’t worry about it. Make "
+"``usersLoader.load`` and ``usersLoader.loadMany`` calls the same way you "
+"would ``users.get`` and ``users.find``. Everything will work as expected "
+"while, behind the scenes, batch-loader is making the fewest database "
+"calls logically possible."
+msgstr ""
+
+#: ../../source/v1/batch-loader/guide.rst:81
+msgid "Batch Function"
+msgstr "Batch Function"
+
+#: ../../source/v1/batch-loader/guide.rst:83
+msgid ""
+"The batch loading function accepts an array of keys and an optional "
+"context. It returns a Promise which resolves to an array of values. Each "
+"index in the returned array of values must correspond to the same index "
+"in the array of keys."
+msgstr ""
+
+#: ../../source/v1/batch-loader/guide.rst:88
+msgid ""
+"For example, if the ``usersLoader`` from above is called with ``[1, 2, 3,"
+" 4, 99]``, we would execute ``users.find({ query: { id: { $in: [1, 2, 3, "
+"4, 99] } } })``. The Feathers service could return the results:"
+msgstr ""
+
+#: ../../source/v1/batch-loader/guide.rst:100
+msgid ""
+"Please not that the order of the results will usually differ from the "
+"order of the keys and here, in addition, there is no ``users`` with an "
+"``id`` of ``99``."
+msgstr ""
+
+#: ../../source/v1/batch-loader/guide.rst:104
+msgid "The batch function has to to reorganize the above results and return:"
+msgstr "The batch function has to to reorganize the above results and return:"
+
+#: ../../source/v1/batch-loader/guide.rst:114
+msgid "The ``null`` indicating there is no record for ``user.id === 99``."
+msgstr "The ``null`` indicating there is no record for ``user.id === 99``."
+
+#: ../../source/v1/batch-loader/guide.rst:117
+msgid "Convenience Methods"
+msgstr "Convenience Methods"
+
+#: ../../source/v1/batch-loader/guide.rst:119
+msgid ""
+"Batch-loader provides two convenience functions that will perform this "
+"reorganization for you."
+msgstr ""
+
+#: ../../source/v1/batch-loader/guide.rst:132
+msgid "**getUniqueKeys** eliminates any duplicate elements in the keys."
+msgstr "**getUniqueKeys** eliminates any duplicate elements in the keys."
+
+#: ../../source/v1/batch-loader/guide.rst:134
+msgid ""
+"The array of keys may contain duplicates when the batch-loader’s "
+"memoization cache is disabled."
+msgstr ""
+
+#: ../../source/v1/batch-loader/guide.rst:137
+msgid ""
+"**getResultsByKey** reorganizes the records from the service call into "
+"the result expected from the batch function. The ``''`` parameter "
+"indicates each key expects a single record or ``null``. Other options are"
+" ``'!'`` when each key requires a single record, and ``'[]'`` when each "
+"key requires an array of 0, 1 or more records."
+msgstr ""
+
+#: ../../source/v1/batch-loader/guide.rst:144
+msgid "Caching"
+msgstr "Caching"
+
+#: ../../source/v1/batch-loader/guide.rst:146
+msgid ""
+"Each batch-loader instance contains a unique memoized cache. Once "
+"``load`` or ``loadMany`` is called, the resulting value is cached. This "
+"eliminates redundant database requests, relieving pressure on your "
+"database. It also creates fewer objects which may relieve memory pressure"
+" on your application."
+msgstr ""
+
+#: ../../source/v1/batch-loader/guide.rst:164
+msgid ""
+"The same object is returned for each of multiple hits on the cache. You "
+"should not mutate that object directly as the mutation would be reflected"
+" in every reference to the object. Rather you should deep-copy before "
+"mutating the copy."
+msgstr ""
+
+#: ../../source/v1/batch-loader/guide.rst:174
+msgid "Caching Per Request"
+msgstr "Caching Per Request"
+
+#: ../../source/v1/batch-loader/guide.rst:176
+msgid ""
+"It may be dangerous to use one cache across many users, and it is "
+"encouraged to create a new batch-loader per request. Typically batch-"
+"loader instances are created when a request begins and are released once "
+"the request ends."
+msgstr ""
+
+#: ../../source/v1/batch-loader/guide.rst:181
+msgid ""
+"Since the cache exists for a limited time only, the cache contents should"
+" not normally grow large enough to cause memory pressure on the "
+"application."
+msgstr ""
+
+#: ../../source/v1/batch-loader/guide.rst:186
+msgid "Persistent Caches"
+msgstr "Persistent Caches"
+
+#: ../../source/v1/batch-loader/guide.rst:188
+msgid ""
+"A batch-loader can be shared between requests and between users if care "
+"is taken. Use caution when used in long-lived applications or those which"
+" serve many users with different access permissions."
+msgstr ""
+
+#: ../../source/v1/batch-loader/guide.rst:192
+msgid ""
+"The main advantage is having the cache already primed at the start of "
+"each request, which could result in fewer initial database requests."
+msgstr ""
+
+#: ../../source/v1/batch-loader/guide.rst:196
+msgid "Memory pressure"
+msgstr "Memory pressure"
+
+#: ../../source/v1/batch-loader/guide.rst:198
+msgid ""
+"There are two concerns though. First the cache could keep filling up with"
+" records causing memory pressure. This can be handled with a custom "
+"cache."
+msgstr ""
+
+#: ../../source/v1/batch-loader/guide.rst:202
+msgid ""
+"**@feathers-plus/cache** is a least-recently-used (LRU) cache which you "
+"can inject when initializing the batch-loader. You can specify the "
+"maximum number of records to be kept in the cache, and it will retain the"
+" least recently used records."
+msgstr ""
+
+#: ../../source/v1/batch-loader/guide.rst:218
+msgid "Mutation"
+msgstr "Mutation"
+
+#: ../../source/v1/batch-loader/guide.rst:220
+msgid ""
+"The other concern is a record mutating. You can create a hook which "
+"clears a record from its BatchLoaders’ caches when it mutates."
+msgstr ""
+
+#: ../../source/v1/batch-loader/guide.rst:229
+msgid ""
+"``@feathers-plus/cache/lib/hooks`` contains hooks which clear the keys of"
+" mutated records."
+msgstr ""
+
+#: ../../source/v1/batch-loader/guide.rst:233
+msgid "Explore Performance Gains"
+msgstr "Explore Performance Gains"
+
+#: ../../source/v1/batch-loader/guide.rst:236
+msgid "Our Sample Data"
+msgstr "Our Sample Data"
+
+#: ../../source/v1/batch-loader/guide.rst:238
+msgid "We will be using Feathers database services containing the following data:"
+msgstr "We will be using Feathers database services containing the following data:"
+
+#: ../../source/v1/batch-loader/guide.rst:270
+msgid ""
+"We want to see how using batch-loader affects the number of database "
+"calls, and we will do that by populating the ``posts`` records with "
+"related information."
+msgstr ""
+
+#: ../../source/v1/batch-loader/guide.rst:275
+msgid "Using Plain JavaScript"
+msgstr "Using Plain JavaScript"
+
+#: ../../source/v1/batch-loader/guide.rst:277
+msgid ""
+"First, let’s add the related ``comments`` records to each ``posts`` "
+"record using regular JavaScript, and let’s do this using both Promises "
+"and async/await."
+msgstr ""
+
+#: ../../source/v1/batch-loader/guide.rst:301
+msgid ""
+"Both of these make the following database service calls, and both get the"
+" following result."
+msgstr ""
+
+#: ../../source/v1/batch-loader/guide.rst:324
+msgid "Using Neither Batching nor Caching"
+msgstr "Using Neither Batching nor Caching"
+
+#: ../../source/v1/batch-loader/guide.rst:326
+msgid ""
+"The batch-loader function will be called for every ``load`` and "
+"``loadMany`` when batching and caching are disabled in the batch-loader. "
+"This means it acts just like individual ``get`` and ``find`` method "
+"calls. Let’s rewrite the above example using such a rudimentary batch-"
+"loader:"
+msgstr ""
+
+#: ../../source/v1/batch-loader/guide.rst:368
+msgid ""
+"Both of these make the same database service calls as did the `plain "
+"JavaScript example <#Using-Plain-JavaScript>`__, because batching and "
+"caching were both disabled."
+msgstr ""
+
+#: ../../source/v1/batch-loader/guide.rst:382
+msgid ""
+"A batch-loader with neither batching nor caching makes the same database "
+"calls as does a plain Javascript implementation. This is a convenient way"
+" to debug issues you might have with batch-loader. The *“magic”* "
+"disappears when you disable batching and caching, which makes it simpler "
+"to understand what is happening."
+msgstr ""
+
+#: ../../source/v1/batch-loader/guide.rst:389
+msgid "Using Batching and Caching"
+msgstr "Using Batching and Caching"
+
+#: ../../source/v1/batch-loader/guide.rst:391
+msgid ""
+"Batching and caching are enabled when we remove the 2 ``{ batch: false, "
+"cache: false }`` in the above example. A very different performance "
+"profile is now produced:"
+msgstr ""
+
+#: ../../source/v1/batch-loader/guide.rst:400
+msgid ""
+"Only 1 service call was made for the ``comments`` records, instead of the"
+" previous 4."
+msgstr ""
+
+#: ../../source/v1/batch-loader/guide.rst:404
+msgid "A Realistic Example"
+msgstr "A Realistic Example"
+
+#: ../../source/v1/batch-loader/guide.rst:406
+msgid ""
+"The more service calls made, the better batch-loader performs. The above "
+"example populated the ``posts`` records with just the ``comments`` "
+"records. Let’s see the effect batch-loader has when we fully populate the"
+" ``posts`` records."
+msgstr ""
+
+#: ../../source/v1/batch-loader/guide.rst:468
+msgid ""
+"Notice ``usersLoader`` is being called within 3 quite different joins. "
+"These joins will share their batching and cache, noticeably improving "
+"overall performance."
+msgstr ""
+
+#: ../../source/v1/batch-loader/guide.rst:472
+msgid ""
+"This example has batching and caching disabled. These 22 service calls "
+"are made when it is run. They are the same calls which a plain JavaScript"
+" implementation would have made:"
+msgstr ""
+
+#: ../../source/v1/batch-loader/guide.rst:501
+msgid ""
+"Now let’s enable batching and caching by changing ``tester({ batch: "
+"false, cache: false })`` to ``tester()``. Only these **three** service "
+"calls are now made to obtain the same results:"
+msgstr ""
+
+#: ../../source/v1/batch-loader/guide.rst:513
+msgid ""
+"The 2 BatchLoaders reduced the number of services calls from 22 for a "
+"plain implementation, to just 3!"
+msgstr ""
+
+#: ../../source/v1/batch-loader/guide.rst:516
+msgid "The final populated result is:"
+msgstr "The final populated result is:"
+
+#: ../../source/v1/batch-loader/guide.rst:583
+msgid "See also"
+msgstr "See also"
+
+#: ../../source/v1/batch-loader/guide.rst:585
+msgid ""
+"`facebook/dataloader <https://github.com/facebook/dataloader>`__ from "
+"which batch-loader is derived."
+msgstr ""
+
